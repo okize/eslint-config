@@ -1,0 +1,31 @@
+{
+  "name": "@okize/eslint-config",
+  "version": "0.0.1",
+  "description": "My preferred eslint rules bundled into composable configs",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
+  "author": "Morgan Wigmanich",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okize/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/okize/eslint-config/issues"
+  },
+  "homepage": "https://github.com/okize/eslint-config#readme",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "eslint config",
+    "flat config",
+    "prettier",
+    "typescript"
+  ]
+}
