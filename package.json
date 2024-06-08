@@ -39,6 +39,7 @@
     "typescript"
   ],
   "dependencies": {
+    "eslint-plugin-perfectionist": "^2.10.0",
     "eslint-plugin-sonarjs": "^1.0.3"
   }
 }
