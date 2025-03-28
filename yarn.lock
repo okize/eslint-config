@@ -40,6 +40,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@commitlint/config-conventional@npm:^19.8.0":
+  version: 19.8.0
+  resolution: "@commitlint/config-conventional@npm:19.8.0"
+  dependencies:
+    "@commitlint/types": "npm:^19.8.0"
+    conventional-changelog-conventionalcommits: "npm:^7.0.2"
+  checksum: 10c0/c0e2ad4ee8b793ad08ce8f0fd242d8111c71c81eba53b652431b7852e02d3eef0a383e234b7574429f5d1876b712a915921f6ff61fdaccdf708cbbaf3fa1f2f0
+  languageName: node
+  linkType: hard
+
 "@commitlint/config-validator@npm:^19.8.0":
   version: 19.8.0
   resolution: "@commitlint/config-validator@npm:19.8.0"
@@ -333,6 +343,7 @@ __metadata:
   resolution: "@okize/eslint-config@workspace:."
   dependencies:
     "@commitlint/cli": "npm:^19.8.0"
+    "@commitlint/config-conventional": "npm:^19.8.0"
     eslint: "npm:^9.22.0"
     husky: "npm:^9.1.7"
   languageName: unknown
@@ -545,6 +556,15 @@ __metadata:
   dependencies:
     compare-func: "npm:^2.0.0"
   checksum: 10c0/90e73e25e224059b02951b6703b5f8742dc2a82c1fea62163978e6735fd3ab04350897a8fc6f443ec6b672d6b66e28a0820e833e544a0101f38879e5e6289b7e
+  languageName: node
+  linkType: hard
+
+"conventional-changelog-conventionalcommits@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "conventional-changelog-conventionalcommits@npm:7.0.2"
+  dependencies:
+    compare-func: "npm:^2.0.0"
+  checksum: 10c0/3cb1eab35e37fc973cfb3aed0e159f54414e49b222988da1c2aa86cc8a87fe7531491bbb7657fe5fc4dc0e25f5b50e2065ba8ac71cc4c08eed9189102a2b81bd
   languageName: node
   linkType: hard
 
