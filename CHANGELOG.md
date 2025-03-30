@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.10
+
+### Patch Changes
+
+- [#20](https://github.com/okize/eslint-config/pull/20) [`bdd4798`](https://github.com/okize/eslint-config/commit/bdd4798442440fe3013ac6cd1e54d847d2049182) Thanks [@okize](https://github.com/okize)! - feat: add node, storybook & styled-components configs & rules
+
 ## 0.0.9
 
 ### Patch Changes
