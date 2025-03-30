@@ -1,6 +1,6 @@
 {
   "name": "@okize/eslint-config",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "packageManager": "yarn@4.7.0",
   "description": "My preferred eslint rules bundled into composable configs",
   "type": "module",
