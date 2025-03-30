@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.7
+
+### Patch Changes
+
+- [#14](https://github.com/okize/eslint-config/pull/14) [`2330a19`](https://github.com/okize/eslint-config/commit/2330a19c3c3aac2dc48226f93481b88ba9e99cdc) Thanks [@okize](https://github.com/okize)! - feat: update base rules & config
+
 ## 0.0.6
 
 ### Patch Changes
