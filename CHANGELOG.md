@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.8
+
+### Patch Changes
+
+- [#16](https://github.com/okize/eslint-config/pull/16) [`e546a90`](https://github.com/okize/eslint-config/commit/e546a905cd1e5e46c6b6c38783517c9790b8df22) Thanks [@okize](https://github.com/okize)! - fix: remove typscript rules that have been deprecated in favor of @stylistic rules
+
 ## 0.0.7
 
 ### Patch Changes
