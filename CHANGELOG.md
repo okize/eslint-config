@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.9
+
+### Patch Changes
+
+- [#18](https://github.com/okize/eslint-config/pull/18) [`be8bd17`](https://github.com/okize/eslint-config/commit/be8bd178325b6ffbae4e28f9afd156dd4a3413b4) Thanks [@okize](https://github.com/okize)! - feat: add testing-library/vitest/jest configs
+
 ## 0.0.8
 
 ### Patch Changes
