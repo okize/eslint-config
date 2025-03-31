@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.11
+
+### Patch Changes
+
+- [#22](https://github.com/okize/eslint-config/pull/22) [`ed3efba`](https://github.com/okize/eslint-config/commit/ed3efba6a8589d07cc736d63ec4333c9bc948043) Thanks [@okize](https://github.com/okize)! - feat: add promise & react-compiler rules
+
 ## 0.0.10
 
 ### Patch Changes
