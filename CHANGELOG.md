@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.12
+
+### Patch Changes
+
+- [#24](https://github.com/okize/eslint-config/pull/24) [`9e41f1e`](https://github.com/okize/eslint-config/commit/9e41f1e418a3b5e7f664674ab4cefb074041a16b) Thanks [@okize](https://github.com/okize)! - fix: eslint-plugin-promise meant to be a dependency, not a devDependency
+
 ## 0.0.11
 
 ### Patch Changes
