@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.13
+
+### Patch Changes
+
+- [#26](https://github.com/okize/eslint-config/pull/26) [`e504f31`](https://github.com/okize/eslint-config/commit/e504f31d57c4efbb26f39ae3c6fc7950d706791c) Thanks [@okize](https://github.com/okize)! - fix: use correct ESM export style in file
+
 ## 0.0.12
 
 ### Patch Changes
