@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.14
+
+### Patch Changes
+
+- [#28](https://github.com/okize/eslint-config/pull/28) [`c51522a`](https://github.com/okize/eslint-config/commit/c51522a7d78d055cb651780a8743162182f01161) Thanks [@okize](https://github.com/okize)! - fix: disable any rules that should be a concern of a style formatter like prettier
+
 ## 0.0.13
 
 ### Patch Changes
