@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.16
+
+### Patch Changes
+
+- [#32](https://github.com/okize/eslint-config/pull/32) [`25d5244`](https://github.com/okize/eslint-config/commit/25d5244165bd45598ba013d99b941f028e90b495) Thanks [@okize](https://github.com/okize)! - fix: remove rules from stylistic that no longer exist
+
 ## 0.0.15
 
 ### Patch Changes
