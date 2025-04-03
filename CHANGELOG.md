@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.17
+
+### Patch Changes
+
+- [#34](https://github.com/okize/eslint-config/pull/34) [`d7dfbe5`](https://github.com/okize/eslint-config/commit/d7dfbe5735bee8b34232addc51887b921a4f0287) Thanks [@okize](https://github.com/okize)! - feat: update base rules; remove deprecated/removed rules
+
 ## 0.0.16
 
 ### Patch Changes
