@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.18
+
+### Patch Changes
+
+- [#37](https://github.com/okize/eslint-config/pull/37) [`36dcb0d`](https://github.com/okize/eslint-config/commit/36dcb0d87b7e4ce9b166e8726b14577ad9bab357) Thanks [@okize](https://github.com/okize)! - feat: set `reportUnusedDisableDirectives` to error in js and ts configs
+
 ## 0.0.17
 
 ### Patch Changes
