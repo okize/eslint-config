@@ -6,8 +6,9 @@
   "type": "module",
   "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "outdated": "yarn upgrade-interactive"
+    "changeset": "changeset",
+    "outdated": "yarn upgrade-interactive",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
