@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.20
+
+### Patch Changes
+
+- [#42](https://github.com/okize/eslint-config/pull/42) [`20f30ea`](https://github.com/okize/eslint-config/commit/20f30eaafc2962f01a8dddcc07a3290b4545c0bd) Thanks [@okize](https://github.com/okize)! - fix: add `react-ssr-compatibility` config to package exports object
+
 ## 0.0.19
 
 ### Patch Changes
