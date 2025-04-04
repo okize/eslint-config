@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.19
+
+### Patch Changes
+
+- [#39](https://github.com/okize/eslint-config/pull/39) [`7260b0b`](https://github.com/okize/eslint-config/commit/7260b0bea0ae37e1a011360d00a0e24d1c6600d0) Thanks [@okize](https://github.com/okize)! - feat: add react-ssr-compatibility config & rules
+
 ## 0.0.18
 
 ### Patch Changes
