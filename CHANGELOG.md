@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.21
+
+### Patch Changes
+
+- [#44](https://github.com/okize/eslint-config/pull/44) [`5256cb0`](https://github.com/okize/eslint-config/commit/5256cb0866a383cb7c2328ea5f96e3225c98bb81) Thanks [@okize](https://github.com/okize)! - fix: wrap `react-ssr-compatibility` plugins in eslint compat
+
 ## 0.0.20
 
 ### Patch Changes
