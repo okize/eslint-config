@@ -8,6 +8,7 @@
   "scripts": {
     "changeset": "changeset",
     "outdated": "yarn upgrade-interactive",
+    "release": "changeset publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

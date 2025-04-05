@@ -1,0 +1,50 @@
+name: Create Release Pull Request or Publish to npm
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  id-token: write
+  issues: read
+  packages: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+          fetch-depth: 0
+
+      - name: Install Node and npm packages
+        uses: ./.github/actions/setup-node-env
+
+      # this is a hack but at this time it's the only way to get the changeset version for the
+      # commit message in the next step. using `changeset status` it generates a `release.json` file,
+      # then reads the new version from it and then removes the file
+      - name: Get new package version
+        run: |
+          echo "NEW_PACKAGE_VERSION=$(yarn changeset status --output=release.json && jq -r '.releases[0].newVersion' release.json && rm release.json)" >> "$GITHUB_ENV"
+
+      - name: Create Release Pull Request or Publish to npm
+        uses: changesets/action@06245a4e0a36c064a573d4150030f5ec548e4fcc # v1.4.10
+        id: changesets
+        with:
+          createGithubReleases: true
+          publish: yarn release
+          title: "chore: release v${{env.NEW_PACKAGE_VERSION}}"
+          commit: "chore: release v${{env.NEW_PACKAGE_VERSION}}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
