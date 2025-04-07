@@ -1,0 +1,40 @@
+name: 'Installs node, yarn and node modules.'
+description: 'Installs node, yarn and node modules. Caches node modules.'
+inputs:
+  cache-prefix:
+    description: 'A prefix you can use to prevent cache collisions in incompatible environments'
+    required: false
+    default: 'cache'
+  token:
+    description: 'Optional GitHub token (eg. PAT)'
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Parse .tool-versions
+      uses: wistia/parse-tool-versions@32f568a4ffd4bfa7720ebf93f171597d1ebc979a # v2.1.1
+      with:
+        prefix: 'TOOL_VERSION_'
+
+    - name: Set up NodeJS environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.TOOL_VERSION_NODEJS }}
+
+    - name: Cache node_modules
+      uses: actions/cache@v4
+      id: node-modules-cache
+      with:
+        path: |
+          ${{ inputs.working-directory }}/node_modules
+        key: |
+          ${{ inputs.cache-prefix }}-node${{ env.TOOL_VERSION_NODEJS }}-${{ hashFiles('yarn.lock', '.github/actions/setup-node-env/action.yml') }}
+        restore-keys: |
+          ${{ inputs.cache-prefix }}-node${{ env.TOOL_VERSION_NODEJS }}-
+
+    - name: Install npm packages
+      if: steps.node-modules-cache.outputs.cache-hit != 'true'
+      run: yarn install --immutable
+      shell: bash
