@@ -12,6 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.10",
     "@babel/eslint-parser": "^7.26.10",
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.28.1",
