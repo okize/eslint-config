@@ -7,7 +7,7 @@
   "main": "index.mjs",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./index.mjs"
+    "./javascript": "./src/eslint/configs/javascript.mjs"
   },
   "scripts": {
     "changeset": "changeset",
