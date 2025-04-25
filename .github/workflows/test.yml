@@ -27,5 +27,8 @@ jobs:
       - name: Install Node and npm packages
         uses: ./.github/actions/setup-node-env
 
+      - name: Run tests
+        run: yarn test
+
       - name: Check export map
         run: yarn test:export

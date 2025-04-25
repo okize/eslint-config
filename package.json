@@ -7,20 +7,22 @@
   "main": "index.mjs",
   "exports": {
     "./package.json": "./package.json",
+    ".": "./src/eslint/configs/javascript.mjs",
     "./javascript": "./src/eslint/configs/javascript.mjs"
   },
   "scripts": {
     "changeset": "changeset",
     "lint": "eslint .",
-    "lint:inspector": "eslint --inspect-config",
     "lint:debug": "eslint . --debug",
     "lint:debug:config": "eslint --print-config index.mjs",
     "lint:debug:files": "DEBUG=eslint:eslint eslint .",
     "lint:debug:rules": "DEBUG=eslint:rules eslint .",
+    "lint:fix": "yarn lint --fix",
+    "lint:inspector": "eslint --inspect-config",
     "outdated": "yarn upgrade-interactive",
     "prepare": "husky install",
     "release": "changeset publish",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "test:export": "check-export-map"
   },
   "dependencies": {
