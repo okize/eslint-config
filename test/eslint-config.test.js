@@ -1,4 +1,5 @@
-import { describe, it } from 'vitest';
+import { describe, test, expect } from 'vitest';
+import { readdirSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -8,9 +9,11 @@ const snapshotsDir = join(__dirname, '__snapshots__');
 
 const pathToSnapshot = (file) => join(snapshotsDir, `${basename(file)}.snap`);
 
+// Get all config files synchronously since we can't use async in the test setup
+const configs = readdirSync(configsDir).map((file) => [basename(file, '.mjs'), file]);
+
 describe('ESLint Configs', () => {
-  it('javascript config matches snapshot', async () => {
-    const file = 'javascript.mjs';
+  test.each(configs)('%s config matches snapshot', async (configName, file) => {
     const configPath = join(configsDir, file);
     const config = await import(configPath);
     const serializedConfig = JSON.stringify(config.default, null, 2);
