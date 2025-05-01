@@ -8,7 +8,8 @@
   "exports": {
     "./package.json": "./package.json",
     ".": "./src/eslint/configs/javascript.mjs",
-    "./javascript": "./src/eslint/configs/javascript.mjs"
+    "./javascript": "./src/eslint/configs/javascript.mjs",
+    "./typescript": "./src/eslint/configs/typescript.mjs"
   },
   "scripts": {
     "changeset": "changeset",
