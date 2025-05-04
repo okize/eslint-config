@@ -128,8 +128,8 @@ export default {
   'prefer-destructuring': 'off',
 
   // reports usage of deprecated code
-  // https://github.com/gund/eslint-plugin-deprecation?tab=readme-ov-file#disallow-usage-of-deprecated-apis-deprecationdeprecation
-  'deprecation/deprecation': 'error',
+  // https://typescript-eslint.io/rules/no-deprecated/
+  '@typescript-eslint/no-deprecated': 'error',
 
   // Require that function overload signatures be consecutive
   // https://typescript-eslint.io/rules/adjacent-overload-signatures

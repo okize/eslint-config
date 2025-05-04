@@ -9287,64 +9287,6 @@
         }
       ],
       "yoda": "error",
-      "observers/for-direction": "error",
-      "observers/getter-return": [
-        "error",
-        {
-          "allowImplicit": true
-        }
-      ],
-      "observers/no-async-promise-executor": "error",
-      "observers/no-await-in-loop": "error",
-      "observers/no-compare-neg-zero": "error",
-      "observers/no-cond-assign": [
-        "error",
-        "always"
-      ],
-      "observers/no-console": "error",
-      "observers/no-constant-condition": "warn",
-      "observers/no-control-regex": "error",
-      "observers/no-debugger": "error",
-      "observers/no-dupe-args": "error",
-      "observers/no-dupe-keys": "error",
-      "observers/no-duplicate-case": "error",
-      "observers/no-empty": "error",
-      "observers/no-empty-character-class": "error",
-      "observers/no-ex-assign": "error",
-      "observers/no-extra-boolean-cast": "error",
-      "observers/no-extra-parens": [
-        "off",
-        "all",
-        {
-          "conditionalAssign": true,
-          "nestedBinaryExpressions": false,
-          "returnAssign": false,
-          "ignoreJSX": "all",
-          "enforceForArrowConditionals": false
-        }
-      ],
-      "observers/no-extra-semi": "error",
-      "observers/no-func-assign": "error",
-      "observers/no-inner-declarations": "error",
-      "observers/no-invalid-regexp": "error",
-      "observers/no-irregular-whitespace": "error",
-      "observers/no-obj-calls": "error",
-      "observers/no-prototype-builtins": "error",
-      "observers/no-regex-spaces": "error",
-      "observers/no-sparse-arrays": "error",
-      "observers/no-template-curly-in-string": "error",
-      "observers/no-unexpected-multiline": "error",
-      "observers/no-unreachable": "error",
-      "observers/no-unsafe-finally": "error",
-      "observers/no-unsafe-negation": "error",
-      "observers/use-isnan": "error",
-      "observers/valid-jsdoc": "off",
-      "observers/valid-typeof": [
-        "error",
-        {
-          "requireStringLiterals": true
-        }
-      ],
       "for-direction": [
         "error"
       ],
@@ -10110,7 +10052,7 @@
       "no-useless-constructor": "off",
       "no-undef": "off",
       "prefer-destructuring": "off",
-      "deprecation/deprecation": "error",
+      "@typescript-eslint/no-deprecated": "error",
       "@typescript-eslint/adjacent-overload-signatures": "error",
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/await-thenable": "error",
