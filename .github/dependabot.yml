@@ -8,3 +8,7 @@ updates:
       interval: 'weekly'
     commit-message:
       prefix: 'ci(github)'
+    ignore:
+      - dependency-name: '*'
+        # ignore patch updates due to frequency
+        update-types: ['version-update:semver-patch']

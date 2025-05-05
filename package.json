@@ -21,7 +21,7 @@
     "lint:fix": "yarn lint --fix",
     "lint:inspector": "eslint --inspect-config",
     "outdated": "yarn upgrade-interactive",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "changeset publish",
     "test": "vitest run",
     "test:export": "check-export-map"
