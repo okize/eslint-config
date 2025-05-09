@@ -1,6 +1,6 @@
 {
   "name": "@okize/eslint-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "yarn@4.7.0",
   "description": "My preferred eslint rules bundled into composable configs",
   "type": "module",
@@ -9,7 +9,8 @@
     "./package.json": "./package.json",
     ".": "./src/eslint/configs/javascript.mjs",
     "./javascript": "./src/eslint/configs/javascript.mjs",
-    "./typescript": "./src/eslint/configs/typescript.mjs"
+    "./typescript": "./src/eslint/configs/typescript.mjs",
+    "./react": "./src/eslint/configs/react.mjs"
   },
   "scripts": {
     "changeset": "changeset",

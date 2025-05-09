@@ -1,8 +1,5 @@
 [
   {
-    "files": [
-      "**/*.{ts,tsx,mts,cts}"
-    ],
     "plugins": {
       "@typescript-eslint": {
         "configs": {
@@ -364,64 +361,7 @@
               "@typescript-eslint/unbound-method": "error"
             }
           },
-          "recommended-type-checked": {
-            "extends": [
-              "./configs/base",
-              "./configs/eslint-recommended"
-            ],
-            "rules": {
-              "@typescript-eslint/await-thenable": "error",
-              "@typescript-eslint/ban-ts-comment": "error",
-              "no-array-constructor": "off",
-              "@typescript-eslint/no-array-constructor": "error",
-              "@typescript-eslint/no-array-delete": "error",
-              "@typescript-eslint/no-base-to-string": "error",
-              "@typescript-eslint/no-duplicate-enum-values": "error",
-              "@typescript-eslint/no-duplicate-type-constituents": "error",
-              "@typescript-eslint/no-empty-object-type": "error",
-              "@typescript-eslint/no-explicit-any": "error",
-              "@typescript-eslint/no-extra-non-null-assertion": "error",
-              "@typescript-eslint/no-floating-promises": "error",
-              "@typescript-eslint/no-for-in-array": "error",
-              "no-implied-eval": "off",
-              "@typescript-eslint/no-implied-eval": "error",
-              "@typescript-eslint/no-misused-new": "error",
-              "@typescript-eslint/no-misused-promises": "error",
-              "@typescript-eslint/no-namespace": "error",
-              "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
-              "@typescript-eslint/no-redundant-type-constituents": "error",
-              "@typescript-eslint/no-require-imports": "error",
-              "@typescript-eslint/no-this-alias": "error",
-              "@typescript-eslint/no-unnecessary-type-assertion": "error",
-              "@typescript-eslint/no-unnecessary-type-constraint": "error",
-              "@typescript-eslint/no-unsafe-argument": "error",
-              "@typescript-eslint/no-unsafe-assignment": "error",
-              "@typescript-eslint/no-unsafe-call": "error",
-              "@typescript-eslint/no-unsafe-declaration-merging": "error",
-              "@typescript-eslint/no-unsafe-enum-comparison": "error",
-              "@typescript-eslint/no-unsafe-function-type": "error",
-              "@typescript-eslint/no-unsafe-member-access": "error",
-              "@typescript-eslint/no-unsafe-return": "error",
-              "@typescript-eslint/no-unsafe-unary-minus": "error",
-              "no-unused-expressions": "off",
-              "@typescript-eslint/no-unused-expressions": "error",
-              "no-unused-vars": "off",
-              "@typescript-eslint/no-unused-vars": "error",
-              "@typescript-eslint/no-wrapper-object-types": "error",
-              "no-throw-literal": "off",
-              "@typescript-eslint/only-throw-error": "error",
-              "@typescript-eslint/prefer-as-const": "error",
-              "@typescript-eslint/prefer-namespace-keyword": "error",
-              "prefer-promise-reject-errors": "off",
-              "@typescript-eslint/prefer-promise-reject-errors": "error",
-              "require-await": "off",
-              "@typescript-eslint/require-await": "error",
-              "@typescript-eslint/restrict-plus-operands": "error",
-              "@typescript-eslint/restrict-template-expressions": "error",
-              "@typescript-eslint/triple-slash-reference": "error",
-              "@typescript-eslint/unbound-method": "error"
-            }
-          },
+          "recommended-type-checked": "[Circular Reference]",
           "recommended-type-checked-only": {
             "extends": [
               "./configs/base",
@@ -1105,11 +1045,7 @@
             ],
             "meta": {
               "type": "suggestion",
-              "defaultOptions": [
-                {
-                  "treatUndefinedAsUnspecified": false
-                }
-              ],
+              "defaultOptions": "[Circular Reference]",
               "docs": {
                 "description": "Require `return` statements to either always or never specify values",
                 "extendsBaseRule": true,
@@ -1357,15 +1293,7 @@
             ],
             "meta": {
               "type": "suggestion",
-              "defaultOptions": [
-                {
-                  "allowIndexSignaturePropertyAccess": false,
-                  "allowKeywords": true,
-                  "allowPattern": "",
-                  "allowPrivateClassPropertyAccess": false,
-                  "allowProtectedClassPropertyAccess": false
-                }
-              ],
+              "defaultOptions": "[Circular Reference]",
               "docs": {
                 "description": "Enforce dot notation whenever possible",
                 "extendsBaseRule": true,
@@ -2098,12 +2026,7 @@
                                     ]
                                   }
                                 },
-                                {
-                                  "type": "string",
-                                  "enum": [
-                                    "never"
-                                  ]
-                                }
+                                "[Circular Reference]"
                               ]
                             },
                             "optionalityOrder": {
@@ -2118,12 +2041,7 @@
                     },
                     "typesConfig": {
                       "oneOf": [
-                        {
-                          "type": "string",
-                          "enum": [
-                            "never"
-                          ]
-                        },
+                        "[Circular Reference]",
                         {
                           "type": "array",
                           "items": {
@@ -2162,12 +2080,7 @@
                                     ]
                                   }
                                 },
-                                {
-                                  "type": "string",
-                                  "enum": [
-                                    "never"
-                                  ]
-                                }
+                                "[Circular Reference]"
                               ]
                             },
                             "optionalityOrder": {
@@ -2372,21 +2285,15 @@
                         "prefix": {
                           "$ref": "#/$defs/prefixSuffixConfig"
                         },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "modifiers": {
@@ -2468,36 +2375,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'default'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -2543,36 +2434,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'variableLike'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -2603,36 +2478,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'variable'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -2674,36 +2533,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'function'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -2736,36 +2579,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'parameter'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -2803,36 +2630,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'memberLike'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -2871,36 +2682,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'classProperty'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -2945,36 +2740,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'objectLiteralProperty'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3012,36 +2791,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'typeProperty'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3080,36 +2843,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'parameterProperty'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3149,36 +2896,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'property'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3224,36 +2955,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'classMethod'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3291,36 +3006,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'objectLiteralMethod'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3352,36 +3051,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'typeMethod'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3412,36 +3095,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'method'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3479,36 +3146,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'classicAccessor'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3551,36 +3202,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'autoAccessor'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3623,36 +3258,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'accessor'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3695,36 +3314,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'enumMember'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3754,36 +3357,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'typeLike'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3815,36 +3402,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'class'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3876,36 +3447,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'interface'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3936,36 +3491,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'typeAlias'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -3996,36 +3535,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'enum'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -4056,36 +3579,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'typeParameter'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -4115,36 +3622,20 @@
                       "additionalProperties": false,
                       "description": "Selector 'import'",
                       "properties": {
-                        "custom": {
-                          "$ref": "#/$defs/matchRegexConfig"
-                        },
-                        "failureMessage": {
-                          "type": "string"
-                        },
-                        "format": {
-                          "$ref": "#/$defs/formatOptionsConfig"
-                        },
-                        "leadingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
-                        "prefix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "suffix": {
-                          "$ref": "#/$defs/prefixSuffixConfig"
-                        },
-                        "trailingUnderscore": {
-                          "$ref": "#/$defs/underscoreOptions"
-                        },
+                        "custom": "[Circular Reference]",
+                        "failureMessage": "[Circular Reference]",
+                        "format": "[Circular Reference]",
+                        "leadingUnderscore": "[Circular Reference]",
+                        "prefix": "[Circular Reference]",
+                        "suffix": "[Circular Reference]",
+                        "trailingUnderscore": "[Circular Reference]",
                         "filter": {
                           "oneOf": [
                             {
                               "minLength": 1,
                               "type": "string"
                             },
-                            {
-                              "$ref": "#/$defs/matchRegexConfig"
-                            }
+                            "[Circular Reference]"
                           ]
                         },
                         "selector": {
@@ -4556,11 +4047,7 @@
             ],
             "meta": {
               "type": "suggestion",
-              "defaultOptions": [
-                {
-                  "allow": []
-                }
-              ],
+              "defaultOptions": "[Circular Reference]",
               "docs": {
                 "description": "Disallow empty functions",
                 "extendsBaseRule": true,
@@ -4811,7 +4298,7 @@
             "defaultOptions": [
               {
                 "allowForKnownSafeCalls": [],
-                "allowForKnownSafePromises": [],
+                "allowForKnownSafePromises": "[Circular Reference]",
                 "checkThenables": false,
                 "ignoreIIFE": false,
                 "ignoreVoid": true
@@ -4842,224 +4329,12 @@
                   "additionalProperties": false,
                   "properties": {
                     "allowForKnownSafeCalls": {
-                      "items": {
-                        "oneOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "file"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "path": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "lib"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "package"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "package": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name",
-                              "package"
-                            ],
-                            "type": "object"
-                          }
-                        ]
-                      },
+                      "items": "[Circular Reference]",
                       "type": "array",
                       "description": "Type specifiers of functions whose calls are safe to float."
                     },
                     "allowForKnownSafePromises": {
-                      "items": {
-                        "oneOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "file"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "path": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "lib"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "package"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "package": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name",
-                              "package"
-                            ],
-                            "type": "object"
-                          }
-                        ]
-                      },
+                      "items": "[Circular Reference]",
                       "type": "array",
                       "description": "Type specifiers that are known to be safe to float."
                     },
@@ -5173,11 +4448,7 @@
             ],
             "meta": {
               "type": "suggestion",
-              "defaultOptions": [
-                {
-                  "capIsConstructor": true
-                }
-              ],
+              "defaultOptions": "[Circular Reference]",
               "docs": {
                 "description": "Disallow `this` keywords outside of classes or class-like objects",
                 "extendsBaseRule": true,
@@ -5548,113 +4819,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "allow": {
-                      "items": {
-                        "oneOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "file"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "path": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "lib"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "package"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "package": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name",
-                              "package"
-                            ],
-                            "type": "object"
-                          }
-                        ]
-                      },
+                      "items": "[Circular Reference]",
                       "type": "array",
                       "description": "An array of type specifiers that are known to be safe to spread."
                     }
@@ -5946,49 +5111,7 @@
                         "type": "object",
                         "additionalProperties": false,
                         "properties": {
-                          "paths": {
-                            "type": "array",
-                            "items": {
-                              "anyOf": [
-                                {
-                                  "type": "string"
-                                },
-                                {
-                                  "type": "object",
-                                  "additionalProperties": false,
-                                  "properties": {
-                                    "name": {
-                                      "type": "string"
-                                    },
-                                    "message": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "importNames": {
-                                      "type": "array",
-                                      "items": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "allowImportNames": {
-                                      "type": "array",
-                                      "items": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "allowTypeImports": {
-                                      "type": "boolean",
-                                      "description": "Whether to allow type-only imports for a path."
-                                    }
-                                  },
-                                  "required": [
-                                    "name"
-                                  ]
-                                }
-                              ]
-                            },
-                            "uniqueItems": true
-                          },
+                          "paths": "[Circular Reference]",
                           "patterns": {
                             "anyOf": [
                               {
@@ -6044,10 +5167,7 @@
                                     "caseSensitive": {
                                       "type": "boolean"
                                     },
-                                    "allowTypeImports": {
-                                      "type": "boolean",
-                                      "description": "Whether to allow type-only imports for a path."
-                                    }
+                                    "allowTypeImports": "[Circular Reference]"
                                   }
                                 },
                                 "uniqueItems": true
@@ -6771,13 +5891,7 @@
             ],
             "meta": {
               "type": "suggestion",
-              "defaultOptions": [
-                {
-                  "allowShortCircuit": false,
-                  "allowTaggedTemplates": false,
-                  "allowTernary": false
-                }
-              ],
+              "defaultOptions": "[Circular Reference]",
               "docs": {
                 "description": "Disallow unused expressions",
                 "extendsBaseRule": true,
@@ -7111,113 +6225,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "allow": {
-                      "items": {
-                        "oneOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "file"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "path": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "lib"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "package"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "package": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name",
-                              "package"
-                            ],
-                            "type": "object"
-                          }
-                        ]
-                      },
+                      "items": "[Circular Reference]",
                       "type": "array",
                       "description": "Type specifiers that can be thrown."
                     },
@@ -7354,32 +6362,10 @@
                             }
                           }
                         },
-                        "VariableDeclarator": {
-                          "type": "object",
-                          "additionalProperties": false,
-                          "properties": {
-                            "array": {
-                              "type": "boolean"
-                            },
-                            "object": {
-                              "type": "boolean"
-                            }
-                          }
-                        }
+                        "VariableDeclarator": "[Circular Reference]"
                       }
                     },
-                    {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "array": {
-                          "type": "boolean"
-                        },
-                        "object": {
-                          "type": "boolean"
-                        }
-                      }
-                    }
+                    "[Circular Reference]"
                   ]
                 },
                 {
@@ -7770,7 +6756,7 @@
           "prefer-readonly-parameter-types": {
             "defaultOptions": [
               {
-                "allow": [],
+                "allow": "[Circular Reference]",
                 "checkParameterProperties": true,
                 "ignoreInferredTypes": false,
                 "treatMethodsAsReadonly": false
@@ -7792,113 +6778,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "allow": {
-                      "items": {
-                        "oneOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "file"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "path": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "lib"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "package"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "package": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name",
-                              "package"
-                            ],
-                            "type": "object"
-                          }
-                        ]
-                      },
+                      "items": "[Circular Reference]",
                       "type": "array",
                       "description": "An array of type specifiers to ignore."
                     },
@@ -8308,113 +7188,7 @@
                     },
                     "allow": {
                       "description": "Types to allow in template expressions.",
-                      "items": {
-                        "oneOf": [
-                          {
-                            "type": "string"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "file"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "path": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "lib"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name"
-                            ],
-                            "type": "object"
-                          },
-                          {
-                            "additionalProperties": false,
-                            "properties": {
-                              "from": {
-                                "enum": [
-                                  "package"
-                                ],
-                                "type": "string"
-                              },
-                              "name": {
-                                "oneOf": [
-                                  {
-                                    "type": "string"
-                                  },
-                                  {
-                                    "items": {
-                                      "type": "string"
-                                    },
-                                    "minItems": 1,
-                                    "type": "array",
-                                    "uniqueItems": true
-                                  }
-                                ]
-                              },
-                              "package": {
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "from",
-                              "name",
-                              "package"
-                            ],
-                            "type": "object"
-                          }
-                        ]
-                      },
+                      "items": "[Circular Reference]",
                       "type": "array"
                     }
                   }

@@ -8,7 +8,6 @@ import typescript from '../rules/typescript.mjs';
 
 export default [
   {
-    files: ['**/*.{ts,tsx,mts,cts}'],
     plugins: {
       '@typescript-eslint': typescriptPlugin,
     },
