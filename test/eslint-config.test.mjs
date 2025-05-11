@@ -4,7 +4,7 @@ import { join, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
-const configsDir = join(__dirname, '../src/eslint/configs');
+const configsDir = join(__dirname, '..', 'src', 'configs');
 const snapshotsDir = join(__dirname, '__snapshots__');
 const configs = readdirSync(configsDir).map((file) => [basename(file, '.mjs'), file]);
 

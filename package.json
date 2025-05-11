@@ -7,10 +7,10 @@
   "main": "index.mjs",
   "exports": {
     "./package.json": "./package.json",
-    ".": "./src/eslint/configs/javascript.mjs",
-    "./javascript": "./src/eslint/configs/javascript.mjs",
-    "./typescript": "./src/eslint/configs/typescript.mjs",
-    "./react": "./src/eslint/configs/react.mjs"
+    ".": "./src/configs/javascript.mjs",
+    "./javascript": "./src/configs/javascript.mjs",
+    "./typescript": "./src/configs/typescript.mjs",
+    "./react": "./src/configs/react.mjs"
   },
   "scripts": {
     "changeset": "changeset",

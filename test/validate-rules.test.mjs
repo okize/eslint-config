@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { readdir } from 'node:fs/promises';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
-const configsDir = join(__dirname, '..', 'src', 'eslint', 'configs');
+const configsDir = join(__dirname, '..', 'src', 'configs');
 
 describe('ESLint Rule Validation', () => {
   it('validates that all plugin rules have their plugins properly configured', async () => {
