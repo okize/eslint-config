@@ -2,32 +2,28 @@
 // see: https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules
 
 export default {
-  // Specify whether double or single quotes should be used in JSX attributes
-  // https://eslint.org/docs/rules/jsx-quotes
-  'jsx-quotes': ['error', 'prefer-double'],
-
   // Enforce that class methods utilize this
   // https://eslint.org/docs/rules/class-methods-use-this
   'class-methods-use-this': [
     'error',
     {
       exceptMethods: [
-        'render',
-        'getInitialState',
-        'getDefaultProps',
-        'getChildContext',
-        'componentWillMount',
         'UNSAFE_componentWillMount',
-        'componentDidMount',
-        'componentWillReceiveProps',
         'UNSAFE_componentWillReceiveProps',
-        'shouldComponentUpdate',
-        'componentWillUpdate',
         'UNSAFE_componentWillUpdate',
-        'componentDidUpdate',
-        'componentWillUnmount',
         'componentDidCatch',
+        'componentDidMount',
+        'componentDidUpdate',
+        'componentWillMount',
+        'componentWillReceiveProps',
+        'componentWillUnmount',
+        'componentWillUpdate',
+        'getChildContext',
+        'getDefaultProps',
+        'getInitialState',
         'getSnapshotBeforeUpdate',
+        'render',
+        'shouldComponentUpdate',
       ],
     },
   ],

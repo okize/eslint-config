@@ -1,8 +1,6 @@
 import babelParser from '@babel/eslint-parser';
 import globals from 'globals';
-import bestPractices from '../rules/best-practices.mjs';
-import errors from '../rules/errors.mjs';
-import style from '../rules/style.mjs';
+import base from '../rules/base.mjs';
 
 export default [
   {
@@ -18,9 +16,7 @@ export default [
       },
     },
     rules: {
-      ...bestPractices,
-      ...errors,
-      ...style,
+      ...base,
     },
   },
 ];
