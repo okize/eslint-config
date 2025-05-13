@@ -1,9 +1,7 @@
 import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import globals from 'globals';
-import bestPractices from '../rules/base.mjs';
-import errors from '../rules/errors.mjs';
-import style from '../rules/style.mjs';
+import base from '../rules/base.mjs';
 import typescript from '../rules/typescript.mjs';
 
 export default [
@@ -34,9 +32,7 @@ export default [
       },
     },
     rules: {
-      ...bestPractices,
-      ...errors,
-      ...style,
+      ...base,
       ...typescript,
     },
   },

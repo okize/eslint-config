@@ -237,4 +237,16 @@ export default {
   // Enforce tabIndex value is not greater than zero.
   // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md
   'jsx-a11y/tabindex-no-positive': 'error',
+
+  // Enforce <a> text to not exactly match "click here", "here", "link", or "a link"
+  // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/anchor-ambiguous-text.md
+  'jsx-a11y/anchor-ambiguous-text': 'error',
+
+  // Disallow aria-hidden="true" from being set on focusable elements
+  // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/no-aria-hidden-on-focusable.md
+  'jsx-a11y/no-aria-hidden-on-focusable': 'error',
+
+  // Enforces using semantic DOM elements over the ARIA role property
+  // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/prefer-tag-over-role.md
+  'jsx-a11y/prefer-tag-over-role': 'error',
 };
