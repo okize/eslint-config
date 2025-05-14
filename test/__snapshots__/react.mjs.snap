@@ -6166,18 +6166,7 @@
           "ignoreTranspilerName": false
         }
       ],
-      "react/forbid-prop-types": [
-        "error",
-        {
-          "forbid": [
-            "any",
-            "array",
-            "object"
-          ],
-          "checkContextTypes": true,
-          "checkChildContextTypes": true
-        }
-      ],
+      "react/forbid-prop-types": "off",
       "react/forbid-dom-props": [
         "off",
         {
@@ -6258,15 +6247,7 @@
           "ignore": []
         }
       ],
-      "react/sort-prop-types": [
-        "error",
-        {
-          "ignoreCase": true,
-          "callbacksLast": false,
-          "requiredFirst": false,
-          "sortShapeProp": true
-        }
-      ],
+      "react/sort-prop-types": "off",
       "react/jsx-sort-prop-types": "off",
       "react/jsx-sort-props": [
         "error",
@@ -6302,14 +6283,7 @@
           "ignorePureComponents": true
         }
       ],
-      "react/prop-types": [
-        "error",
-        {
-          "ignore": [],
-          "customValidators": [],
-          "skipUndeclared": false
-        }
-      ],
+      "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
       "react/require-render-return": "error",
       "react/self-closing-comp": "error",
@@ -6432,13 +6406,7 @@
         }
       ],
       "react/no-danger-with-children": "error",
-      "react/no-unused-prop-types": [
-        "error",
-        {
-          "customValidators": [],
-          "skipShapeProps": true
-        }
-      ],
+      "react/no-unused-prop-types": "off",
       "react/style-prop-object": "error",
       "react/no-unescaped-entities": "error",
       "react/no-children-prop": "error",
@@ -6456,25 +6424,10 @@
         "always"
       ],
       "react/no-array-index-key": "error",
-      "react/require-default-props": [
-        "error",
-        {
-          "forbidDefaultForRequired": true
-        }
-      ],
-      "react/forbid-foreign-prop-types": [
-        "error",
-        {
-          "allowInPropTypes": true
-        }
-      ],
+      "react/require-default-props": "off",
+      "react/forbid-foreign-prop-types": "off",
       "react/void-dom-elements-no-children": "error",
-      "react/default-props-match-prop-types": [
-        "error",
-        {
-          "allowRequiredDefaults": false
-        }
-      ],
+      "react/default-props-match-prop-types": "off",
       "react/no-redundant-should-component-update": "error",
       "react/no-unused-state": "error",
       "react/boolean-prop-naming": [
@@ -6539,15 +6492,7 @@
         "error",
         "static public field"
       ],
-      "react/jsx-props-no-spreading": [
-        "error",
-        {
-          "html": "enforce",
-          "custom": "enforce",
-          "explicitSpread": "ignore",
-          "exceptions": []
-        }
-      ],
+      "react/jsx-props-no-spreading": "off",
       "react/prefer-read-only-props": "off",
       "react/jsx-no-script-url": [
         "error",

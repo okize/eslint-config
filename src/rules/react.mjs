@@ -34,14 +34,8 @@ export default {
 
   // Forbid certain propTypes (any, array, object)
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
-  'react/forbid-prop-types': [
-    'error',
-    {
-      forbid: ['any', 'array', 'object'],
-      checkContextTypes: true,
-      checkChildContextTypes: true,
-    },
-  ],
+  // decision: prop-types are deprecated in favor of TypeScript types
+  'react/forbid-prop-types': 'off',
 
   // Forbid certain props on DOM Nodes
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md
@@ -127,15 +121,8 @@ export default {
 
   // Enforce propTypes declarations alphabetical sorting
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
-  'react/sort-prop-types': [
-    'error',
-    {
-      ignoreCase: true,
-      callbacksLast: false,
-      requiredFirst: false,
-      sortShapeProp: true,
-    },
-  ],
+  // decision: prop-types are deprecated in favor of TypeScript types
+  'react/sort-prop-types': 'off',
 
   // Deprecated in favor of react/jsx-sort-props
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-prop-types.md
@@ -219,14 +206,8 @@ export default {
 
   // Prevent missing props validation in a React component definition
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md
-  'react/prop-types': [
-    'error',
-    {
-      ignore: [],
-      customValidators: [],
-      skipUndeclared: false,
-    },
-  ],
+  // decision: prop-types are deprecated in favor of TypeScript types
+  'react/prop-types': 'off',
 
   // Prevent missing React when using JSX
   // decision: no longer required with React 17 & babel `automatic` runtime
@@ -368,13 +349,8 @@ export default {
 
   // Prevent unused propType definitions
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
-  'react/no-unused-prop-types': [
-    'error',
-    {
-      customValidators: [],
-      skipShapeProps: true,
-    },
-  ],
+  // decision: prop-types are deprecated in favor of TypeScript types
+  'react/no-unused-prop-types': 'off',
 
   // Require style prop value be an object or var
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
@@ -411,16 +387,13 @@ export default {
 
   // Enforce a defaultProps definition for every prop that is not a required prop
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
-  'react/require-default-props': [
-    'error',
-    {
-      forbidDefaultForRequired: true,
-    },
-  ],
+  // decision: default prop types shouldn't be necessary for optional parameters as they can just default to undefined
+  'react/require-default-props': 'off',
 
   // Forbids using non-exported propTypes
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
-  'react/forbid-foreign-prop-types': ['error', { allowInPropTypes: true }],
+  // decision: prop-types are deprecated in favor of TypeScript types
+  'react/forbid-foreign-prop-types': 'off',
 
   // Prevent void DOM elements from receiving children
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
@@ -428,7 +401,8 @@ export default {
 
   // Enforce all defaultProps have a corresponding non-required PropType
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
-  'react/default-props-match-prop-types': ['error', { allowRequiredDefaults: false }],
+  // decision: prop-types are deprecated in favor of TypeScript types
+  'react/default-props-match-prop-types': 'off',
 
   // Prevent usage of shouldComponentUpdate when extending React.PureComponent
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
@@ -525,15 +499,9 @@ export default {
 
   // Disallow JSX props spreading
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
-  'react/jsx-props-no-spreading': [
-    'error',
-    {
-      html: 'enforce',
-      custom: 'enforce',
-      explicitSpread: 'ignore',
-      exceptions: [],
-    },
-  ],
+  // decision: because we have type safety in TypeScript, this rule isn't necessary as we will see
+  // TS errors for prop spreading against mismatched (prop)type declarations
+  'react/jsx-props-no-spreading': 'off',
 
   // Enforce that props are read-only
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
