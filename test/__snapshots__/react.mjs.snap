@@ -6757,7 +6757,7 @@
       "jsx-a11y/tabindex-no-positive": "error",
       "jsx-a11y/anchor-ambiguous-text": "error",
       "jsx-a11y/no-aria-hidden-on-focusable": "error",
-      "jsx-a11y/prefer-tag-over-role": "error",
+      "jsx-a11y/prefer-tag-over-role": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "error"
     }

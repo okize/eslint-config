@@ -248,5 +248,6 @@ export default {
 
   // Enforces using semantic DOM elements over the ARIA role property
   // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/prefer-tag-over-role.md
-  'jsx-a11y/prefer-tag-over-role': 'error',
+  // decision: best left to the implementer to decide on this
+  'jsx-a11y/prefer-tag-over-role': 'off',
 };
