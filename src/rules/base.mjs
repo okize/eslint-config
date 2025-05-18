@@ -299,7 +299,7 @@ export default {
   // https://eslint.org/docs/rules/no-redeclare
   'no-redeclare': 'error',
 
-  // Disallow specified names in exports
+  // disallow specified names in exports
   // https://eslint.org/docs/rules/no-restricted-exports
   'no-restricted-exports': [
     'error',
@@ -316,17 +316,19 @@ export default {
   // https://eslint.org/docs/rules/no-restricted-globals
   'no-restricted-globals': [
     'error',
+    ...confusingBrowserGlobals.map((name) => ({
+      name,
+      message: `'${name}' should be written as 'window.${name}' or 'document.${name}' instead.`,
+    })),
     {
       name: 'isFinite',
-      message:
-        'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
+      message: 'Use Number.isFinite instead...',
     },
     {
       name: 'isNaN',
-      message:
-        'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
+      message: 'Use Number.isNaN instead...',
     },
-  ].concat(confusingBrowserGlobals),
+  ],
 
   // disallow specific imports
   // https://eslint.org/docs/rules/no-restricted-imports

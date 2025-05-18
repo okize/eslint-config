@@ -253,71 +253,245 @@
       "no-restricted-globals": [
         "error",
         {
+          "name": "addEventListener",
+          "message": "'addEventListener' should be written as 'window.addEventListener' or 'document.addEventListener' instead."
+        },
+        {
+          "name": "blur",
+          "message": "'blur' should be written as 'window.blur' or 'document.blur' instead."
+        },
+        {
+          "name": "close",
+          "message": "'close' should be written as 'window.close' or 'document.close' instead."
+        },
+        {
+          "name": "closed",
+          "message": "'closed' should be written as 'window.closed' or 'document.closed' instead."
+        },
+        {
+          "name": "confirm",
+          "message": "'confirm' should be written as 'window.confirm' or 'document.confirm' instead."
+        },
+        {
+          "name": "defaultStatus",
+          "message": "'defaultStatus' should be written as 'window.defaultStatus' or 'document.defaultStatus' instead."
+        },
+        {
+          "name": "defaultstatus",
+          "message": "'defaultstatus' should be written as 'window.defaultstatus' or 'document.defaultstatus' instead."
+        },
+        {
+          "name": "event",
+          "message": "'event' should be written as 'window.event' or 'document.event' instead."
+        },
+        {
+          "name": "external",
+          "message": "'external' should be written as 'window.external' or 'document.external' instead."
+        },
+        {
+          "name": "find",
+          "message": "'find' should be written as 'window.find' or 'document.find' instead."
+        },
+        {
+          "name": "focus",
+          "message": "'focus' should be written as 'window.focus' or 'document.focus' instead."
+        },
+        {
+          "name": "frameElement",
+          "message": "'frameElement' should be written as 'window.frameElement' or 'document.frameElement' instead."
+        },
+        {
+          "name": "frames",
+          "message": "'frames' should be written as 'window.frames' or 'document.frames' instead."
+        },
+        {
+          "name": "history",
+          "message": "'history' should be written as 'window.history' or 'document.history' instead."
+        },
+        {
+          "name": "innerHeight",
+          "message": "'innerHeight' should be written as 'window.innerHeight' or 'document.innerHeight' instead."
+        },
+        {
+          "name": "innerWidth",
+          "message": "'innerWidth' should be written as 'window.innerWidth' or 'document.innerWidth' instead."
+        },
+        {
+          "name": "length",
+          "message": "'length' should be written as 'window.length' or 'document.length' instead."
+        },
+        {
+          "name": "location",
+          "message": "'location' should be written as 'window.location' or 'document.location' instead."
+        },
+        {
+          "name": "locationbar",
+          "message": "'locationbar' should be written as 'window.locationbar' or 'document.locationbar' instead."
+        },
+        {
+          "name": "menubar",
+          "message": "'menubar' should be written as 'window.menubar' or 'document.menubar' instead."
+        },
+        {
+          "name": "moveBy",
+          "message": "'moveBy' should be written as 'window.moveBy' or 'document.moveBy' instead."
+        },
+        {
+          "name": "moveTo",
+          "message": "'moveTo' should be written as 'window.moveTo' or 'document.moveTo' instead."
+        },
+        {
+          "name": "name",
+          "message": "'name' should be written as 'window.name' or 'document.name' instead."
+        },
+        {
+          "name": "onblur",
+          "message": "'onblur' should be written as 'window.onblur' or 'document.onblur' instead."
+        },
+        {
+          "name": "onerror",
+          "message": "'onerror' should be written as 'window.onerror' or 'document.onerror' instead."
+        },
+        {
+          "name": "onfocus",
+          "message": "'onfocus' should be written as 'window.onfocus' or 'document.onfocus' instead."
+        },
+        {
+          "name": "onload",
+          "message": "'onload' should be written as 'window.onload' or 'document.onload' instead."
+        },
+        {
+          "name": "onresize",
+          "message": "'onresize' should be written as 'window.onresize' or 'document.onresize' instead."
+        },
+        {
+          "name": "onunload",
+          "message": "'onunload' should be written as 'window.onunload' or 'document.onunload' instead."
+        },
+        {
+          "name": "open",
+          "message": "'open' should be written as 'window.open' or 'document.open' instead."
+        },
+        {
+          "name": "opener",
+          "message": "'opener' should be written as 'window.opener' or 'document.opener' instead."
+        },
+        {
+          "name": "opera",
+          "message": "'opera' should be written as 'window.opera' or 'document.opera' instead."
+        },
+        {
+          "name": "outerHeight",
+          "message": "'outerHeight' should be written as 'window.outerHeight' or 'document.outerHeight' instead."
+        },
+        {
+          "name": "outerWidth",
+          "message": "'outerWidth' should be written as 'window.outerWidth' or 'document.outerWidth' instead."
+        },
+        {
+          "name": "pageXOffset",
+          "message": "'pageXOffset' should be written as 'window.pageXOffset' or 'document.pageXOffset' instead."
+        },
+        {
+          "name": "pageYOffset",
+          "message": "'pageYOffset' should be written as 'window.pageYOffset' or 'document.pageYOffset' instead."
+        },
+        {
+          "name": "parent",
+          "message": "'parent' should be written as 'window.parent' or 'document.parent' instead."
+        },
+        {
+          "name": "print",
+          "message": "'print' should be written as 'window.print' or 'document.print' instead."
+        },
+        {
+          "name": "removeEventListener",
+          "message": "'removeEventListener' should be written as 'window.removeEventListener' or 'document.removeEventListener' instead."
+        },
+        {
+          "name": "resizeBy",
+          "message": "'resizeBy' should be written as 'window.resizeBy' or 'document.resizeBy' instead."
+        },
+        {
+          "name": "resizeTo",
+          "message": "'resizeTo' should be written as 'window.resizeTo' or 'document.resizeTo' instead."
+        },
+        {
+          "name": "screen",
+          "message": "'screen' should be written as 'window.screen' or 'document.screen' instead."
+        },
+        {
+          "name": "screenLeft",
+          "message": "'screenLeft' should be written as 'window.screenLeft' or 'document.screenLeft' instead."
+        },
+        {
+          "name": "screenTop",
+          "message": "'screenTop' should be written as 'window.screenTop' or 'document.screenTop' instead."
+        },
+        {
+          "name": "screenX",
+          "message": "'screenX' should be written as 'window.screenX' or 'document.screenX' instead."
+        },
+        {
+          "name": "screenY",
+          "message": "'screenY' should be written as 'window.screenY' or 'document.screenY' instead."
+        },
+        {
+          "name": "scroll",
+          "message": "'scroll' should be written as 'window.scroll' or 'document.scroll' instead."
+        },
+        {
+          "name": "scrollbars",
+          "message": "'scrollbars' should be written as 'window.scrollbars' or 'document.scrollbars' instead."
+        },
+        {
+          "name": "scrollBy",
+          "message": "'scrollBy' should be written as 'window.scrollBy' or 'document.scrollBy' instead."
+        },
+        {
+          "name": "scrollTo",
+          "message": "'scrollTo' should be written as 'window.scrollTo' or 'document.scrollTo' instead."
+        },
+        {
+          "name": "scrollX",
+          "message": "'scrollX' should be written as 'window.scrollX' or 'document.scrollX' instead."
+        },
+        {
+          "name": "scrollY",
+          "message": "'scrollY' should be written as 'window.scrollY' or 'document.scrollY' instead."
+        },
+        {
+          "name": "self",
+          "message": "'self' should be written as 'window.self' or 'document.self' instead."
+        },
+        {
+          "name": "status",
+          "message": "'status' should be written as 'window.status' or 'document.status' instead."
+        },
+        {
+          "name": "statusbar",
+          "message": "'statusbar' should be written as 'window.statusbar' or 'document.statusbar' instead."
+        },
+        {
+          "name": "stop",
+          "message": "'stop' should be written as 'window.stop' or 'document.stop' instead."
+        },
+        {
+          "name": "toolbar",
+          "message": "'toolbar' should be written as 'window.toolbar' or 'document.toolbar' instead."
+        },
+        {
+          "name": "top",
+          "message": "'top' should be written as 'window.top' or 'document.top' instead."
+        },
+        {
           "name": "isFinite",
-          "message": "Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite"
+          "message": "Use Number.isFinite instead..."
         },
         {
           "name": "isNaN",
-          "message": "Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan"
-        },
-        "addEventListener",
-        "blur",
-        "close",
-        "closed",
-        "confirm",
-        "defaultStatus",
-        "defaultstatus",
-        "event",
-        "external",
-        "find",
-        "focus",
-        "frameElement",
-        "frames",
-        "history",
-        "innerHeight",
-        "innerWidth",
-        "length",
-        "location",
-        "locationbar",
-        "menubar",
-        "moveBy",
-        "moveTo",
-        "name",
-        "onblur",
-        "onerror",
-        "onfocus",
-        "onload",
-        "onresize",
-        "onunload",
-        "open",
-        "opener",
-        "opera",
-        "outerHeight",
-        "outerWidth",
-        "pageXOffset",
-        "pageYOffset",
-        "parent",
-        "print",
-        "removeEventListener",
-        "resizeBy",
-        "resizeTo",
-        "screen",
-        "screenLeft",
-        "screenTop",
-        "screenX",
-        "screenY",
-        "scroll",
-        "scrollbars",
-        "scrollBy",
-        "scrollTo",
-        "scrollX",
-        "scrollY",
-        "self",
-        "status",
-        "statusbar",
-        "stop",
-        "toolbar",
-        "top"
+          "message": "Use Number.isNaN instead..."
+        }
       ],
       "no-restricted-imports": [
         "off",
