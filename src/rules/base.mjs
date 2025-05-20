@@ -690,7 +690,7 @@ export default {
   // https://eslint.org/docs/rules/yoda
   yoda: 'error',
 
-  // Enforce “for” loop update clause moving the counter in the right direction
+  // Enforce "for" loop update clause moving the counter in the right direction
   // https://eslint.org/docs/rules/for-direction
   'for-direction': 'error',
 
@@ -889,11 +889,6 @@ export default {
   // disallow comparisons with the value NaN
   // https://eslint.org/docs/rules/use-isnan
   'use-isnan': 'error',
-
-  // ensure JSDoc comments are valid
-  // https://eslint.org/docs/rules/valid-jsdoc
-  // deprecated in favor of https://github.com/gajus/eslint-plugin-jsdoc
-  'valid-jsdoc': 'off',
 
   // ensure that the results of typeof are compared against a valid string
   // https://eslint.org/docs/rules/valid-typeof
@@ -1480,10 +1475,6 @@ export default {
   // enforce spacing between object rest-spread
   // https://eslint.org/docs/rules/rest-spread-spacing
   'rest-spread-spacing': ['error', 'never'],
-
-  // do not require jsdoc
-  // https://eslint.org/docs/rules/require-jsdoc
-  'require-jsdoc': 'off',
 
   // require or disallow use of semicolons instead of ASI
   // https://eslint.org/docs/rules/semi
