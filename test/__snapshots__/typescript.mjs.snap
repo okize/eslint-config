@@ -7844,10 +7844,6 @@
       "default-case-last": "error",
       "default-param-last": "off",
       "dot-notation": "off",
-      "dot-location": [
-        "error",
-        "property"
-      ],
       "eqeqeq": [
         "error",
         "always",
@@ -7866,12 +7862,6 @@
       "no-caller": "error",
       "no-case-declarations": "error",
       "no-class-assign": "error",
-      "no-confusing-arrow": [
-        "error",
-        {
-          "allowParens": true
-        }
-      ],
       "no-const-assign": "error",
       "no-constructor-return": "error",
       "no-div-regex": "off",
@@ -7891,7 +7881,6 @@
       "no-extra-bind": "error",
       "no-extra-label": "error",
       "no-fallthrough": "error",
-      "no-floating-decimal": "error",
       "no-global-assign": [
         "error",
         {
@@ -7899,7 +7888,6 @@
         }
       ],
       "no-native-reassign": "off",
-      "no-new-symbol": "error",
       "no-implicit-coercion": [
         "off",
         {
@@ -7923,12 +7911,6 @@
       "no-lone-blocks": "error",
       "no-loop-func": "off",
       "no-magic-numbers": "off",
-      "no-multi-spaces": [
-        "error",
-        {
-          "ignoreEOLComments": false
-        }
-      ],
       "no-multi-str": "error",
       "no-new": "error",
       "no-new-func": "error",
@@ -8358,7 +8340,6 @@
           "disallowRedundantWrapping": true
         }
       ],
-      "prefer-reflect": "off",
       "prefer-rest-params": "error",
       "prefer-spread": "error",
       "prefer-template": "error",
@@ -8386,14 +8367,6 @@
       ],
       "symbol-description": "error",
       "vars-on-top": "error",
-      "wrap-iife": [
-        "error",
-        "outside",
-        {
-          "functionPrototypeMethods": false
-        }
-      ],
-      "yoda": "error",
       "for-direction": "error",
       "getter-return": [
         "error",
@@ -8421,18 +8394,6 @@
       "no-empty-character-class": "error",
       "no-ex-assign": "error",
       "no-extra-boolean-cast": "error",
-      "no-extra-parens": [
-        "off",
-        "all",
-        {
-          "conditionalAssign": true,
-          "nestedBinaryExpressions": false,
-          "returnAssign": false,
-          "ignoreJSX": "all",
-          "enforceForArrowConditionals": false
-        }
-      ],
-      "no-extra-semi": "off",
       "no-func-assign": "error",
       "no-import-assign": "error",
       "no-inner-declarations": "error",
@@ -8468,13 +8429,13 @@
       "no-negated-in-lhs": "off",
       "require-atomic-updates": "off",
       "use-isnan": "error",
-      "valid-jsdoc": "off",
       "valid-typeof": [
         "error",
         {
           "requireStringLiterals": true
         }
       ],
+      "yoda": "error",
       "array-bracket-newline": [
         "error",
         "consistent"
@@ -8490,7 +8451,6 @@
         "error",
         "never"
       ],
-      "arrow-body-style": "off",
       "arrow-parens": [
         "error",
         "always"
@@ -8508,29 +8468,6 @@
         "1tbs",
         {
           "allowSingleLine": true
-        }
-      ],
-      "camelcase": [
-        "error",
-        {
-          "properties": "never",
-          "ignoreDestructuring": false
-        }
-      ],
-      "capitalized-comments": [
-        "off",
-        "never",
-        {
-          "line": {
-            "ignorePattern": ".*",
-            "ignoreInlineComments": true,
-            "ignoreConsecutiveComments": true
-          },
-          "block": {
-            "ignorePattern": ".*",
-            "ignoreInlineComments": true,
-            "ignoreConsecutiveComments": true
-          }
         }
       ],
       "comma-dangle": [
@@ -8573,7 +8510,10 @@
         "error",
         "never"
       ],
-      "consistent-this": "off",
+      "dot-location": [
+        "error",
+        "property"
+      ],
       "eol-last": [
         "error",
         "always"
@@ -8586,22 +8526,6 @@
         "error",
         "never"
       ],
-      "func-name-matching": [
-        "off",
-        "always",
-        {
-          "includeCommonJSModuleExports": false,
-          "considerPropertyDescriptor": true
-        }
-      ],
-      "func-names": [
-        "error",
-        "always"
-      ],
-      "func-style": [
-        "error",
-        "expression"
-      ],
       "function-paren-newline": [
         "error",
         "multiline-arguments"
@@ -8613,21 +8537,6 @@
           "after": true
         }
       ],
-      "id-denylist": "off",
-      "id-length": [
-        "error",
-        {
-          "min": 2,
-          "exceptions": [
-            "_",
-            "i",
-            "j",
-            "x",
-            "y"
-          ]
-        }
-      ],
-      "id-match": "off",
       "implicit-arrow-linebreak": [
         "error",
         "beside"
@@ -8725,10 +8634,6 @@
           "after": "always"
         }
       ],
-      "max-depth": [
-        "off",
-        4
-      ],
       "max-len": [
         "error",
         100,
@@ -8740,29 +8645,6 @@
           "ignoreStrings": true,
           "ignoreTemplateLiterals": true
         }
-      ],
-      "max-lines": [
-        "off",
-        {
-          "max": 300,
-          "skipBlankLines": true,
-          "skipComments": true
-        }
-      ],
-      "max-lines-per-function": [
-        "off",
-        {
-          "max": 50,
-          "skipBlankLines": true,
-          "skipComments": true,
-          "IIFEs": true
-        }
-      ],
-      "max-nested-callbacks": "off",
-      "max-params": "off",
-      "max-statements": [
-        "off",
-        10
       ],
       "max-statements-per-line": [
         "off",
@@ -8778,19 +8660,6 @@
         "off",
         "never"
       ],
-      "new-cap": [
-        "error",
-        {
-          "newIsCap": true,
-          "newIsCapExceptions": [],
-          "capIsNew": false,
-          "capIsNewExceptions": [
-            "Immutable.Map",
-            "Immutable.Set",
-            "Immutable.List"
-          ]
-        }
-      ],
       "new-parens": "error",
       "newline-after-var": "off",
       "newline-before-return": "off",
@@ -8800,11 +8669,25 @@
           "ignoreChainWithDepth": 4
         }
       ],
-      "no-array-constructor": "off",
-      "no-bitwise": "error",
-      "no-continue": "error",
-      "no-inline-comments": "off",
-      "no-lonely-if": "error",
+      "no-confusing-arrow": [
+        "error",
+        {
+          "allowParens": true
+        }
+      ],
+      "no-extra-parens": [
+        "off",
+        "all",
+        {
+          "conditionalAssign": true,
+          "nestedBinaryExpressions": false,
+          "returnAssign": false,
+          "ignoreJSX": "all",
+          "enforceForArrowConditionals": false
+        }
+      ],
+      "no-extra-semi": "off",
+      "no-floating-decimal": "error",
       "no-mixed-operators": [
         "error",
         {
@@ -8855,8 +8738,11 @@
         }
       ],
       "no-mixed-spaces-and-tabs": "error",
-      "no-multi-assign": [
-        "error"
+      "no-multi-spaces": [
+        "error",
+        {
+          "ignoreEOLComments": false
+        }
       ],
       "no-multiple-empty-lines": [
         "error",
@@ -8866,61 +8752,13 @@
           "maxEOF": 0
         }
       ],
-      "no-negated-condition": "off",
-      "no-nested-ternary": "error",
-      "no-new-object": "error",
-      "no-plusplus": [
-        "error",
-        {
-          "allowForLoopAfterthoughts": true
-        }
-      ],
-      "no-restricted-syntax": [
-        "error",
-        {
-          "selector": "TSEnumDeclaration",
-          "message": "Typescript enums are problematic because the values can change when new keys are added to an enum. Prefer a type of unioned strings in place of an enum type."
-        },
-        {
-          "selector": "ForInStatement",
-          "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
-        },
-        {
-          "selector": "ForOfStatement",
-          "message": "Loops should be avoided in favor of array iterations."
-        },
-        {
-          "selector": "LabeledStatement",
-          "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
-        },
-        {
-          "selector": "WithStatement",
-          "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
-        }
-      ],
       "no-spaced-func": "error",
       "no-tabs": "error",
-      "no-ternary": "off",
       "no-trailing-spaces": [
         "error",
         {
           "skipBlankLines": false,
           "ignoreComments": false
-        }
-      ],
-      "no-underscore-dangle": [
-        "error",
-        {
-          "allow": [],
-          "allowAfterThis": false,
-          "allowAfterSuper": false,
-          "enforceInMethodNames": true
-        }
-      ],
-      "no-unneeded-ternary": [
-        "error",
-        {
-          "defaultAssignment": false
         }
       ],
       "no-whitespace-before-property": "error",
@@ -8930,10 +8768,6 @@
         {
           "overrides": {}
         }
-      ],
-      "object-curly-spacing": [
-        "error",
-        "always"
       ],
       "object-curly-newline": [
         "error",
@@ -8960,21 +8794,17 @@
           }
         }
       ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
       "object-property-newline": [
         "error",
         {
           "allowAllPropertiesOnSameLine": true
         }
       ],
-      "one-var": [
-        "error",
-        "never"
-      ],
       "one-var-declaration-per-line": [
-        "error",
-        "always"
-      ],
-      "operator-assignment": [
         "error",
         "always"
       ],
@@ -8999,8 +8829,6 @@
         }
       ],
       "padding-line-between-statements": "off",
-      "prefer-exponentiation-operator": "error",
-      "prefer-object-spread": "error",
       "quote-props": [
         "error",
         "as-needed",
@@ -9021,7 +8849,6 @@
         "error",
         "never"
       ],
-      "require-jsdoc": "off",
       "semi": [
         "error",
         "always"
@@ -9037,15 +8864,6 @@
         "error",
         "last"
       ],
-      "sort-keys": [
-        "off",
-        "asc",
-        {
-          "caseSensitive": false,
-          "natural": true
-        }
-      ],
-      "sort-vars": "off",
       "space-before-blocks": "error",
       "space-before-function-paren": [
         "error",
@@ -9110,14 +8928,68 @@
         "error",
         "never"
       ],
-      "unicode-bom": [
+      "wrap-iife": [
         "error",
-        "never"
+        "outside",
+        {
+          "functionPrototypeMethods": false
+        }
       ],
       "wrap-regex": "off",
       "yield-star-spacing": [
         "error",
         "after"
+      ],
+      "curly-newline": "off",
+      "indent-binary-ops": "off",
+      "jsx-child-element-spacing": "off",
+      "jsx-closing-bracket-location": "off",
+      "jsx-closing-tag-location": "off",
+      "jsx-curly-brace-presence": "off",
+      "jsx-curly-newline": "off",
+      "jsx-curly-spacing": "off",
+      "jsx-equals-spacing": "off",
+      "jsx-first-prop-new-line": "off",
+      "jsx-function-call-newline": "off",
+      "jsx-indent": "off",
+      "jsx-indent-props": "off",
+      "jsx-max-props-per-line": "off",
+      "jsx-newline": "off",
+      "jsx-one-expression-per-line": "off",
+      "jsx-pascal-case": "off",
+      "jsx-props-no-multi-spaces": "off",
+      "jsx-self-closing-comp": "off",
+      "jsx-sort-props": "off",
+      "jsx-tag-spacing": "off",
+      "jsx-wrap-multilines": "off",
+      "member-delimiter-style": "off",
+      "type-annotation-spacing": "off",
+      "type-generic-spacing": "off",
+      "type-named-tuple-spacing": "off",
+      "max-params": "off",
+      "no-array-constructor": "off",
+      "no-restricted-syntax": [
+        "error",
+        {
+          "selector": "TSEnumDeclaration",
+          "message": "Typescript enums are problematic because the values can change when new keys are added to an enum. Prefer a type of unioned strings in place of an enum type."
+        },
+        {
+          "selector": "ForInStatement",
+          "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+        },
+        {
+          "selector": "ForOfStatement",
+          "message": "Loops should be avoided in favor of array iterations."
+        },
+        {
+          "selector": "LabeledStatement",
+          "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+        },
+        {
+          "selector": "WithStatement",
+          "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+        }
       ],
       "@typescript-eslint/adjacent-overload-signatures": "error",
       "@typescript-eslint/array-type": "error",

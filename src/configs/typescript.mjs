@@ -2,6 +2,7 @@ import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import globals from 'globals';
 import base from '../rules/base.mjs';
+import stylistic from '../rules/stylistic.mjs';
 import typescript from '../rules/typescript.mjs';
 
 export default [
@@ -33,6 +34,7 @@ export default [
     },
     rules: {
       ...base,
+      ...stylistic,
       ...typescript,
     },
   },
