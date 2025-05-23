@@ -103,7 +103,7 @@ export default {
 
   // This option sets a specific tab width for your code
   // https://eslint.style/rules/default/indent
-  'indent': [
+  indent: [
     'error',
     2,
     {
@@ -402,7 +402,7 @@ export default {
 
   // Specify whether double or single quotes should be used
   // https://eslint.style/rules/default/quotes
-  'quotes': ['error', 'single', { avoidEscape: true }],
+  quotes: ['error', 'single', { avoidEscape: true }],
 
   // Enforce spacing between object rest-spread
   // https://eslint.style/rules/default/rest-spread-spacing
@@ -410,7 +410,7 @@ export default {
 
   // Require or disallow use of semicolons instead of ASI
   // https://eslint.style/rules/default/semi
-  'semi': ['error', 'always'],
+  semi: ['error', 'always'],
 
   // Enforce spacing before and after semicolons
   // https://eslint.style/rules/default/semi-spacing

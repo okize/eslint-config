@@ -8367,6 +8367,7 @@
       ],
       "symbol-description": "error",
       "vars-on-top": "error",
+      "yoda": "error",
       "for-direction": "error",
       "getter-return": [
         "error",
@@ -8435,7 +8436,11 @@
           "requireStringLiterals": true
         }
       ],
-      "yoda": "error",
+      "no-empty-static-block": "error",
+      "no-useless-assignment": "error",
+      "no-object-constructor": "error",
+      "no-new-native-nonconstructor": "error",
+      "prefer-exponentiation-operator": "error",
       "array-bracket-newline": [
         "error",
         "consistent"
