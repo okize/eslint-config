@@ -6182,13 +6182,7 @@
         "line-aligned"
       ],
       "react/jsx-closing-tag-location": "error",
-      "react/jsx-curly-spacing": [
-        "error",
-        "never",
-        {
-          "allowMultiline": true
-        }
-      ],
+      "react/jsx-curly-spacing": "off",
       "react/jsx-handler-names": [
         "error",
         {
@@ -6198,10 +6192,7 @@
           "checkInlineFunction": false
         }
       ],
-      "react/jsx-indent-props": [
-        "error",
-        2
-      ],
+      "react/jsx-indent-props": "off",
       "react/jsx-key": [
         "error",
         {
@@ -6210,13 +6201,7 @@
           "warnOnDuplicates": true
         }
       ],
-      "react/jsx-max-props-per-line": [
-        "error",
-        {
-          "maximum": 1,
-          "when": "multiline"
-        }
-      ],
+      "react/jsx-max-props-per-line": "off",
       "react/jsx-no-bind": [
         "error",
         {
@@ -6410,15 +6395,7 @@
       "react/style-prop-object": "error",
       "react/no-unescaped-entities": "error",
       "react/no-children-prop": "error",
-      "react/jsx-tag-spacing": [
-        "error",
-        {
-          "closingSlash": "never",
-          "beforeSelfClosing": "always",
-          "afterOpening": "never",
-          "beforeClosing": "never"
-        }
-      ],
+      "react/jsx-tag-spacing": "off",
       "react/jsx-space-before-closing": [
         "off",
         "always"
@@ -6477,13 +6454,7 @@
         "error",
         "syntax"
       ],
-      "react/jsx-curly-newline": [
-        "error",
-        {
-          "multiline": "consistent",
-          "singleline": "consistent"
-        }
-      ],
+      "react/jsx-curly-newline": "off",
       "react/state-in-constructor": [
         "error",
         "never"

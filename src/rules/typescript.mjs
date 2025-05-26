@@ -726,9 +726,10 @@ export default {
   // https://typescript-eslint.io/rules/keyword-spacing
   '@typescript-eslint/keyword-spacing': 'off',
 
-  // Require empty lines around comments
+  // Enforces empty lines around comments
   // https://typescript-eslint.io/rules/lines-around-comment/
-  '@typescript-eslint/lines-around-comment': 'error',
+  // decision: disabled because this is a prettier concern
+  '@typescript-eslint/lines-around-comment': 'off',
 
   // Require or disallow an empty line between class members
   // https://typescript-eslint.io/rules/lines-between-class-members
@@ -747,7 +748,8 @@ export default {
   '@typescript-eslint/no-extra-semi': 'off',
 
   // Enforce the consistent use of either backticks, double, or single quotes
-  // https://typescript-eslint.io/rules/quotes
+  // https://typescript-eslint.io/rules/quotes/
+  // decision: disabled because this is a prettier concern
   '@typescript-eslint/quotes': 'off',
 
   // Require or disallow semicolons instead of ASI

@@ -786,7 +786,8 @@ export default {
 
   // Disallow confusing multiline expressions
   // https://eslint.org/docs/rules/no-unexpected-multiline
-  'no-unexpected-multiline': 'error',
+  // decision: disabled because this is a prettier concern
+  'no-unexpected-multiline': 'off',
 
   // Disallow unreachable code after return, throw, continue, and break statements
   // https://eslint.org/docs/rules/no-unreachable

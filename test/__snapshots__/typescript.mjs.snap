@@ -8409,7 +8409,7 @@
       "no-setter-return": "error",
       "no-sparse-arrays": "error",
       "no-template-curly-in-string": "error",
-      "no-unexpected-multiline": "error",
+      "no-unexpected-multiline": "off",
       "no-unreachable": "error",
       "no-unreachable-loop": [
         "error",
@@ -8639,18 +8639,7 @@
           "after": "always"
         }
       ],
-      "max-len": [
-        "error",
-        100,
-        2,
-        {
-          "ignoreUrls": true,
-          "ignoreComments": false,
-          "ignoreRegExpLiterals": true,
-          "ignoreStrings": true,
-          "ignoreTemplateLiterals": true
-        }
-      ],
+      "max-len": "off",
       "max-statements-per-line": [
         "off",
         {
@@ -9201,7 +9190,7 @@
       "@typescript-eslint/indent": "off",
       "@typescript-eslint/key-spacing": "error",
       "@typescript-eslint/keyword-spacing": "off",
-      "@typescript-eslint/lines-around-comment": "error",
+      "@typescript-eslint/lines-around-comment": "off",
       "@typescript-eslint/lines-between-class-members": "off",
       "@typescript-eslint/member-delimiter-style": "off",
       "@typescript-eslint/no-extra-parens": "off",

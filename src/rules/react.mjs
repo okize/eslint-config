@@ -55,7 +55,8 @@ export default {
 
   // Enforce or disallow spaces inside of curly braces in JSX attributes
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
-  'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
+  // decision: disabled because this is a prettier concern
+  'react/jsx-curly-spacing': 'off',
 
   // Enforce event handler naming conventions in JSX
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
@@ -71,7 +72,8 @@ export default {
 
   // Validate props indentation in JSX
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
-  'react/jsx-indent-props': ['error', 2],
+  // decision: disabled because this is a prettier concern
+  'react/jsx-indent-props': 'off',
 
   // Validate JSX has key prop when in array or iterator
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
@@ -82,7 +84,8 @@ export default {
 
   // Limit maximum of props on a single line in JSX
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-  'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
+  // decision: disabled because this is a prettier concern
+  'react/jsx-max-props-per-line': 'off',
 
   // Prevent usage of .bind() in JSX props
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -366,15 +369,8 @@ export default {
 
   // Validate whitespace in and around the JSX opening and closing brackets
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
-  'react/jsx-tag-spacing': [
-    'error',
-    {
-      closingSlash: 'never',
-      beforeSelfClosing: 'always',
-      afterOpening: 'never',
-      beforeClosing: 'never',
-    },
-  ],
+  // decision: disabled because this is a prettier concern
+  'react/jsx-tag-spacing': 'off',
 
   // Enforce spaces before the closing bracket of self-closing JSX elements
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
@@ -481,13 +477,8 @@ export default {
 
   // Enforce linebreaks in curly braces in JSX attributes and expressions.
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-newline.md
-  'react/jsx-curly-newline': [
-    'error',
-    {
-      multiline: 'consistent',
-      singleline: 'consistent',
-    },
-  ],
+  // decision: disabled because this is a prettier concern
+  'react/jsx-curly-newline': 'off',
 
   // Enforce state initialization style
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md

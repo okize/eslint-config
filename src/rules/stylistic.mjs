@@ -193,6 +193,7 @@ export default {
 
   // Enforces empty lines around comments
   // https://eslint.style/rules/default/lines-around-comment
+  // decision: disabled because this is a prettier concern
   'lines-around-comment': 'off',
 
   // Require or disallow newlines around directives
@@ -207,18 +208,8 @@ export default {
 
   // Specify the maximum length of a line in your program
   // https://eslint.style/rules/default/max-len
-  'max-len': [
-    'error',
-    100,
-    2,
-    {
-      ignoreUrls: true,
-      ignoreComments: false,
-      ignoreRegExpLiterals: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-    },
-  ],
+  // decision: disabled because this is a prettier concern
+  'max-len': 'off',
 
   // Restrict the number of statements per line
   // https://eslint.style/rules/default/max-statements-per-line
