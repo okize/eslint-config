@@ -9,8 +9,9 @@
     "./package.json": "./package.json",
     ".": "./src/configs/javascript.mjs",
     "./javascript": "./src/configs/javascript.mjs",
-    "./typescript": "./src/configs/typescript.mjs",
-    "./react": "./src/configs/react.mjs"
+    "./react": "./src/configs/react.mjs",
+    "./testing-library": "./src/configs/testing-library.mjs",
+    "./typescript": "./src/configs/typescript.mjs"
   },
   "scripts": {
     "changeset": "changeset",
