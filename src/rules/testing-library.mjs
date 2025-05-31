@@ -118,7 +118,7 @@ export default {
   // Enforce a valid naming for return value from `render`
   // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/render-result-naming-convention.md
   'testing-library/render-result-naming-convention': 'error',
-  
+
   // Suggest using implicit assertions for getBy* & findBy* queries
   // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-implicit-assert.md
   'testing-library/prefer-implicit-assert': 'error',
