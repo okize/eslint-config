@@ -1126,6 +1126,7 @@ __metadata:
     eslint-plugin-testing-library: "npm:^7.1.1"
     eslint-plugin-vitest: "npm:^0.5.4"
     globals: "npm:^16.0.0"
+    globals-vitest: "npm:^3.0.9"
     husky: "npm:^9.1.7"
     prettier: "npm:^3.5.3"
     typescript: "npm:^5.8.2"
@@ -3333,6 +3334,15 @@ __metadata:
   dependencies:
     ini: "npm:4.1.1"
   checksum: 10c0/f9cbeef41db4876f94dd0bac1c1b4282a7de9c16350ecaaf83e7b2dd777b32704cc25beeb1170b5a63c42a2c9abfade74d46357fe0133e933218bc89e613d4b2
+  languageName: node
+  linkType: hard
+
+"globals-vitest@npm:^3.0.9":
+  version: 3.0.9
+  resolution: "globals-vitest@npm:3.0.9"
+  peerDependencies:
+    vitest: 3.0.9
+  checksum: 10c0/016035b24d4676f6c7e5745d42ae75919bfe357d8cc969156c57ea5081a3f838fbd3435540ec287e4ea949114252bb9ca7d94133d0d08e1025ca5de3106473f2
   languageName: node
   linkType: hard
 
