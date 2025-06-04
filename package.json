@@ -11,7 +11,8 @@
     "./javascript": "./src/configs/javascript.mjs",
     "./react": "./src/configs/react.mjs",
     "./testing-library": "./src/configs/testing-library.mjs",
-    "./typescript": "./src/configs/typescript.mjs"
+    "./typescript": "./src/configs/typescript.mjs",
+    "./vitest": "./src/configs/vitest.mjs"
   },
   "scripts": {
     "changeset": "changeset",

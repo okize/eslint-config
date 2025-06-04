@@ -8,11 +8,6 @@ import reactHooksRules from '../rules/react-hooks.mjs';
 
 export default [
   {
-    plugins: {
-      react: reactPlugin,
-      'jsx-a11y': jsxA11yPlugin,
-      'react-hooks': reactHooksPlugin,
-    },
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
@@ -27,6 +22,11 @@ export default [
       react: {
         version: 'detect',
       },
+    },
+    plugins: {
+      react: reactPlugin,
+      'jsx-a11y': jsxA11yPlugin,
+      'react-hooks': reactHooksPlugin,
     },
     rules: {
       ...reactRules,

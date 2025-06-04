@@ -2,7 +2,7 @@
 // see: https://typescript-eslint.io/rules/
 
 export default {
-  // the following rules are deliberately disabled (as they may be inherited from other rulesets (eg. best-practices.cjs)) because
+  // the following rules are deliberately disabled (as they may be inherited from other rulesets (eg. javascript.mjs)) because
   // they have equivalent rules below that are considered "extension rules" by @typescript-eslint
 
   // prefer @typescript-eslint/block-spacing

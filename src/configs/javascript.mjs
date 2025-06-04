@@ -2,15 +2,11 @@ import babelParser from '@babel/eslint-parser';
 import globals from 'globals';
 import jsPlugin from '@eslint/js';
 import stylisticPlugin from '@stylistic/eslint-plugin';
-import base from '../rules/base.mjs';
-import stylistic from '../rules/stylistic.mjs';
+import baseRules from '../rules/base.mjs';
+import stylisticRules from '../rules/stylistic.mjs';
 
 export default [
   {
-    plugins: {
-      js: jsPlugin,
-      '@stylistic': stylisticPlugin,
-    },
     languageOptions: {
       sourceType: 'module',
       ecmaVersion: 2024,
@@ -22,9 +18,13 @@ export default [
         ...globals.es2024,
       },
     },
+    plugins: {
+      js: jsPlugin,
+      '@stylistic': stylisticPlugin,
+    },
     rules: {
-      ...base,
-      ...stylistic,
+      ...baseRules,
+      ...stylisticRules,
     },
   },
 ];

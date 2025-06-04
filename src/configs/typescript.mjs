@@ -1,15 +1,12 @@
 import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import globals from 'globals';
-import base from '../rules/base.mjs';
-import stylistic from '../rules/stylistic.mjs';
-import typescript from '../rules/typescript.mjs';
+import baseRules from '../rules/base.mjs';
+import stylisticRules from '../rules/stylistic.mjs';
+import typescriptRules from '../rules/typescript.mjs';
 
 export default [
   {
-    plugins: {
-      '@typescript-eslint': typescriptPlugin,
-    },
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -21,21 +18,13 @@ export default [
         ...globals.es2024,
       },
     },
-    settings: {
-      'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx', '.mts'],
-      },
-      'import/resolver': {
-        typescript: {
-          alwaysTryTypes: true,
-          project: '<root>/tsconfig.json',
-        },
-      },
+    plugins: {
+      '@typescript-eslint': typescriptPlugin,
     },
     rules: {
-      ...base,
-      ...stylistic,
-      ...typescript,
+      ...baseRules,
+      ...stylisticRules,
+      ...typescriptRules,
     },
   },
 ];
