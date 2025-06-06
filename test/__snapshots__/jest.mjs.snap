@@ -1,0 +1,1785 @@
+[
+  {
+    "languageOptions": {
+      "globals": {
+        "afterAll": false,
+        "afterEach": false,
+        "beforeAll": false,
+        "beforeEach": false,
+        "describe": false,
+        "expect": false,
+        "fit": false,
+        "it": false,
+        "jest": false,
+        "test": false,
+        "xdescribe": false,
+        "xit": false,
+        "xtest": false
+      }
+    },
+    "plugins": {
+      "jest": {
+        "meta": {
+          "name": "eslint-plugin-jest",
+          "version": "28.11.0"
+        },
+        "configs": {
+          "all": {
+            "plugins": [
+              "jest"
+            ],
+            "env": {
+              "jest/globals": true
+            },
+            "rules": {
+              "jest/consistent-test-it": "error",
+              "jest/expect-expect": "error",
+              "jest/max-expects": "error",
+              "jest/max-nested-describe": "error",
+              "jest/no-alias-methods": "error",
+              "jest/no-commented-out-tests": "error",
+              "jest/no-conditional-expect": "error",
+              "jest/no-conditional-in-test": "error",
+              "jest/no-confusing-set-timeout": "error",
+              "jest/no-deprecated-functions": "error",
+              "jest/no-disabled-tests": "error",
+              "jest/no-done-callback": "error",
+              "jest/no-duplicate-hooks": "error",
+              "jest/no-export": "error",
+              "jest/no-focused-tests": "error",
+              "jest/no-hooks": "error",
+              "jest/no-identical-title": "error",
+              "jest/no-interpolation-in-snapshots": "error",
+              "jest/no-jasmine-globals": "error",
+              "jest/no-large-snapshots": "error",
+              "jest/no-mocks-import": "error",
+              "jest/no-restricted-jest-methods": "error",
+              "jest/no-restricted-matchers": "error",
+              "jest/no-standalone-expect": "error",
+              "jest/no-test-prefixes": "error",
+              "jest/no-test-return-statement": "error",
+              "jest/no-untyped-mock-factory": "error",
+              "jest/padding-around-after-all-blocks": "error",
+              "jest/padding-around-after-each-blocks": "error",
+              "jest/padding-around-all": "error",
+              "jest/padding-around-before-all-blocks": "error",
+              "jest/padding-around-before-each-blocks": "error",
+              "jest/padding-around-describe-blocks": "error",
+              "jest/padding-around-expect-groups": "error",
+              "jest/padding-around-test-blocks": "error",
+              "jest/prefer-called-with": "error",
+              "jest/prefer-comparison-matcher": "error",
+              "jest/prefer-each": "error",
+              "jest/prefer-equality-matcher": "error",
+              "jest/prefer-expect-assertions": "error",
+              "jest/prefer-expect-resolves": "error",
+              "jest/prefer-hooks-in-order": "error",
+              "jest/prefer-hooks-on-top": "error",
+              "jest/prefer-importing-jest-globals": "error",
+              "jest/prefer-jest-mocked": "error",
+              "jest/prefer-lowercase-title": "error",
+              "jest/prefer-mock-promise-shorthand": "error",
+              "jest/prefer-snapshot-hint": "error",
+              "jest/prefer-spy-on": "error",
+              "jest/prefer-strict-equal": "error",
+              "jest/prefer-to-be": "error",
+              "jest/prefer-to-contain": "error",
+              "jest/prefer-to-have-length": "error",
+              "jest/prefer-todo": "error",
+              "jest/require-hook": "error",
+              "jest/require-to-throw-message": "error",
+              "jest/require-top-level-describe": "error",
+              "jest/unbound-method": "error",
+              "jest/valid-describe-callback": "error",
+              "jest/valid-expect-in-promise": "error",
+              "jest/valid-expect": "error",
+              "jest/valid-title": "error"
+            }
+          },
+          "recommended": {
+            "plugins": [
+              "jest"
+            ],
+            "env": {
+              "jest/globals": true
+            },
+            "rules": {
+              "jest/expect-expect": "warn",
+              "jest/no-alias-methods": "error",
+              "jest/no-commented-out-tests": "warn",
+              "jest/no-conditional-expect": "error",
+              "jest/no-deprecated-functions": "error",
+              "jest/no-disabled-tests": "warn",
+              "jest/no-done-callback": "error",
+              "jest/no-export": "error",
+              "jest/no-focused-tests": "error",
+              "jest/no-identical-title": "error",
+              "jest/no-interpolation-in-snapshots": "error",
+              "jest/no-jasmine-globals": "error",
+              "jest/no-mocks-import": "error",
+              "jest/no-standalone-expect": "error",
+              "jest/no-test-prefixes": "error",
+              "jest/valid-describe-callback": "error",
+              "jest/valid-expect": "error",
+              "jest/valid-expect-in-promise": "error",
+              "jest/valid-title": "error"
+            }
+          },
+          "style": {
+            "plugins": [
+              "jest"
+            ],
+            "env": {
+              "jest/globals": true
+            },
+            "rules": {
+              "jest/no-alias-methods": "warn",
+              "jest/prefer-to-be": "error",
+              "jest/prefer-to-contain": "error",
+              "jest/prefer-to-have-length": "error"
+            }
+          },
+          "flat/all": {
+            "plugins": {
+              "jest": "[Circular Reference]"
+            },
+            "languageOptions": {
+              "globals": "[Circular Reference]"
+            },
+            "rules": "[Circular Reference]"
+          },
+          "flat/recommended": {
+            "plugins": {
+              "jest": "[Circular Reference]"
+            },
+            "languageOptions": {
+              "globals": "[Circular Reference]"
+            },
+            "rules": "[Circular Reference]"
+          },
+          "flat/style": {
+            "plugins": {
+              "jest": "[Circular Reference]"
+            },
+            "languageOptions": {
+              "globals": "[Circular Reference]"
+            },
+            "rules": "[Circular Reference]"
+          }
+        },
+        "environments": {
+          "globals": {
+            "globals": "[Circular Reference]"
+          }
+        },
+        "rules": {
+          "consistent-test-it": {
+            "defaultOptions": [
+              {
+                "fn": "test",
+                "withinDescribe": "it"
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Enforce `test` and `it` usage conventions",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/consistent-test-it.md"
+              },
+              "fixable": "code",
+              "messages": {
+                "consistentMethod": "Prefer using '{{ testKeyword }}' instead of '{{ oppositeTestKeyword }}'",
+                "consistentMethodWithinDescribe": "Prefer using '{{ testKeywordWithinDescribe }}' instead of '{{ oppositeTestKeyword }}' within describe"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "fn": {
+                      "type": "string",
+                      "enum": [
+                        "it",
+                        "test"
+                      ]
+                    },
+                    "withinDescribe": {
+                      "type": "string",
+                      "enum": [
+                        "it",
+                        "test"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "type": "suggestion"
+            }
+          },
+          "expect-expect": {
+            "defaultOptions": [
+              {
+                "assertFunctionNames": [
+                  "expect"
+                ],
+                "additionalTestBlockFunctions": []
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Enforce assertion to be made in a test body",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/expect-expect.md"
+              },
+              "messages": {
+                "noAssertions": "Test has no assertions"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "assertFunctionNames": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalTestBlockFunctions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "type": "suggestion"
+            }
+          },
+          "max-expects": {
+            "defaultOptions": [
+              {
+                "max": 5
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Enforces a maximum number assertion calls in a test body",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/max-expects.md"
+              },
+              "messages": {
+                "exceededMaxAssertion": "Too many assertion calls ({{ count }}) - maximum allowed is {{ max }}"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "max-nested-describe": {
+            "defaultOptions": [
+              {
+                "max": 5
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Enforces a maximum depth to nested describe calls",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/max-nested-describe.md"
+              },
+              "messages": {
+                "exceededMaxDepth": "Too many nested describe calls ({{ depth }}) - maximum allowed is {{ max }}"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "max": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "no-alias-methods": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow alias methods",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-alias-methods.md"
+              },
+              "messages": {
+                "replaceAlias": "Replace {{ alias }}() with its canonical name of {{ canonical }}()"
+              },
+              "fixable": "code",
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "no-commented-out-tests": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow commented out tests",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-commented-out-tests.md"
+              },
+              "messages": {
+                "commentedTests": "Some tests seem to be commented"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "no-conditional-expect": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow calling `expect` conditionally",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-conditional-expect.md"
+              },
+              "messages": {
+                "conditionalExpect": "Avoid calling `expect` conditionally`"
+              },
+              "type": "problem",
+              "schema": []
+            }
+          },
+          "no-conditional-in-test": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow conditional logic in tests",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-conditional-in-test.md"
+              },
+              "messages": {
+                "conditionalInTest": "Avoid having conditionals in tests"
+              },
+              "type": "problem",
+              "schema": []
+            }
+          },
+          "no-confusing-set-timeout": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow confusing usages of jest.setTimeout",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-confusing-set-timeout.md"
+              },
+              "messages": {
+                "globalSetTimeout": "`jest.setTimeout` should be call in `global` scope",
+                "multipleSetTimeouts": "Do not call `jest.setTimeout` multiple times, as only the last call will have an effect",
+                "orderSetTimeout": "`jest.setTimeout` should be placed before any other jest methods"
+              },
+              "type": "problem",
+              "schema": []
+            }
+          },
+          "no-deprecated-functions": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow use of deprecated functions",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-deprecated-functions.md"
+              },
+              "messages": {
+                "deprecatedFunction": "`{{ deprecation }}` has been deprecated in favor of `{{ replacement }}`"
+              },
+              "type": "suggestion",
+              "schema": [],
+              "fixable": "code"
+            }
+          },
+          "no-disabled-tests": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow disabled tests",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-disabled-tests.md"
+              },
+              "messages": {
+                "missingFunction": "Test is missing function argument",
+                "pending": "Call to pending()",
+                "pendingSuite": "Call to pending() within test suite",
+                "pendingTest": "Call to pending() within test",
+                "disabledSuite": "Disabled test suite",
+                "disabledTest": "Disabled test"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "no-done-callback": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow using a callback in asynchronous tests and hooks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-done-callback.md"
+              },
+              "messages": {
+                "noDoneCallback": "Return a Promise instead of relying on callback parameter",
+                "suggestWrappingInPromise": "Wrap in `new Promise({{ callback }} => ...`",
+                "useAwaitInsteadOfCallback": "Use await instead of callback in async functions"
+              },
+              "schema": [],
+              "type": "suggestion",
+              "hasSuggestions": true
+            }
+          },
+          "no-duplicate-hooks": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow duplicate setup and teardown hooks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-duplicate-hooks.md"
+              },
+              "messages": {
+                "noDuplicateHook": "Duplicate {{hook}} in describe block"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "no-export": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow using `exports` in files containing tests",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-export.md"
+              },
+              "messages": {
+                "unexpectedExport": "Do not export from a test file"
+              },
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "no-focused-tests": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow focused tests",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-focused-tests.md"
+              },
+              "messages": {
+                "focusedTest": "Unexpected focused test",
+                "suggestRemoveFocus": "Remove focus from test"
+              },
+              "schema": [],
+              "type": "suggestion",
+              "hasSuggestions": true
+            }
+          },
+          "no-hooks": {
+            "defaultOptions": [
+              {
+                "allow": []
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Disallow setup and teardown hooks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-hooks.md"
+              },
+              "messages": {
+                "unexpectedHook": "Unexpected '{{ hookName }}' hook"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "allow": {
+                      "type": "array",
+                      "contains": [
+                        "beforeAll",
+                        "beforeEach",
+                        "afterAll",
+                        "afterEach"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "type": "suggestion"
+            }
+          },
+          "no-identical-title": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow identical titles",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-identical-title.md"
+              },
+              "messages": {
+                "multipleTestTitle": "Test title is used multiple times in the same describe block",
+                "multipleDescribeTitle": "Describe block title is used multiple times in the same describe block"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "no-interpolation-in-snapshots": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow string interpolation inside snapshots",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-interpolation-in-snapshots.md"
+              },
+              "messages": {
+                "noInterpolation": "Do not use string interpolation inside of snapshots"
+              },
+              "schema": [],
+              "type": "problem"
+            }
+          },
+          "no-jasmine-globals": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow Jasmine globals",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-jasmine-globals.md"
+              },
+              "messages": {
+                "illegalGlobal": "Illegal usage of global `{{ global }}`, prefer `{{ replacement }}`",
+                "illegalMethod": "Illegal usage of `{{ method }}`, prefer `{{ replacement }}`",
+                "illegalFail": "Illegal usage of `fail`, prefer throwing an error, or the `done.fail` callback",
+                "illegalPending": "Illegal usage of `pending`, prefer explicitly skipping a test using `test.skip`",
+                "illegalJasmine": "Illegal usage of jasmine global"
+              },
+              "fixable": "code",
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "no-large-snapshots": {
+            "defaultOptions": [
+              {}
+            ],
+            "meta": {
+              "docs": {
+                "description": "Disallow large snapshots",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-large-snapshots.md"
+              },
+              "messages": {
+                "noSnapshot": "`{{ lineCount }}`s should begin with lowercase",
+                "tooLongSnapshots": "Expected Jest snapshot to be smaller than {{ lineLimit }} lines but was {{ lineCount }} lines long"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "maxSize": {
+                      "type": "number"
+                    },
+                    "inlineMaxSize": {
+                      "type": "number"
+                    },
+                    "allowedSnapshots": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "array"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "no-mocks-import": {
+            "defaultOptions": [],
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Disallow manually importing from `__mocks__`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-mocks-import.md"
+              },
+              "messages": {
+                "noManualImport": "Mocks should not be manually imported from a __mocks__ directory. Instead use `jest.mock` and import from the original module path"
+              },
+              "schema": []
+            }
+          },
+          "no-restricted-jest-methods": {
+            "defaultOptions": [
+              {}
+            ],
+            "meta": {
+              "docs": {
+                "description": "Disallow specific `jest.` methods",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-restricted-jest-methods.md"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              ],
+              "messages": {
+                "restrictedJestMethod": "Use of `{{ restriction }}` is disallowed",
+                "restrictedJestMethodWithMessage": "{{ message }}"
+              }
+            }
+          },
+          "no-restricted-matchers": {
+            "defaultOptions": [
+              {}
+            ],
+            "meta": {
+              "docs": {
+                "description": "Disallow specific matchers & modifiers",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-restricted-matchers.md"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              ],
+              "messages": {
+                "restrictedChain": "Use of `{{ restriction }}` is disallowed",
+                "restrictedChainWithMessage": "{{ message }}"
+              }
+            }
+          },
+          "no-standalone-expect": {
+            "defaultOptions": [
+              {
+                "additionalTestBlockFunctions": []
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Disallow using `expect` outside of `it` or `test` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-standalone-expect.md"
+              },
+              "messages": {
+                "unexpectedExpect": "Expect must be inside of a test block"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "additionalTestBlockFunctions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "no-test-prefixes": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Require using `.only` and `.skip` over `f` and `x`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-test-prefixes.md"
+              },
+              "messages": {
+                "usePreferredName": "Use \"{{ preferredNodeName }}\" instead"
+              },
+              "fixable": "code",
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "no-test-return-statement": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow explicitly returning from tests",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-test-return-statement.md"
+              },
+              "messages": {
+                "noReturnValue": "Jest tests should not return a value"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "no-untyped-mock-factory": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Disallow using `jest.mock()` factories without an explicit type parameter",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/no-untyped-mock-factory.md"
+              },
+              "messages": {
+                "addTypeParameterToModuleMock": "Add a type parameter to the mock factory such as `typeof import({{ moduleName }})`"
+              },
+              "fixable": "code",
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-after-all-blocks": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around `afterAll` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-after-all-blocks.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-after-each-blocks": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around `afterEach` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-after-each-blocks.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-all": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around Jest functions",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-all.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-before-all-blocks": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around `beforeAll` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-before-all-blocks.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-before-each-blocks": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around `beforeEach` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-before-each-blocks.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-describe-blocks": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around `describe` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-describe-blocks.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-expect-groups": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around `expect` groups",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-expect-groups.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "padding-around-test-blocks": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Enforce padding around `test` and `it` blocks",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/padding-around-test-blocks.md"
+              },
+              "fixable": "whitespace",
+              "deprecated": false,
+              "messages": {
+                "missingPadding": "Expected blank line before this statement."
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "prefer-called-with": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-called-with.md"
+              },
+              "messages": {
+                "preferCalledWith": "Prefer {{ matcherName }}With(/* expected args */)"
+              },
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "prefer-comparison-matcher": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using the built-in comparison matchers",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-comparison-matcher.md"
+              },
+              "messages": {
+                "useToBeComparison": "Prefer using `{{ preferredMatcher }}` instead"
+              },
+              "fixable": "code",
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "prefer-each": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prefer using `.each` rather than manual loops",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-each.md"
+              },
+              "messages": {
+                "preferEach": "prefer using `{{ fn }}.each` rather than a manual loop"
+              },
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "prefer-equality-matcher": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using the built-in equality matchers",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-equality-matcher.md"
+              },
+              "messages": {
+                "useEqualityMatcher": "Prefer using one of the equality matchers instead",
+                "suggestEqualityMatcher": "Use `{{ equalityMatcher }}`"
+              },
+              "hasSuggestions": true,
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "prefer-expect-assertions": {
+            "defaultOptions": [
+              {
+                "onlyFunctionsWithAsyncKeyword": false,
+                "onlyFunctionsWithExpectInLoop": false,
+                "onlyFunctionsWithExpectInCallback": false
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `expect.assertions()` OR `expect.hasAssertions()`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-expect-assertions.md"
+              },
+              "messages": {
+                "hasAssertionsTakesNoArguments": "`expect.hasAssertions` expects no arguments",
+                "assertionsRequiresOneArgument": "`expect.assertions` excepts a single argument of type number",
+                "assertionsRequiresNumberArgument": "This argument should be a number",
+                "haveExpectAssertions": "Every test should have either `expect.assertions(<number of assertions>)` or `expect.hasAssertions()` as its first expression",
+                "suggestAddingHasAssertions": "Add `expect.hasAssertions()`",
+                "suggestAddingAssertions": "Add `expect.assertions(<number of assertions>)`",
+                "suggestRemovingExtraArguments": "Remove extra arguments"
+              },
+              "type": "suggestion",
+              "hasSuggestions": true,
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "onlyFunctionsWithAsyncKeyword": {
+                      "type": "boolean"
+                    },
+                    "onlyFunctionsWithExpectInLoop": {
+                      "type": "boolean"
+                    },
+                    "onlyFunctionsWithExpectInCallback": {
+                      "type": "boolean"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "prefer-expect-resolves": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prefer `await expect(...).resolves` over `expect(await ...)` syntax",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-expect-resolves.md"
+              },
+              "fixable": "code",
+              "messages": {
+                "expectResolves": "Use `await expect(...).resolves instead"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "prefer-hooks-in-order": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prefer having hooks in a consistent order",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-hooks-in-order.md"
+              },
+              "messages": {
+                "reorderHooks": "`{{ currentHook }}` hooks should be before any `{{ previousHook }}` hooks"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "prefer-hooks-on-top": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest having hooks before any test cases",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-hooks-on-top.md"
+              },
+              "messages": {
+                "noHookOnTop": "Hooks should come before test cases"
+              },
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "prefer-importing-jest-globals": {
+            "defaultOptions": [
+              {
+                "types": [
+                  "hook",
+                  "describe",
+                  "test",
+                  "expect",
+                  "jest",
+                  "unknown"
+                ]
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Prefer importing Jest globals",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-importing-jest-globals.md"
+              },
+              "messages": {
+                "preferImportingJestGlobal": "Import the following Jest functions from '@jest/globals': {{ jestFunctions }}"
+              },
+              "fixable": "code",
+              "type": "problem",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "types": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": "[Circular Reference]"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "prefer-jest-mocked": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prefer `jest.mocked()` over `fn as jest.Mock`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-jest-mocked.md"
+              },
+              "messages": {
+                "useJestMocked": "Prefer `jest.mocked()`"
+              },
+              "schema": [],
+              "type": "suggestion",
+              "fixable": "code"
+            }
+          },
+          "prefer-lowercase-title": {
+            "defaultOptions": [
+              {
+                "ignore": [],
+                "allowedPrefixes": [],
+                "ignoreTopLevelDescribe": false
+              }
+            ],
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Enforce lowercase test names",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-lowercase-title.md"
+              },
+              "fixable": "code",
+              "messages": {
+                "unexpectedLowercase": "`{{ method }}`s should begin with lowercase"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "ignore": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "describe",
+                          "test",
+                          "it"
+                        ]
+                      },
+                      "additionalItems": false
+                    },
+                    "allowedPrefixes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "additionalItems": false
+                    },
+                    "ignoreTopLevelDescribe": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "prefer-mock-promise-shorthand": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Prefer mock resolved/rejected shorthands for promises",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-mock-promise-shorthand.md"
+              },
+              "messages": {
+                "useMockShorthand": "Prefer {{ replacement }}"
+              },
+              "schema": [],
+              "type": "suggestion",
+              "fixable": "code"
+            }
+          },
+          "prefer-snapshot-hint": {
+            "defaultOptions": [
+              "multi"
+            ],
+            "meta": {
+              "docs": {
+                "description": "Prefer including a hint with external snapshots",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-snapshot-hint.md"
+              },
+              "messages": {
+                "missingHint": "You should provide a hint for this snapshot"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "always",
+                    "multi"
+                  ]
+                }
+              ]
+            }
+          },
+          "prefer-spy-on": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `jest.spyOn()`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-spy-on.md"
+              },
+              "messages": {
+                "useJestSpyOn": "Use jest.spyOn() instead"
+              },
+              "fixable": "code",
+              "schema": [],
+              "type": "suggestion"
+            }
+          },
+          "prefer-strict-equal": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `toStrictEqual()`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-strict-equal.md"
+              },
+              "messages": {
+                "useToStrictEqual": "Use `toStrictEqual()` instead",
+                "suggestReplaceWithStrictEqual": "Replace with `toStrictEqual()`"
+              },
+              "type": "suggestion",
+              "schema": [],
+              "hasSuggestions": true
+            }
+          },
+          "prefer-to-be": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `toBe()` for primitive literals",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-to-be.md"
+              },
+              "messages": {
+                "useToBe": "Use `toBe` when expecting primitive literals",
+                "useToBeUndefined": "Use `toBeUndefined` instead",
+                "useToBeDefined": "Use `toBeDefined` instead",
+                "useToBeNull": "Use `toBeNull` instead",
+                "useToBeNaN": "Use `toBeNaN` instead"
+              },
+              "fixable": "code",
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "prefer-to-contain": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `toContain()`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-to-contain.md"
+              },
+              "messages": {
+                "useToContain": "Use toContain() instead"
+              },
+              "fixable": "code",
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "prefer-to-have-length": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `toHaveLength()`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-to-have-length.md"
+              },
+              "messages": {
+                "useToHaveLength": "Use toHaveLength() instead"
+              },
+              "fixable": "code",
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "prefer-todo": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Suggest using `test.todo`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/prefer-todo.md"
+              },
+              "messages": {
+                "emptyTest": "Prefer todo test case over empty test case",
+                "unimplementedTest": "Prefer todo test case over unimplemented test case"
+              },
+              "fixable": "code",
+              "schema": [],
+              "type": "layout"
+            }
+          },
+          "require-hook": {
+            "defaultOptions": [
+              {
+                "allowedFunctionCalls": []
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Require setup and teardown code to be within a hook",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/require-hook.md"
+              },
+              "messages": {
+                "useHook": "This should be done within a hook"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "allowedFunctionCalls": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "require-to-throw-message": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Require a message for `toThrow()`",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/require-to-throw-message.md"
+              },
+              "messages": {
+                "addErrorMessage": "Add an error message to {{ matcherName }}()"
+              },
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "require-top-level-describe": {
+            "defaultOptions": [
+              {}
+            ],
+            "meta": {
+              "docs": {
+                "description": "Require test cases and hooks to be inside a `describe` block",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/require-top-level-describe.md"
+              },
+              "messages": {
+                "tooManyDescribes": "There should not be more than {{ max }} describe{{ s }} at the top level",
+                "unexpectedTestCase": "All test cases must be wrapped in a describe block.",
+                "unexpectedHook": "All hooks must be wrapped in a describe block."
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "maxNumberOfTopLevelDescribes": {
+                      "type": "number",
+                      "minimum": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "unbound-method": {
+            "defaultOptions": [
+              {
+                "ignoreStatic": false
+              }
+            ],
+            "meta": {
+              "messages": {
+                "unbound": "Avoid referencing unbound methods which may cause unintentional scoping of `this`.",
+                "unboundWithoutThisAnnotation": "Avoid referencing unbound methods which may cause unintentional scoping of `this`.\nIf your function does not access `this`, you can annotate it with `this: void`, or consider using an arrow function instead."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "ignoreStatic": {
+                      "type": "boolean",
+                      "description": "Whether to skip checking whether `static` methods are correctly bound."
+                    }
+                  }
+                }
+              ],
+              "type": "problem",
+              "docs": {
+                "description": "Enforce unbound methods are called with their expected scope",
+                "requiresTypeChecking": true,
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/unbound-method.md"
+              }
+            }
+          },
+          "valid-describe-callback": {
+            "defaultOptions": [],
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Enforce valid `describe()` callback",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/valid-describe-callback.md"
+              },
+              "messages": {
+                "nameAndCallback": "Describe requires name and callback arguments",
+                "secondArgumentMustBeFunction": "Second argument must be function",
+                "noAsyncDescribeCallback": "No async describe callback",
+                "unexpectedDescribeArgument": "Unexpected argument(s) in describe callback",
+                "unexpectedReturnInDescribe": "Unexpected return statement in describe callback"
+              },
+              "schema": []
+            }
+          },
+          "valid-expect-in-promise": {
+            "defaultOptions": [],
+            "meta": {
+              "docs": {
+                "description": "Require promises that have expectations in their chain to be valid",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/valid-expect-in-promise.md"
+              },
+              "messages": {
+                "expectInFloatingPromise": "This promise should either be returned or awaited to ensure the expects in its chain are called"
+              },
+              "type": "suggestion",
+              "schema": []
+            }
+          },
+          "valid-expect": {
+            "defaultOptions": [
+              {
+                "alwaysAwait": false,
+                "asyncMatchers": [
+                  "toReject",
+                  "toResolve"
+                ],
+                "minArgs": 1,
+                "maxArgs": 1
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Enforce valid `expect()` usage",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/valid-expect.md"
+              },
+              "messages": {
+                "tooManyArgs": "Expect takes at most {{ amount }} argument{{ s }}",
+                "notEnoughArgs": "Expect requires at least {{ amount }} argument{{ s }}",
+                "modifierUnknown": "Expect has an unknown modifier",
+                "matcherNotFound": "Expect must have a corresponding matcher call",
+                "matcherNotCalled": "Matchers must be called to assert",
+                "asyncMustBeAwaited": "Async assertions must be awaited{{ orReturned }}",
+                "promisesWithAsyncAssertionsMustBeAwaited": "Promises which return async assertions must be awaited{{ orReturned }}"
+              },
+              "fixable": "code",
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "alwaysAwait": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "asyncMatchers": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "minArgs": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "maxArgs": {
+                      "type": "number",
+                      "minimum": 1
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "valid-title": {
+            "defaultOptions": [
+              {
+                "ignoreSpaces": false,
+                "ignoreTypeOfDescribeName": false,
+                "ignoreTypeOfTestName": false,
+                "disallowedWords": []
+              }
+            ],
+            "meta": {
+              "docs": {
+                "description": "Enforce valid titles",
+                "url": "https://github.com/jest-community/eslint-plugin-jest/blob/v28.11.0/docs/rules/valid-title.md"
+              },
+              "messages": {
+                "titleMustBeString": "Title must be a string",
+                "emptyTitle": "{{ jestFunctionName }} should not have an empty title",
+                "duplicatePrefix": "should not have duplicate prefix",
+                "accidentalSpace": "should not have leading or trailing spaces",
+                "disallowedWord": "\"{{ word }}\" is not allowed in test titles",
+                "mustNotMatch": "{{ jestFunctionName }} should not match {{ pattern }}",
+                "mustMatch": "{{ jestFunctionName }} should match {{ pattern }}",
+                "mustNotMatchCustom": "{{ message }}",
+                "mustMatchCustom": "{{ message }}"
+              },
+              "type": "suggestion",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "ignoreSpaces": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "ignoreTypeOfDescribeName": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "ignoreTypeOfTestName": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "disallowedWords": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "patternProperties": {
+                    "^must(?:Not)?Match$": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "minItems": 1,
+                          "maxItems": 2,
+                          "additionalItems": false
+                        },
+                        {
+                          "type": "object",
+                          "propertyNames": {
+                            "enum": [
+                              "describe",
+                              "test",
+                              "it"
+                            ]
+                          },
+                          "additionalProperties": {
+                            "oneOf": [
+                              {
+                                "type": "string"
+                              },
+                              "[Circular Reference]"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "fixable": "code"
+            }
+          }
+        }
+      },
+      "jest-formatting": {
+        "rules": {
+          "padding-around-after-all-blocks": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          },
+          "padding-around-after-each-blocks": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          },
+          "padding-around-before-all-blocks": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          },
+          "padding-around-before-each-blocks": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          },
+          "padding-around-describe-blocks": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          },
+          "padding-around-expect-groups": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          },
+          "padding-around-test-blocks": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          },
+          "padding-around-all": {
+            "meta": {
+              "fixable": "whitespace",
+              "deprecated": false
+            }
+          }
+        },
+        "configs": {
+          "recommended": {
+            "plugins": [
+              "jest-formatting"
+            ],
+            "overrides": [
+              {
+                "files": [
+                  "**/*.test.*",
+                  "**/*_test.*",
+                  "**/*Test.*",
+                  "**/*.spec.*",
+                  "**/*_spec.*",
+                  "**/*Spec.*",
+                  "**/__tests__/*"
+                ],
+                "rules": {
+                  "jest-formatting/padding-around-after-all-blocks": 2,
+                  "jest-formatting/padding-around-after-each-blocks": 2,
+                  "jest-formatting/padding-around-before-all-blocks": 2,
+                  "jest-formatting/padding-around-before-each-blocks": 2,
+                  "jest-formatting/padding-around-describe-blocks": 2,
+                  "jest-formatting/padding-around-test-blocks": 2
+                }
+              }
+            ]
+          },
+          "strict": {
+            "plugins": [
+              "jest-formatting"
+            ],
+            "overrides": [
+              {
+                "files": [
+                  "**/*.test.*",
+                  "**/*_test.*",
+                  "**/*Test.*",
+                  "**/*.spec.*",
+                  "**/*_spec.*",
+                  "**/*Spec.*",
+                  "**/__tests__/*"
+                ],
+                "rules": {
+                  "jest-formatting/padding-around-all": 2
+                }
+              }
+            ]
+          }
+        }
+      },
+      "no-only-tests": {
+        "rules": {
+          "no-only-tests": {
+            "meta": {
+              "docs": {
+                "description": "disallow .only blocks in tests",
+                "category": "Possible Errors",
+                "recommended": true,
+                "url": "https://github.com/levibuzolic/eslint-plugin-no-only-tests"
+              },
+              "fixable": "code",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "block": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "uniqueItems": true,
+                      "default": [
+                        "describe",
+                        "it",
+                        "context",
+                        "test",
+                        "tape",
+                        "fixture",
+                        "serial",
+                        "Feature",
+                        "Scenario",
+                        "Given",
+                        "And",
+                        "When",
+                        "Then"
+                      ]
+                    },
+                    "focus": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "uniqueItems": true,
+                      "default": [
+                        "only"
+                      ]
+                    },
+                    "functions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "uniqueItems": true,
+                      "default": []
+                    },
+                    "fix": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "rules": {
+      "no-only-tests/no-only-tests": "error",
+      "jest/consistent-test-it": "error",
+      "jest/expect-expect": "error",
+      "jest/max-expects": [
+        "error",
+        {
+          "max": 15
+        }
+      ],
+      "jest/max-nested-describe": "error",
+      "jest/no-alias-methods": "error",
+      "jest/no-commented-out-tests": "error",
+      "jest/no-conditional-expect": "error",
+      "jest/no-conditional-in-test": "error",
+      "jest/no-deprecated-functions": "error",
+      "jest/no-disabled-tests": "off",
+      "jest/no-done-callback": "error",
+      "jest/no-duplicate-hooks": "error",
+      "jest/no-export": "error",
+      "jest/no-focused-tests": "off",
+      "jest/no-hooks": "off",
+      "jest/no-identical-title": "error",
+      "jest/no-interpolation-in-snapshots": "error",
+      "jest/no-jasmine-globals": "error",
+      "jest/no-large-snapshots": [
+        "error",
+        {
+          "maxSize": 500
+        }
+      ],
+      "jest/no-mocks-import": "error",
+      "jest/no-restricted-matchers": [
+        "error",
+        {}
+      ],
+      "jest/no-standalone-expect": "error",
+      "jest/no-test-prefixes": "error",
+      "jest/no-test-return-statement": "error",
+      "jest/prefer-called-with": "error",
+      "jest/prefer-comparison-matcher": "error",
+      "jest/prefer-equality-matcher": "error",
+      "jest/prefer-expect-assertions": "off",
+      "jest/prefer-expect-resolves": "error",
+      "jest/prefer-hooks-in-order": "error",
+      "jest/prefer-hooks-on-top": "error",
+      "jest/prefer-lowercase-title": "off",
+      "jest/prefer-snapshot-hint": "error",
+      "jest/prefer-spy-on": "error",
+      "jest/prefer-strict-equal": "error",
+      "jest/prefer-to-be": "error",
+      "jest/prefer-to-contain": "error",
+      "jest/prefer-to-have-length": "error",
+      "jest/prefer-todo": "error",
+      "jest/require-hook": "error",
+      "jest/require-to-throw-message": "error",
+      "jest/require-top-level-describe": "error",
+      "jest/valid-describe-callback": "error",
+      "jest/valid-expect": "error",
+      "jest/valid-expect-in-promise": "error",
+      "jest/valid-title": "error",
+      "jest-formatting/padding-around-after-all-blocks": "error",
+      "jest-formatting/padding-around-after-each-blocks": "error",
+      "jest-formatting/padding-around-before-all-blocks": "error",
+      "jest-formatting/padding-around-before-each-blocks": "error",
+      "jest-formatting/padding-around-expect-groups": "error",
+      "jest-formatting/padding-around-describe-blocks": "error",
+      "jest-formatting/padding-around-test-blocks": "error",
+      "jest-formatting/padding-around-all": "off"
+    }
+  }
+]

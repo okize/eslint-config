@@ -2,6 +2,10 @@
 // see: https://github.com/veritem/eslint-plugin-vitest?tab=readme-ov-file#rules
 
 export default {
+  // Prevent focused tests (.only)
+  // https://github.com/levibuzolic/eslint-plugin-no-only-tests#usage
+  'no-only-tests/no-only-tests': 'error',
+
   // Require .test test file pattern
   // https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md
   'vitest/consistent-test-filename': 'error',

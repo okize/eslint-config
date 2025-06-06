@@ -1,24 +1,21 @@
-import globalsVitest from 'globals-vitest';
-import vitestPlugin from 'eslint-plugin-vitest';
+import jestPlugin from 'eslint-plugin-jest';
 import jestFormattingPlugin from 'eslint-plugin-jest-formatting';
 import noOnlyTestsPlugin from 'eslint-plugin-no-only-tests';
-import vitestRules from '../rules/vitest.mjs';
+import jestRules from '../rules/jest.mjs';
 import jestFormattingRules from '../rules/jest-formatting.mjs';
 
 export default [
   {
     languageOptions: {
-      globals: {
-        ...globalsVitest,
-      },
+      globals: jestPlugin.environments.globals.globals,
     },
     plugins: {
-      vitest: vitestPlugin,
+      jest: jestPlugin,
       'jest-formatting': jestFormattingPlugin,
       'no-only-tests': noOnlyTestsPlugin,
     },
     rules: {
-      ...vitestRules,
+      ...jestRules,
       ...jestFormattingRules,
     },
   },

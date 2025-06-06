@@ -1455,73 +1455,6 @@
           }
         }
       },
-      "no-only-tests": {
-        "rules": {
-          "no-only-tests": {
-            "meta": {
-              "docs": {
-                "description": "disallow .only blocks in tests",
-                "category": "Possible Errors",
-                "recommended": true,
-                "url": "https://github.com/levibuzolic/eslint-plugin-no-only-tests"
-              },
-              "fixable": "code",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "block": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "uniqueItems": true,
-                      "default": [
-                        "describe",
-                        "it",
-                        "context",
-                        "test",
-                        "tape",
-                        "fixture",
-                        "serial",
-                        "Feature",
-                        "Scenario",
-                        "Given",
-                        "And",
-                        "When",
-                        "Then"
-                      ]
-                    },
-                    "focus": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "uniqueItems": true,
-                      "default": [
-                        "only"
-                      ]
-                    },
-                    "functions": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "uniqueItems": true,
-                      "default": []
-                    },
-                    "fix": {
-                      "type": "boolean",
-                      "default": false
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          }
-        }
-      },
       "jest-formatting": {
         "rules": {
           "padding-around-after-all-blocks": {
@@ -1622,9 +1555,77 @@
             ]
           }
         }
+      },
+      "no-only-tests": {
+        "rules": {
+          "no-only-tests": {
+            "meta": {
+              "docs": {
+                "description": "disallow .only blocks in tests",
+                "category": "Possible Errors",
+                "recommended": true,
+                "url": "https://github.com/levibuzolic/eslint-plugin-no-only-tests"
+              },
+              "fixable": "code",
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "block": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "uniqueItems": true,
+                      "default": [
+                        "describe",
+                        "it",
+                        "context",
+                        "test",
+                        "tape",
+                        "fixture",
+                        "serial",
+                        "Feature",
+                        "Scenario",
+                        "Given",
+                        "And",
+                        "When",
+                        "Then"
+                      ]
+                    },
+                    "focus": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "uniqueItems": true,
+                      "default": [
+                        "only"
+                      ]
+                    },
+                    "functions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "uniqueItems": true,
+                      "default": []
+                    },
+                    "fix": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          }
+        }
       }
     },
     "rules": {
+      "no-only-tests/no-only-tests": "error",
       "vitest/consistent-test-filename": "error",
       "vitest/consistent-test-it": "error",
       "vitest/expect-expect": "error",
@@ -1694,8 +1695,7 @@
       "jest-formatting/padding-around-expect-groups": "error",
       "jest-formatting/padding-around-describe-blocks": "error",
       "jest-formatting/padding-around-test-blocks": "error",
-      "jest-formatting/padding-around-all": "off",
-      "no-only-tests/no-only-tests": "error"
+      "jest-formatting/padding-around-all": "off"
     }
   }
 ]
