@@ -10,6 +10,7 @@
     ".": "./src/configs/javascript.mjs",
     "./javascript": "./src/configs/javascript.mjs",
     "./jest": "./src/configs/jest.mjs",
+    "./node": "./src/configs/node.cjs",
     "./react": "./src/configs/react.mjs",
     "./testing-library": "./src/configs/testing-library.mjs",
     "./typescript": "./src/configs/typescript.mjs",
