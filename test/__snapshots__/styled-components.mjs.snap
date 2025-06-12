@@ -1,0 +1,1204 @@
+[
+  {
+    "languageOptions": {
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      }
+    },
+    "plugins": {
+      "styled-components-a11y": {
+        "meta": {
+          "name": "eslint-plugin-styled-components-a11y",
+          "version": "2.2.0"
+        },
+        "rules": {
+          "accessible-emoji": {
+            "meta": {
+              "docs": {
+                "description": "Enforce emojis are wrapped in `<span>` and provide screen reader access.",
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/accessible-emoji.md"
+              },
+              "deprecated": true,
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "alt-text": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/alt-text.md",
+                "description": "Enforce all elements that require alternative text have meaningful information to relay back to end user."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "elements": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "uniqueItems": true,
+                      "additionalItems": false
+                    },
+                    "img": "[Circular Reference]",
+                    "object": "[Circular Reference]",
+                    "area": "[Circular Reference]",
+                    "input[type=\"image\"]": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "anchor-has-content": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/anchor-has-content.md",
+                "description": "Enforce all anchors to contain accessible content."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "components": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "anchor-is-valid": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/anchor-is-valid.md",
+                "description": "Enforce all anchors are valid, navigable elements."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "components": "[Circular Reference]",
+                    "specialLink": "[Circular Reference]",
+                    "aspects": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "noHref",
+                          "invalidHref",
+                          "preferButton"
+                        ]
+                      },
+                      "uniqueItems": true,
+                      "additionalItems": false,
+                      "minItems": 1
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "aria-activedescendant-has-tabindex": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-activedescendant-has-tabindex.md",
+                "description": "Enforce elements with aria-activedescendant are tabbable."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "aria-props": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-props.md",
+                "description": "Enforce all `aria-*` props are valid."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "aria-proptypes": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-proptypes.md",
+                "description": "Enforce ARIA state and property values are valid."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "aria-role": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-role.md",
+                "description": "Enforce that elements with ARIA roles must use a valid, non-abstract ARIA role."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "allowedInvalidRoles": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array",
+                      "uniqueItems": true
+                    },
+                    "ignoreNonDOM": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "aria-unsupported-elements": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/aria-unsupported-elements.md",
+                "description": "Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "autocomplete-valid": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/autocomplete-valid.md",
+                "description": "Enforce that autocomplete attributes are used correctly."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "inputComponents": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "click-events-have-key-events": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/click-events-have-key-events.md",
+                "description": "Enforce a clickable non-interactive element has at least one keyboard event listener."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "control-has-associated-label": {
+            "meta": {
+              "docs": {
+                "description": "Enforce that a control (an interactive element) has a text label.",
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/control-has-associated-label.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "labelAttributes": "[Circular Reference]",
+                    "controlComponents": "[Circular Reference]",
+                    "ignoreElements": "[Circular Reference]",
+                    "ignoreRoles": "[Circular Reference]",
+                    "depth": {
+                      "description": "JSX tree depth limit to check for accessible label",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "heading-has-content": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/heading-has-content.md",
+                "description": "Enforce heading (`h1`, `h2`, etc) elements contain accessible content."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "components": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "html-has-lang": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/html-has-lang.md",
+                "description": "Enforce `<html>` element has `lang` prop."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "iframe-has-title": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/iframe-has-title.md",
+                "description": "Enforce iframe elements have a title attribute."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "img-redundant-alt": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/img-redundant-alt.md",
+                "description": "Enforce `<img>` alt prop does not contain the word \"image\", \"picture\", or \"photo\"."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "components": "[Circular Reference]",
+                    "words": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "interactive-supports-focus": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/interactive-supports-focus.md",
+                "description": "Enforce that elements with interactive handlers like `onClick` must be focusable."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "tabbable": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "button",
+                          "checkbox",
+                          "columnheader",
+                          "combobox",
+                          "grid",
+                          "gridcell",
+                          "link",
+                          "listbox",
+                          "menu",
+                          "menubar",
+                          "menuitem",
+                          "menuitemcheckbox",
+                          "menuitemradio",
+                          "option",
+                          "progressbar",
+                          "radio",
+                          "radiogroup",
+                          "row",
+                          "rowheader",
+                          "scrollbar",
+                          "searchbox",
+                          "slider",
+                          "spinbutton",
+                          "switch",
+                          "tab",
+                          "tablist",
+                          "textbox",
+                          "tree",
+                          "treegrid",
+                          "treeitem",
+                          "doc-backlink",
+                          "doc-biblioref",
+                          "doc-glossref",
+                          "doc-noteref"
+                        ]
+                      },
+                      "uniqueItems": true,
+                      "additionalItems": false,
+                      "minItems": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "label-has-associated-control": {
+            "meta": {
+              "docs": {
+                "description": "Enforce that a `label` tag has a text label and an associated control.",
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/label-has-associated-control.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "labelComponents": "[Circular Reference]",
+                    "labelAttributes": "[Circular Reference]",
+                    "controlComponents": "[Circular Reference]",
+                    "assert": {
+                      "description": "Assert that the label has htmlFor, a nested label, both or either",
+                      "type": "string",
+                      "enum": [
+                        "htmlFor",
+                        "nesting",
+                        "both",
+                        "either"
+                      ]
+                    },
+                    "depth": {
+                      "description": "JSX tree depth limit to check for accessible label",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "label-has-for": {
+            "meta": {
+              "deprecated": true,
+              "replacedBy": [
+                "label-has-associated-control"
+              ],
+              "docs": {
+                "description": "Enforce that `<label>` elements have the `htmlFor` prop.",
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/label-has-for.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "components": "[Circular Reference]",
+                    "required": {
+                      "oneOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "nesting",
+                            "id"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "some": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "enum": "[Circular Reference]"
+                              },
+                              "uniqueItems": true,
+                              "additionalItems": false,
+                              "minItems": 0
+                            }
+                          },
+                          "required": [
+                            "some"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "every": {
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "enum": "[Circular Reference]"
+                              },
+                              "uniqueItems": true,
+                              "additionalItems": false,
+                              "minItems": 0
+                            }
+                          },
+                          "required": [
+                            "every"
+                          ]
+                        }
+                      ]
+                    },
+                    "allowChildren": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "lang": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/lang.md",
+                "description": "Enforce lang attribute has a valid value."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "media-has-caption": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/media-has-caption.md",
+                "description": "Enforces that `<audio>` and `<video>` elements must have a `<track>` for captions."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "audio": "[Circular Reference]",
+                    "video": "[Circular Reference]",
+                    "track": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "mouse-events-have-key-events": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/mouse-events-have-key-events.md",
+                "description": "Enforce that `onMouseOver`/`onMouseOut` are accompanied by `onFocus`/`onBlur` for keyboard-only users."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "hoverInHandlers": {
+                      "type": "array",
+                      "items": "[Circular Reference]",
+                      "uniqueItems": true,
+                      "additionalItems": false,
+                      "description": "An array of events that need to be accompanied by `onFocus`"
+                    },
+                    "hoverOutHandlers": {
+                      "type": "array",
+                      "items": "[Circular Reference]",
+                      "uniqueItems": true,
+                      "additionalItems": false,
+                      "description": "An array of events that need to be accompanied by `onBlur`"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "no-access-key": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-access-key.md",
+                "description": "Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screen reader."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "no-autofocus": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-autofocus.md",
+                "description": "Enforce autoFocus prop is not used."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "ignoreNonDOM": {
+                      "type": "boolean",
+                      "default": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "no-distracting-elements": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-distracting-elements.md",
+                "description": "Enforce distracting elements are not used."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "elements": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "marquee",
+                          "blink"
+                        ]
+                      },
+                      "uniqueItems": true,
+                      "additionalItems": false,
+                      "minItems": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "no-interactive-element-to-noninteractive-role": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-interactive-element-to-noninteractive-role.md",
+                "description": "Interactive elements should not be assigned non-interactive roles."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "uniqueItems": true
+                  }
+                }
+              ]
+            }
+          },
+          "no-noninteractive-element-interactions": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-element-interactions.md",
+                "description": "Non-interactive elements should not be assigned mouse or keyboard event listeners."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "handlers": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "no-noninteractive-element-to-interactive-role": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-element-to-interactive-role.md",
+                "description": "Non-interactive elements should not be assigned interactive roles."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "uniqueItems": true
+                  }
+                }
+              ]
+            }
+          },
+          "no-noninteractive-tabindex": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-noninteractive-tabindex.md",
+                "description": "`tabIndex` should only be declared on interactive elements."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "roles": {
+                      "type": "array",
+                      "items": "[Circular Reference]",
+                      "uniqueItems": true,
+                      "additionalItems": false,
+                      "description": "An array of ARIA roles"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": "[Circular Reference]",
+                      "uniqueItems": true,
+                      "additionalItems": false,
+                      "description": "An array of HTML tag names"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "no-onchange": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-onchange.md",
+                "description": "Enforce usage of `onBlur` over `onChange` on select menus for accessibility."
+              },
+              "deprecated": true,
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "no-redundant-roles": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-redundant-roles.md",
+                "description": "Enforce explicit role property is not the same as implicit/default role property on element."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "uniqueItems": true
+                  }
+                }
+              ]
+            }
+          },
+          "no-static-element-interactions": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/no-static-element-interactions.md",
+                "description": "Enforce that non-interactive, visible elements (such as `<div>`) that have click handlers use the role attribute."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "handlers": "[Circular Reference]"
+                  }
+                }
+              ]
+            }
+          },
+          "role-has-required-aria-props": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/role-has-required-aria-props.md",
+                "description": "Enforce that elements with ARIA roles must have all required attributes for that role."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "role-supports-aria-props": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/role-supports-aria-props.md",
+                "description": "Enforce that elements with explicit or implicit roles defined contain only `aria-*` properties supported by that `role`."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "scope": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/scope.md",
+                "description": "Enforce `scope` prop is only used on `<th>` elements."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          },
+          "tabindex-no-positive": {
+            "meta": {
+              "docs": {
+                "url": "https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/tree/HEAD/docs/rules/tabindex-no-positive.md",
+                "description": "Enforce `tabIndex` value is not greater than zero."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {}
+                }
+              ]
+            }
+          }
+        },
+        "configs": {
+          "recommended": {
+            "plugins": [
+              "styled-components-a11y"
+            ],
+            "extends": [
+              "plugin:jsx-a11y/recommended"
+            ],
+            "parserOptions": {
+              "ecmaFeatures": {
+                "jsx": true
+              }
+            },
+            "rules": {
+              "styled-components-a11y/alt-text": "error",
+              "styled-components-a11y/anchor-has-content": "error",
+              "styled-components-a11y/anchor-is-valid": "error",
+              "styled-components-a11y/aria-activedescendant-has-tabindex": "error",
+              "styled-components-a11y/aria-props": "error",
+              "styled-components-a11y/aria-proptypes": "error",
+              "styled-components-a11y/aria-role": "error",
+              "styled-components-a11y/aria-unsupported-elements": "error",
+              "styled-components-a11y/autocomplete-valid": "error",
+              "styled-components-a11y/click-events-have-key-events": "error",
+              "styled-components-a11y/control-has-associated-label": [
+                "off",
+                {
+                  "ignoreElements": [
+                    "audio",
+                    "canvas",
+                    "embed",
+                    "input",
+                    "textarea",
+                    "tr",
+                    "video"
+                  ],
+                  "ignoreRoles": [
+                    "grid",
+                    "listbox",
+                    "menu",
+                    "menubar",
+                    "radiogroup",
+                    "row",
+                    "tablist",
+                    "toolbar",
+                    "tree",
+                    "treegrid"
+                  ],
+                  "includeRoles": [
+                    "alert",
+                    "dialog"
+                  ]
+                }
+              ],
+              "styled-components-a11y/heading-has-content": "error",
+              "styled-components-a11y/html-has-lang": "error",
+              "styled-components-a11y/iframe-has-title": "error",
+              "styled-components-a11y/img-redundant-alt": "error",
+              "styled-components-a11y/interactive-supports-focus": [
+                "error",
+                {
+                  "tabbable": [
+                    "button",
+                    "checkbox",
+                    "link",
+                    "searchbox",
+                    "spinbutton",
+                    "switch",
+                    "textbox"
+                  ]
+                }
+              ],
+              "styled-components-a11y/label-has-associated-control": "error",
+              "styled-components-a11y/label-has-for": "off",
+              "styled-components-a11y/media-has-caption": "error",
+              "styled-components-a11y/mouse-events-have-key-events": "error",
+              "styled-components-a11y/no-autofocus": "error",
+              "styled-components-a11y/no-distracting-elements": "error",
+              "styled-components-a11y/no-interactive-element-to-noninteractive-role": [
+                "error",
+                {
+                  "tr": [
+                    "none",
+                    "presentation"
+                  ],
+                  "canvas": [
+                    "img"
+                  ]
+                }
+              ],
+              "styled-components-a11y/no-noninteractive-element-interactions": [
+                "error",
+                {
+                  "handlers": [
+                    "onClick",
+                    "onError",
+                    "onLoad",
+                    "onMouseDown",
+                    "onMouseUp",
+                    "onKeyPress",
+                    "onKeyDown",
+                    "onKeyUp"
+                  ],
+                  "alert": [
+                    "onKeyUp",
+                    "onKeyDown",
+                    "onKeyPress"
+                  ],
+                  "body": [
+                    "onError",
+                    "onLoad"
+                  ],
+                  "dialog": [
+                    "onKeyUp",
+                    "onKeyDown",
+                    "onKeyPress"
+                  ],
+                  "iframe": [
+                    "onError",
+                    "onLoad"
+                  ],
+                  "img": [
+                    "onError",
+                    "onLoad"
+                  ]
+                }
+              ],
+              "styled-components-a11y/no-noninteractive-element-to-interactive-role": [
+                "error",
+                {
+                  "ul": [
+                    "listbox",
+                    "menu",
+                    "menubar",
+                    "radiogroup",
+                    "tablist",
+                    "tree",
+                    "treegrid"
+                  ],
+                  "ol": [
+                    "listbox",
+                    "menu",
+                    "menubar",
+                    "radiogroup",
+                    "tablist",
+                    "tree",
+                    "treegrid"
+                  ],
+                  "li": [
+                    "menuitem",
+                    "option",
+                    "row",
+                    "tab",
+                    "treeitem"
+                  ],
+                  "table": [
+                    "grid"
+                  ],
+                  "td": [
+                    "gridcell"
+                  ],
+                  "fieldset": [
+                    "radiogroup",
+                    "presentation"
+                  ]
+                }
+              ],
+              "styled-components-a11y/no-noninteractive-tabindex": [
+                "error",
+                {
+                  "tags": [],
+                  "roles": [
+                    "tabpanel"
+                  ],
+                  "allowExpressionValues": true
+                }
+              ],
+              "styled-components-a11y/no-redundant-roles": "error",
+              "styled-components-a11y/no-static-element-interactions": [
+                "error",
+                {
+                  "allowExpressionValues": true,
+                  "handlers": [
+                    "onClick",
+                    "onMouseDown",
+                    "onMouseUp",
+                    "onKeyPress",
+                    "onKeyDown",
+                    "onKeyUp"
+                  ]
+                }
+              ],
+              "styled-components-a11y/role-has-required-aria-props": "error",
+              "styled-components-a11y/role-supports-aria-props": "error",
+              "styled-components-a11y/scope": "error",
+              "styled-components-a11y/tabindex-no-positive": "error"
+            }
+          },
+          "strict": {
+            "plugins": [
+              "styled-components-a11y"
+            ],
+            "extends": [
+              "plugin:jsx-a11y/strict"
+            ],
+            "parserOptions": "[Circular Reference]",
+            "rules": {
+              "styled-components-a11y/alt-text": "error",
+              "styled-components-a11y/anchor-has-content": "error",
+              "styled-components-a11y/anchor-is-valid": "error",
+              "styled-components-a11y/aria-activedescendant-has-tabindex": "error",
+              "styled-components-a11y/aria-props": "error",
+              "styled-components-a11y/aria-proptypes": "error",
+              "styled-components-a11y/aria-role": "error",
+              "styled-components-a11y/aria-unsupported-elements": "error",
+              "styled-components-a11y/autocomplete-valid": "error",
+              "styled-components-a11y/click-events-have-key-events": "error",
+              "styled-components-a11y/control-has-associated-label": [
+                "off",
+                {
+                  "ignoreElements": [
+                    "audio",
+                    "canvas",
+                    "embed",
+                    "input",
+                    "textarea",
+                    "tr",
+                    "video"
+                  ],
+                  "ignoreRoles": [
+                    "grid",
+                    "listbox",
+                    "menu",
+                    "menubar",
+                    "radiogroup",
+                    "row",
+                    "tablist",
+                    "toolbar",
+                    "tree",
+                    "treegrid"
+                  ],
+                  "includeRoles": [
+                    "alert",
+                    "dialog"
+                  ]
+                }
+              ],
+              "styled-components-a11y/heading-has-content": "error",
+              "styled-components-a11y/html-has-lang": "error",
+              "styled-components-a11y/iframe-has-title": "error",
+              "styled-components-a11y/img-redundant-alt": "error",
+              "styled-components-a11y/interactive-supports-focus": [
+                "error",
+                {
+                  "tabbable": [
+                    "button",
+                    "checkbox",
+                    "link",
+                    "progressbar",
+                    "searchbox",
+                    "slider",
+                    "spinbutton",
+                    "switch",
+                    "textbox"
+                  ]
+                }
+              ],
+              "styled-components-a11y/label-has-for": "off",
+              "styled-components-a11y/label-has-associated-control": "error",
+              "styled-components-a11y/media-has-caption": "error",
+              "styled-components-a11y/mouse-events-have-key-events": "error",
+              "styled-components-a11y/no-access-key": "error",
+              "styled-components-a11y/no-autofocus": "error",
+              "styled-components-a11y/no-distracting-elements": "error",
+              "styled-components-a11y/no-interactive-element-to-noninteractive-role": "error",
+              "styled-components-a11y/no-noninteractive-element-interactions": [
+                "error",
+                {
+                  "body": [
+                    "onError",
+                    "onLoad"
+                  ],
+                  "iframe": [
+                    "onError",
+                    "onLoad"
+                  ],
+                  "img": [
+                    "onError",
+                    "onLoad"
+                  ]
+                }
+              ],
+              "styled-components-a11y/no-noninteractive-element-to-interactive-role": "error",
+              "styled-components-a11y/no-noninteractive-tabindex": "error",
+              "styled-components-a11y/no-redundant-roles": "error",
+              "styled-components-a11y/no-static-element-interactions": "error",
+              "styled-components-a11y/role-has-required-aria-props": "error",
+              "styled-components-a11y/role-supports-aria-props": "error",
+              "styled-components-a11y/scope": "error",
+              "styled-components-a11y/tabindex-no-positive": "error"
+            }
+          }
+        },
+        "flatConfigs": {
+          "recommended": {
+            "plugins": {
+              "styled-components-a11y": {
+                "meta": "[Circular Reference]",
+                "rules": "[Circular Reference]"
+              }
+            },
+            "languageOptions": {
+              "parserOptions": "[Circular Reference]"
+            },
+            "name": "styled-components-a11y/recommended",
+            "rules": "[Circular Reference]"
+          },
+          "strict": {
+            "plugins": "[Circular Reference]",
+            "languageOptions": "[Circular Reference]",
+            "name": "styled-components-a11y/strict",
+            "rules": "[Circular Reference]"
+          }
+        }
+      }
+    },
+    "rules": {
+      "styled-components-a11y/accessible-emoji": "error",
+      "styled-components-a11y/alt-text": "error",
+      "styled-components-a11y/anchor-has-content": "error",
+      "styled-components-a11y/anchor-is-valid": "error",
+      "styled-components-a11y/aria-activedescendant-has-tabindex": "error",
+      "styled-components-a11y/aria-props": "error",
+      "styled-components-a11y/aria-proptypes": "error",
+      "styled-components-a11y/aria-role": "error",
+      "styled-components-a11y/aria-unsupported-elements": "error",
+      "styled-components-a11y/autocomplete-valid": "error",
+      "styled-components-a11y/click-events-have-key-events": "error",
+      "styled-components-a11y/control-has-associated-label": [
+        "error",
+        {
+          "ignoreElements": [
+            "audio",
+            "canvas",
+            "embed",
+            "input",
+            "textarea",
+            "tr",
+            "video"
+          ],
+          "ignoreRoles": [
+            "grid",
+            "listbox",
+            "menu",
+            "menubar",
+            "radiogroup",
+            "row",
+            "tablist",
+            "toolbar",
+            "tree",
+            "treegrid"
+          ],
+          "includeRoles": [
+            "alert",
+            "dialog"
+          ]
+        }
+      ],
+      "styled-components-a11y/heading-has-content": "error",
+      "styled-components-a11y/html-has-lang": "error",
+      "styled-components-a11y/iframe-has-title": "error",
+      "styled-components-a11y/img-redundant-alt": "error",
+      "styled-components-a11y/interactive-supports-focus": [
+        "error",
+        {
+          "tabbable": [
+            "button",
+            "checkbox",
+            "link",
+            "progressbar",
+            "searchbox",
+            "slider",
+            "spinbutton",
+            "switch",
+            "textbox"
+          ]
+        }
+      ],
+      "styled-components-a11y/label-has-associated-control": "error",
+      "styled-components-a11y/media-has-caption": "error",
+      "styled-components-a11y/mouse-events-have-key-events": "error",
+      "styled-components-a11y/no-access-key": "error",
+      "styled-components-a11y/no-autofocus": "error",
+      "styled-components-a11y/no-distracting-elements": "error",
+      "styled-components-a11y/no-interactive-element-to-noninteractive-role": "error",
+      "styled-components-a11y/no-noninteractive-element-interactions": [
+        "error",
+        {
+          "body": [
+            "onError",
+            "onLoad"
+          ],
+          "iframe": [
+            "onError",
+            "onLoad"
+          ],
+          "img": [
+            "onError",
+            "onLoad"
+          ]
+        }
+      ],
+      "styled-components-a11y/no-noninteractive-element-to-interactive-role": "error",
+      "styled-components-a11y/no-noninteractive-tabindex": "error",
+      "styled-components-a11y/no-onchange": "error",
+      "styled-components-a11y/no-redundant-roles": "error",
+      "styled-components-a11y/no-static-element-interactions": "error",
+      "styled-components-a11y/role-has-required-aria-props": "error",
+      "styled-components-a11y/role-supports-aria-props": "error",
+      "styled-components-a11y/scope": "error",
+      "styled-components-a11y/tabindex-no-positive": "error"
+    }
+  }
+]

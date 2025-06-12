@@ -10,9 +10,10 @@
     ".": "./src/configs/javascript.mjs",
     "./javascript": "./src/configs/javascript.mjs",
     "./jest": "./src/configs/jest.mjs",
-    "./storybook": "./src/configs/storybook.mjs",
     "./node": "./src/configs/node.mjs",
     "./react": "./src/configs/react.mjs",
+    "./storybook": "./src/configs/storybook.mjs",
+    "./styled-components": "./src/configs/styled-components.mjs",
     "./testing-library": "./src/configs/testing-library.mjs",
     "./typescript": "./src/configs/typescript.mjs",
     "./vitest": "./src/configs/vitest.mjs"
