@@ -13,15 +13,24 @@ const getCircularReplacer = () => {
   const seen = new WeakSet();
   return (_key, value) => {
     // skip non-object values
-    if (typeof value !== 'object' || value === null) {
+    if (typeof value !== 'object' && typeof value !== 'string') {
       return value;
     }
 
-    if (seen.has(value)) {
-      return '[Circular Reference]';
+    // handle absolute paths in strings
+    if (typeof value === 'string' && value.includes('node_modules')) {
+      // replace absolute paths with relative paths
+      const normalizedPath = value.replace(/^.*?(node_modules\/.+)$/, '<rootDir>/node_modules/$1');
+      return normalizedPath;
     }
 
-    seen.add(value);
+    // handle circular references
+    if (typeof value === 'object' && value !== null) {
+      if (seen.has(value)) {
+        return '[Circular Reference]';
+      }
+      seen.add(value);
+    }
 
     return value;
   };

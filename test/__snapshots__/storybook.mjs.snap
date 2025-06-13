@@ -34,7 +34,7 @@
             ]
           },
           "csf-strict": {
-            "extends": "/Users/morganwigmanich/src/eslint-config/node_modules/eslint-plugin-storybook/dist/configs/csf.js",
+            "extends": "<rootDir>/node_modules/node_modules/eslint-plugin-storybook/dist/configs/csf.js",
             "rules": {
               "react-hooks/rules-of-hooks": "off",
               "import/no-anonymous-default-export": "off",
