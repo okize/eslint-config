@@ -6569,6 +6569,394 @@
           },
           "all-flat": "[Circular Reference]"
         }
+      },
+      "promise": {
+        "rules": {
+          "param-names": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Enforce consistent param names and ordering when creating new promises.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/param-names.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "resolvePattern": {
+                      "type": "string"
+                    },
+                    "rejectPattern": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "messages": {
+                "resolveParamNames": "Promise constructor parameters must be named to match \"{{ resolvePattern }}\"",
+                "rejectParamNames": "Promise constructor parameters must be named to match \"{{ rejectPattern }}\""
+              }
+            }
+          },
+          "no-return-wrap": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Disallow wrapping values in `Promise.resolve` or `Promise.reject` when not needed.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-return-wrap.md"
+              },
+              "messages": {
+                "resolve": "Avoid wrapping return values in Promise.resolve",
+                "reject": "Expected throw instead of Promise.reject"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "allowReject": {
+                      "type": "boolean"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "always-return": {
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Require returning inside each `then()` to create readable and reusable Promise chains.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/always-return.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "ignoreLastCallback": {
+                      "type": "boolean"
+                    },
+                    "ignoreAssignmentVariable": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "pattern": "^[\\w$]+$"
+                      },
+                      "uniqueItems": true
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "messages": {
+                "thenShouldReturnOrThrow": "Each then() should return a value or throw"
+              }
+            }
+          },
+          "catch-or-return": {
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Enforce the use of `catch()` on un-returned promises.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/catch-or-return.md"
+              },
+              "messages": {
+                "terminationMethod": "Expected {{ terminationMethod }}() or return"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "allowFinally": {
+                      "type": "boolean"
+                    },
+                    "allowThen": {
+                      "type": "boolean"
+                    },
+                    "allowThenStrict": {
+                      "type": "boolean"
+                    },
+                    "terminationMethod": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "prefer-await-to-callbacks": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Prefer `async`/`await` to the callback pattern.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/prefer-await-to-callbacks.md"
+              },
+              "messages": {
+                "error": "Avoid callbacks. Prefer Async/Await."
+              },
+              "schema": []
+            }
+          },
+          "prefer-await-to-then": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Prefer `await` to `then()`/`catch()`/`finally()` for reading Promise values.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/prefer-await-to-then.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "strict": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              ],
+              "messages": {
+                "preferAwaitToCallback": "Prefer await to then()/catch()/finally()."
+              }
+            }
+          },
+          "prefer-catch": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Prefer `catch` to `then(a, b)`/`then(null, b)` for handling errors.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/prefer-catch.md"
+              },
+              "fixable": "code",
+              "schema": [],
+              "messages": {
+                "preferCatchToThen": "Prefer `catch` to `then(a, b)`/`then(null, b)`."
+              }
+            }
+          },
+          "no-native": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Require creating a `Promise` constructor before using it in an ES5 environment.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-native.md"
+              },
+              "messages": {
+                "name": "\"{{name}}\" is not defined."
+              },
+              "schema": []
+            }
+          },
+          "no-callback-in-promise": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Disallow calling `cb()` inside of a `then()` (use [util.callbackify][] instead).",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-callback-in-promise.md"
+              },
+              "messages": {
+                "callback": "Avoid calling back inside of a promise."
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "exceptions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "timeoutsErr": {
+                      "type": "boolean"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "no-promise-in-callback": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Disallow using promises inside of callbacks.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-promise-in-callback.md"
+              },
+              "schema": [],
+              "messages": {
+                "avoidPromiseInCallback": "Avoid using promises inside of callbacks."
+              }
+            }
+          },
+          "no-nesting": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Disallow nested `then()` or `catch()` statements.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-nesting.md"
+              },
+              "schema": [],
+              "messages": {
+                "avoidNesting": "Avoid nesting promises."
+              }
+            }
+          },
+          "avoid-new": {
+            "meta": {
+              "type": "suggestion",
+              "docs": {
+                "description": "Disallow creating `new` promises outside of utility libs (use [util.promisify][] instead).",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/avoid-new.md"
+              },
+              "schema": [],
+              "messages": {
+                "avoidNew": "Avoid creating new promises."
+              }
+            }
+          },
+          "no-new-statics": {
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Disallow calling `new` on a Promise static method.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-new-statics.md"
+              },
+              "fixable": "code",
+              "schema": [],
+              "messages": {
+                "avoidNewStatic": "Avoid calling 'new' on 'Promise.{{ name }}()'"
+              }
+            }
+          },
+          "no-return-in-finally": {
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Disallow return statements in `finally()`.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-return-in-finally.md"
+              },
+              "schema": [],
+              "messages": {
+                "avoidReturnInFinally": "No return in finally"
+              }
+            }
+          },
+          "valid-params": {
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Enforces the proper number of arguments are passed to Promise functions.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/valid-params.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "exclude": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "messages": {
+                "requireOneOptionalArgument": "Promise.{{ name }}() requires 0 or 1 arguments, but received {{ numArgs }}",
+                "requireOneArgument": "Promise.{{ name }}() requires 1 argument, but received {{ numArgs }}",
+                "requireTwoOptionalArguments": "Promise.{{ name }}() requires 1 or 2 arguments, but received {{ numArgs }}"
+              }
+            }
+          },
+          "no-multiple-resolved": {
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Disallow creating new promises with paths that resolve multiple times.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-multiple-resolved.md"
+              },
+              "messages": {
+                "alreadyResolved": "Promise should not be resolved multiple times. Promise is already resolved on line {{line}}.",
+                "potentiallyAlreadyResolved": "Promise should not be resolved multiple times. Promise is potentially resolved on line {{line}}."
+              },
+              "schema": []
+            }
+          },
+          "spec-only": {
+            "meta": {
+              "type": "problem",
+              "docs": {
+                "description": "Disallow use of non-standard Promise static methods.",
+                "url": "https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/spec-only.md"
+              },
+              "schema": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "allowedMethods": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ],
+              "messages": {
+                "avoidNonStandard": "Avoid using non-standard 'Promise.{{ name }}'"
+              }
+            }
+          }
+        },
+        "rulesConfig": {
+          "param-names": 1,
+          "always-return": 1,
+          "no-return-wrap": 1,
+          "no-native": 0,
+          "catch-or-return": 1
+        },
+        "configs": {
+          "recommended": {
+            "plugins": [
+              "promise"
+            ],
+            "rules": {
+              "promise/always-return": "error",
+              "promise/no-return-wrap": "error",
+              "promise/param-names": "error",
+              "promise/catch-or-return": "error",
+              "promise/no-native": "off",
+              "promise/no-nesting": "warn",
+              "promise/no-promise-in-callback": "warn",
+              "promise/no-callback-in-promise": "warn",
+              "promise/avoid-new": "off",
+              "promise/no-new-statics": "error",
+              "promise/no-return-in-finally": "warn",
+              "promise/valid-params": "warn"
+            }
+          },
+          "flat/recommended": {
+            "name": "promise/flat/recommended",
+            "plugins": {
+              "promise": "[Circular Reference]"
+            },
+            "rules": "[Circular Reference]"
+          }
+        }
       }
     },
     "rules": {
@@ -7789,7 +8177,24 @@
       "member-delimiter-style": "off",
       "type-annotation-spacing": "off",
       "type-generic-spacing": "off",
-      "type-named-tuple-spacing": "off"
+      "type-named-tuple-spacing": "off",
+      "promise/catch-or-return": "error",
+      "promise/no-return-wrap": "error",
+      "promise/param-names": "error",
+      "promise/always-return": "error",
+      "promise/no-native": "off",
+      "promise/no-nesting": "error",
+      "promise/no-promise-in-callback": "error",
+      "promise/no-callback-in-promise": "error",
+      "promise/avoid-new": "off",
+      "promise/no-new-statics": "error",
+      "promise/no-return-in-finally": "error",
+      "promise/valid-params": "error",
+      "promise/prefer-await-to-then": "off",
+      "promise/prefer-await-to-callbacks": "error",
+      "promise/no-multiple-resolved": "error",
+      "promise/prefer-catch": "error",
+      "promise/spec-only": "error"
     }
   }
 ]
