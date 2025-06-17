@@ -6134,6 +6134,44 @@
         },
         "meta": "[Circular Reference]",
         "rules": "[Circular Reference]"
+      },
+      "react-compiler": {
+        "configs": {
+          "recommended": {
+            "plugins": {
+              "react-compiler": {
+                "rules": {
+                  "react-compiler": {
+                    "meta": {
+                      "type": "problem",
+                      "docs": {
+                        "description": "Surfaces diagnostics from React Forget",
+                        "recommended": true
+                      },
+                      "fixable": "code",
+                      "hasSuggestions": true,
+                      "schema": [
+                        {
+                          "type": "object",
+                          "additionalProperties": true
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "rules": {
+              "react-compiler/react-compiler": "error"
+            }
+          }
+        },
+        "meta": {
+          "name": "eslint-plugin-react-compiler"
+        },
+        "rules": {
+          "react-compiler": "[Circular Reference]"
+        }
       }
     },
     "rules": {
@@ -6160,6 +6198,7 @@
           ]
         }
       ],
+      "react-compiler/react-compiler": "error",
       "react/display-name": [
         "off",
         {
