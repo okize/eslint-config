@@ -1,4 +1,3 @@
-import { describe, test, expect } from 'vitest';
 import { readdirSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
