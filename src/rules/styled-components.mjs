@@ -1,7 +1,7 @@
 // only add styled-components rules
 // see: https://github.com/brendanmorrell/eslint-plugin-styled-components-a11y
 
-module.exports = {
+export default {
   // plugin does not provide definitions
   'styled-components-a11y/accessible-emoji': 'error',
   'styled-components-a11y/alt-text': 'error',
