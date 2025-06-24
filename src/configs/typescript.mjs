@@ -1,6 +1,7 @@
 import globals from 'globals';
 import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
+import stylisticPlugin from '@stylistic/eslint-plugin';
 import promisePlugin from 'eslint-plugin-promise';
 import baseRules from '../rules/base.mjs';
 import stylisticRules from '../rules/stylistic.mjs';
@@ -22,6 +23,7 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescriptPlugin,
+      '@stylistic': stylisticPlugin,
       promise: promisePlugin,
     },
     rules: {

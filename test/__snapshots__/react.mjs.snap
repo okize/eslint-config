@@ -6216,11 +6216,8 @@
         "error",
         "always"
       ],
-      "react/jsx-closing-bracket-location": [
-        "error",
-        "line-aligned"
-      ],
-      "react/jsx-closing-tag-location": "error",
+      "react/jsx-closing-bracket-location": "off",
+      "react/jsx-closing-tag-location": "off",
       "react/jsx-curly-spacing": "off",
       "react/jsx-handler-names": [
         "error",
@@ -6288,7 +6285,7 @@
       "react/jsx-uses-vars": "error",
       "react/no-danger": "error",
       "react/no-deprecated": "error",
-      "react/no-did-mount-set-state": "off",
+      "react/no-did-mount-set-state": "error",
       "react/no-did-update-set-state": "error",
       "react/no-will-update-set-state": "error",
       "react/no-direct-mutation-state": "off",
@@ -6369,30 +6366,10 @@
           "ignoreCase": true
         }
       ],
-      "react/jsx-wrap-multilines": [
-        "error",
-        {
-          "declaration": "parens-new-line",
-          "assignment": "parens-new-line",
-          "return": "parens-new-line",
-          "arrow": "parens-new-line",
-          "condition": "parens-new-line",
-          "logical": "parens-new-line",
-          "prop": "parens-new-line"
-        }
-      ],
-      "react/jsx-first-prop-new-line": [
-        "error",
-        "multiline-multiprop"
-      ],
-      "react/jsx-equals-spacing": [
-        "error",
-        "never"
-      ],
-      "react/jsx-indent": [
-        "error",
-        2
-      ],
+      "react/jsx-wrap-multilines": "off",
+      "react/jsx-first-prop-new-line": "off",
+      "react/jsx-equals-spacing": "off",
+      "react/jsx-indent": "off",
       "react/jsx-no-target-blank": [
         "error",
         {
@@ -6435,10 +6412,7 @@
       "react/no-unescaped-entities": "error",
       "react/no-children-prop": "error",
       "react/jsx-tag-spacing": "off",
-      "react/jsx-space-before-closing": [
-        "off",
-        "always"
-      ],
+      "react/jsx-space-before-closing": "off",
       "react/no-array-index-key": "error",
       "react/require-default-props": "off",
       "react/forbid-foreign-prop-types": "off",
@@ -6465,12 +6439,7 @@
           "children": "never"
         }
       ],
-      "react/jsx-one-expression-per-line": [
-        "off",
-        {
-          "allow": "single-child"
-        }
-      ],
+      "react/jsx-one-expression-per-line": "off",
       "react/destructuring-assignment": [
         "off",
         "always"
@@ -6487,7 +6456,7 @@
       "react/jsx-child-element-spacing": "off",
       "react/no-this-in-sfc": "error",
       "react/jsx-max-depth": "off",
-      "react/jsx-props-no-multi-spaces": "error",
+      "react/jsx-props-no-multi-spaces": "off",
       "react/no-unsafe": "off",
       "react/jsx-fragments": [
         "error",
