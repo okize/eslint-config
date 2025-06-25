@@ -1,585 +1,65 @@
-[
-  {
-    "plugins": {
-      "storybook": {
-        "configs": {
-          "csf": {
-            "plugins": [
-              "storybook"
-            ],
-            "overrides": [
-              {
-                "files": [
-                  "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-                  "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"
-                ],
-                "rules": {
-                  "react-hooks/rules-of-hooks": "off",
-                  "import/no-anonymous-default-export": "off",
-                  "storybook/csf-component": "warn",
-                  "storybook/default-exports": "error",
-                  "storybook/hierarchy-separator": "warn",
-                  "storybook/no-redundant-story-name": "warn",
-                  "storybook/story-exports": "error"
-                }
-              },
-              {
-                "files": [
-                  ".storybook/main.@(js|cjs|mjs|ts)"
-                ],
-                "rules": {
-                  "storybook/no-uninstalled-addons": "error"
-                }
-              }
-            ]
-          },
-          "csf-strict": {
-            "extends": "<rootDir>/node_modules/node_modules/eslint-plugin-storybook/dist/configs/csf.js",
-            "rules": {
-              "react-hooks/rules-of-hooks": "off",
-              "import/no-anonymous-default-export": "off",
-              "storybook/no-stories-of": "error",
-              "storybook/no-title-property-in-meta": "error"
-            }
-          },
-          "addon-interactions": {
-            "plugins": [
-              "storybook"
-            ],
-            "overrides": [
-              {
-                "files": [
-                  "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-                  "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"
-                ],
-                "rules": {
-                  "react-hooks/rules-of-hooks": "off",
-                  "import/no-anonymous-default-export": "off",
-                  "storybook/await-interactions": "error",
-                  "storybook/context-in-play-function": "error",
-                  "storybook/use-storybook-expect": "error",
-                  "storybook/use-storybook-testing-library": "error"
-                }
-              },
-              {
-                "files": [
-                  ".storybook/main.@(js|cjs|mjs|ts)"
-                ],
-                "rules": {
-                  "storybook/no-uninstalled-addons": "error"
-                }
-              }
-            ]
-          },
-          "recommended": {
-            "plugins": [
-              "storybook"
-            ],
-            "overrides": [
-              {
-                "files": [
-                  "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-                  "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"
-                ],
-                "rules": {
-                  "react-hooks/rules-of-hooks": "off",
-                  "import/no-anonymous-default-export": "off",
-                  "storybook/await-interactions": "error",
-                  "storybook/context-in-play-function": "error",
-                  "storybook/default-exports": "error",
-                  "storybook/hierarchy-separator": "warn",
-                  "storybook/no-redundant-story-name": "warn",
-                  "storybook/prefer-pascal-case": "warn",
-                  "storybook/story-exports": "error",
-                  "storybook/use-storybook-expect": "error",
-                  "storybook/use-storybook-testing-library": "error"
-                }
-              },
-              {
-                "files": [
-                  ".storybook/main.@(js|cjs|mjs|ts)"
-                ],
-                "rules": {
-                  "storybook/no-uninstalled-addons": "error"
-                }
-              }
-            ]
-          },
-          "flat/csf": [
-            {
-              "name": "storybook:csf:setup",
-              "plugins": {
-                "storybook": "[Circular Reference]"
-              }
-            },
-            {
-              "name": "storybook:csf:stories-rules",
-              "files": [
-                "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-                "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"
-              ],
-              "rules": {
-                "react-hooks/rules-of-hooks": "off",
-                "import/no-anonymous-default-export": "off",
-                "storybook/csf-component": "warn",
-                "storybook/default-exports": "error",
-                "storybook/hierarchy-separator": "warn",
-                "storybook/no-redundant-story-name": "warn",
-                "storybook/story-exports": "error"
-              }
-            },
-            {
-              "name": "storybook:csf:main-rules",
-              "files": [
-                ".storybook/main.@(js|cjs|mjs|ts)"
-              ],
-              "rules": {
-                "storybook/no-uninstalled-addons": "error"
-              }
-            }
-          ],
-          "flat/csf-strict": [
-            "[Circular Reference]",
-            "[Circular Reference]",
-            "[Circular Reference]",
-            {
-              "name": "storybook:csf-strict:rules",
-              "rules": {
-                "react-hooks/rules-of-hooks": "off",
-                "import/no-anonymous-default-export": "off",
-                "storybook/no-stories-of": "error",
-                "storybook/no-title-property-in-meta": "error"
-              }
-            }
-          ],
-          "flat/addon-interactions": [
-            {
-              "name": "storybook:addon-interactions:setup",
-              "plugins": {
-                "storybook": "[Circular Reference]"
-              }
-            },
-            {
-              "name": "storybook:addon-interactions:stories-rules",
-              "files": [
-                "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-                "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"
-              ],
-              "rules": {
-                "react-hooks/rules-of-hooks": "off",
-                "import/no-anonymous-default-export": "off",
-                "storybook/await-interactions": "error",
-                "storybook/context-in-play-function": "error",
-                "storybook/use-storybook-expect": "error",
-                "storybook/use-storybook-testing-library": "error"
-              }
-            },
-            {
-              "name": "storybook:addon-interactions:main-rules",
-              "files": [
-                ".storybook/main.@(js|cjs|mjs|ts)"
-              ],
-              "rules": {
-                "storybook/no-uninstalled-addons": "error"
-              }
-            }
-          ],
-          "flat/recommended": [
-            {
-              "name": "storybook:recommended:setup",
-              "plugins": {
-                "storybook": "[Circular Reference]"
-              }
-            },
-            {
-              "name": "storybook:recommended:stories-rules",
-              "files": [
-                "**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-                "**/*.story.@(ts|tsx|js|jsx|mjs|cjs)"
-              ],
-              "rules": {
-                "react-hooks/rules-of-hooks": "off",
-                "import/no-anonymous-default-export": "off",
-                "storybook/await-interactions": "error",
-                "storybook/context-in-play-function": "error",
-                "storybook/default-exports": "error",
-                "storybook/hierarchy-separator": "warn",
-                "storybook/no-redundant-story-name": "warn",
-                "storybook/prefer-pascal-case": "warn",
-                "storybook/story-exports": "error",
-                "storybook/use-storybook-expect": "error",
-                "storybook/use-storybook-testing-library": "error"
-              }
-            },
-            {
-              "name": "storybook:recommended:main-rules",
-              "files": [
-                ".storybook/main.@(js|cjs|mjs|ts)"
-              ],
-              "rules": {
-                "storybook/no-uninstalled-addons": "error"
-              }
-            }
-          ]
-        },
-        "rules": {
-          "await-interactions": {
-            "defaultOptions": [],
-            "meta": {
-              "severity": "error",
-              "docs": {
-                "description": "Interactions should be awaited",
-                "categories": [
-                  "addon-interactions",
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/await-interactions.md"
-              },
-              "messages": {
-                "interactionShouldBeAwaited": "Interaction should be awaited: {{method}}",
-                "fixSuggestion": "Add `await` to method"
-              },
-              "type": "problem",
-              "fixable": "code",
-              "hasSuggestions": true,
-              "schema": []
-            }
-          },
-          "context-in-play-function": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "severity": "error",
-              "docs": {
-                "description": "Pass a context when invoking play function of another story",
-                "categories": [
-                  "recommended",
-                  "addon-interactions"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/context-in-play-function.md"
-              },
-              "messages": {
-                "passContextToPlayFunction": "Pass a context when invoking play function of another story"
-              },
-              "schema": []
-            }
-          },
-          "csf-component": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "severity": "warn",
-              "docs": {
-                "description": "The component property should be set",
-                "categories": [
-                  "csf"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/csf-component.md"
-              },
-              "messages": {
-                "missingComponentProperty": "Missing component property."
-              },
-              "schema": []
-            }
-          },
-          "default-exports": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "severity": "error",
-              "docs": {
-                "description": "Story files should have a default export",
-                "categories": [
-                  "csf",
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/default-exports.md"
-              },
-              "messages": {
-                "shouldHaveDefaultExport": "The file should have a default export.",
-                "fixSuggestion": "Add default export"
-              },
-              "fixable": "code",
-              "hasSuggestions": true,
-              "schema": []
-            }
-          },
-          "hierarchy-separator": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "fixable": "code",
-              "hasSuggestions": true,
-              "severity": "warn",
-              "docs": {
-                "description": "Deprecated hierarchy separator in title property",
-                "categories": [
-                  "csf",
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/hierarchy-separator.md"
-              },
-              "messages": {
-                "useCorrectSeparators": "Use correct separators",
-                "deprecatedHierarchySeparator": "Deprecated hierarchy separator in title property: {{metaTitle}}."
-              },
-              "schema": []
-            }
-          },
-          "meta-inline-properties": {
-            "defaultOptions": [
-              {
-                "csfVersion": 3
-              }
-            ],
-            "meta": {
-              "type": "problem",
-              "severity": "error",
-              "docs": {
-                "description": "Meta should only have inline properties",
-                "categories": [
-                  "csf",
-                  "recommended"
-                ],
-                "excludeFromConfig": true,
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/meta-inline-properties.md"
-              },
-              "messages": {
-                "metaShouldHaveInlineProperties": "Meta should only have inline properties: {{property}}"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "csfVersion": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "meta-satisfies-type": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "fixable": "code",
-              "severity": "error",
-              "docs": {
-                "description": "Meta should use `satisfies Meta`",
-                "categories": [],
-                "excludeFromConfig": true,
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/meta-satisfies-type.md"
-              },
-              "messages": {
-                "metaShouldSatisfyType": "CSF Meta should use `satisfies` for type safety"
-              },
-              "schema": []
-            }
-          },
-          "no-redundant-story-name": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "fixable": "code",
-              "hasSuggestions": true,
-              "severity": "warn",
-              "docs": {
-                "description": "A story should not have a redundant name property",
-                "categories": [
-                  "csf",
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-redundant-story-name.md"
-              },
-              "messages": {
-                "removeRedundantName": "Remove redundant name",
-                "storyNameIsRedundant": "Named exports should not use the name annotation if it is redundant to the name that would be generated by the export name"
-              },
-              "schema": []
-            }
-          },
-          "no-stories-of": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "severity": "error",
-              "docs": {
-                "description": "storiesOf is deprecated and should not be used",
-                "categories": [
-                  "csf-strict"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-stories-of.md"
-              },
-              "messages": {
-                "doNotUseStoriesOf": "storiesOf is deprecated and should not be used"
-              },
-              "schema": []
-            }
-          },
-          "no-title-property-in-meta": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "fixable": "code",
-              "hasSuggestions": true,
-              "severity": "error",
-              "docs": {
-                "description": "Do not define a title in meta",
-                "categories": [
-                  "csf-strict"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-title-property-in-meta.md"
-              },
-              "messages": {
-                "removeTitleInMeta": "Remove title property from meta",
-                "noTitleInMeta": "CSF3 does not need a title in meta"
-              },
-              "schema": []
-            }
-          },
-          "no-uninstalled-addons": {
-            "defaultOptions": [
-              {
-                "packageJsonLocation": "",
-                "ignore": []
-              }
-            ],
-            "meta": {
-              "type": "problem",
-              "severity": "error",
-              "docs": {
-                "description": "This rule identifies storybook addons that are invalid because they are either not installed or contain a typo in their name.",
-                "categories": [
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/no-uninstalled-addons.md"
-              },
-              "messages": {
-                "addonIsNotInstalled": "The {{ addonName }} is not installed in {{packageJsonPath}}. Did you forget to install it or is your package.json in a different location?"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "packageJsonLocation": {
-                      "type": "string"
-                    },
-                    "ignore": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "prefer-pascal-case": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "fixable": "code",
-              "hasSuggestions": true,
-              "severity": "warn",
-              "docs": {
-                "description": "Stories should use PascalCase",
-                "categories": [
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/prefer-pascal-case.md"
-              },
-              "messages": {
-                "convertToPascalCase": "Use pascal case",
-                "usePascalCase": "The story should use PascalCase notation: {{name}}"
-              },
-              "schema": []
-            }
-          },
-          "story-exports": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "severity": "error",
-              "docs": {
-                "description": "A story file must contain at least one story export",
-                "categories": [
-                  "recommended",
-                  "csf"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/story-exports.md"
-              },
-              "messages": {
-                "shouldHaveStoryExport": "The file should have at least one story export",
-                "shouldHaveStoryExportWithFilters": "The file should have at least one story export. Make sure the includeStories/excludeStories you defined are correct, otherwise Storybook will not use any stories for this file.",
-                "addStoryExport": "Add a story export"
-              },
-              "schema": []
-            }
-          },
-          "use-storybook-expect": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "fixable": "code",
-              "schema": [],
-              "severity": "error",
-              "docs": {
-                "description": "Use expect from `@storybook/test`, `storybook/test` or `@storybook/jest`",
-                "categories": [
-                  "addon-interactions",
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/use-storybook-expect.md"
-              },
-              "messages": {
-                "useExpectFromStorybook": "Do not use global expect directly in the story. You should import it from `@storybook/test` (preferrably) or `@storybook/jest` instead."
-              }
-            }
-          },
-          "use-storybook-testing-library": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "fixable": "code",
-              "hasSuggestions": true,
-              "severity": "error",
-              "docs": {
-                "description": "Do not use testing-library directly on stories",
-                "categories": [
-                  "addon-interactions",
-                  "recommended"
-                ],
-                "url": "https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/use-storybook-testing-library.md"
-              },
-              "schema": [],
-              "messages": {
-                "updateImports": "Update imports",
-                "dontUseTestingLibraryDirectly": "Do not use `{{library}}` directly in the story. You should import the functions from `@storybook/test` (preferrably) or `@storybook/testing-library` instead."
-              }
-            }
-          }
-        }
-      }
+{
+  "language": "@/js",
+  "languageOptions": {
+    "ecmaVersion": 2025,
+    "parser": "espree@10.3.0",
+    "parserOptions": {
+      "sourceType": "module",
     },
-    "rules": {
-      "storybook/await-interactions": "error",
-      "storybook/context-in-play-function": "error",
-      "storybook/csf-component": "error",
-      "storybook/default-exports": "error",
-      "storybook/hierarchy-separator": "error",
-      "storybook/meta-inline-properties": "error",
-      "storybook/meta-satisfies-type": "error",
-      "storybook/no-redundant-story-name": "error",
-      "storybook/no-stories-of": "error",
-      "storybook/no-title-property-in-meta": "off",
-      "storybook/no-uninstalled-addons": "error",
-      "storybook/prefer-pascal-case": "error",
-      "storybook/story-exports": "error",
-      "storybook/use-storybook-expect": "error",
-      "storybook/use-storybook-testing-library": "error"
-    }
-  }
-]
+    "sourceType": "module",
+  },
+  "linterOptions": {
+    "reportUnusedDisableDirectives": 1,
+  },
+  "plugins": [
+    "@",
+    "storybook",
+  ],
+  "rules": {
+    "storybook/await-interactions": [
+      2,
+    ],
+    "storybook/context-in-play-function": [
+      2,
+    ],
+    "storybook/csf-component": [
+      2,
+    ],
+    "storybook/default-exports": [
+      2,
+    ],
+    "storybook/hierarchy-separator": [
+      2,
+    ],
+    "storybook/meta-inline-properties": [
+      2,
+    ],
+    "storybook/meta-satisfies-type": [
+      2,
+    ],
+    "storybook/no-redundant-story-name": [
+      2,
+    ],
+    "storybook/no-stories-of": [
+      2,
+    ],
+    "storybook/no-title-property-in-meta": [
+      0,
+    ],
+    "storybook/no-uninstalled-addons": [
+      2,
+    ],
+    "storybook/prefer-pascal-case": [
+      2,
+    ],
+    "storybook/story-exports": [
+      2,
+    ],
+    "storybook/use-storybook-expect": [
+      2,
+    ],
+    "storybook/use-storybook-testing-library": [
+      2,
+    ],
+  },
+}

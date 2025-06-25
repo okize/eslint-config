@@ -1,1701 +1,229 @@
-[
-  {
-    "languageOptions": {
-      "globals": {
-        "suite": true,
-        "test": true,
-        "describe": true,
-        "it": true,
-        "expectTypeOf": true,
-        "assertType": true,
-        "expect": true,
-        "assert": true,
-        "vitest": true,
-        "vi": true,
-        "beforeAll": true,
-        "afterAll": true,
-        "beforeEach": true,
-        "afterEach": true,
-        "onTestFailed": true,
-        "onTestFinished": true
-      }
+{
+  "language": "@/js",
+  "languageOptions": {
+    "ecmaVersion": 2025,
+    "globals": {
+      "afterAll": true,
+      "afterEach": true,
+      "assert": true,
+      "assertType": true,
+      "beforeAll": true,
+      "beforeEach": true,
+      "describe": true,
+      "expect": true,
+      "expectTypeOf": true,
+      "it": true,
+      "onTestFailed": true,
+      "onTestFinished": true,
+      "suite": true,
+      "test": true,
+      "vi": true,
+      "vitest": true,
     },
-    "plugins": {
-      "vitest": {
-        "meta": {
-          "name": "vitest",
-          "version": "0.5.3"
-        },
-        "rules": {
-          "prefer-lowercase-title": {
-            "defaultOptions": [
-              {
-                "ignore": [],
-                "allowedPrefixes": [],
-                "ignoreTopLevelDescribe": false,
-                "lowercaseFirstCharacterOnly": true
-              }
-            ],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "enforce lowercase titles",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-lowercase-title.md"
-              },
-              "fixable": "code",
-              "messages": {
-                "lowerCaseTitle": "`{{ method }}`s should begin with lowercase"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "ignore": {
-                      "type": "array",
-                      "items": {
-                        "enum": [
-                          "describe",
-                          "test",
-                          "it"
-                        ]
-                      },
-                      "additionalProperties": false
-                    },
-                    "allowedPrefixes": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "additionalItems": false
-                    },
-                    "ignoreTopLevelDescribe": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "lowercaseFirstCharacterOnly": {
-                      "type": "boolean",
-                      "default": true
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "max-nested-describe": {
-            "defaultOptions": [
-              {
-                "max": 5
-              }
-            ],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "require describe block to be less than set max value or default value",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-nested-describe.md"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "max": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ],
-              "messages": {
-                "maxNestedDescribe": "Nested describe block should be less than set max value."
-              }
-            }
-          },
-          "no-identical-title": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "disallow identical titles",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-identical-title.md"
-              },
-              "fixable": "code",
-              "schema": [],
-              "messages": {
-                "multipleTestTitle": "Test is used multiple times in the same describe(suite) block",
-                "multipleDescribeTitle": "Describe is used multiple times in the same describe(suite) block"
-              }
-            }
-          },
-          "no-focused-tests": {
-            "defaultOptions": [
-              {
-                "fixable": true
-              }
-            ],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "disallow focused tests",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-focused-tests.md"
-              },
-              "fixable": "code",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "fixable": {
-                      "type": "boolean",
-                      "default": true
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ],
-              "messages": {
-                "noFocusedTests": "Focused tests are not allowed."
-              }
-            }
-          },
-          "no-conditional-tests": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "disallow conditional tests",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-tests.md"
-              },
-              "schema": [],
-              "messages": {
-                "noConditionalTests": "Avoid using if conditions in a test."
-              }
-            }
-          },
-          "expect-expect": {
-            "defaultOptions": [
-              {
-                "assertFunctionNames": [
-                  "expect"
-                ],
-                "additionalTestBlockFunctions": []
-              }
-            ],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce having expectation in test body",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/expect-expect.md"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "assertFunctionNames": {
-                      "type": "array",
-                      "items": [
-                        {
-                          "type": "string"
-                        }
-                      ]
-                    },
-                    "additionalTestBlockFunctions": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ],
-              "messages": {
-                "noAssertions": "Test has no assertions"
-              }
-            }
-          },
-          "consistent-test-it": {
-            "defaultOptions": [
-              {
-                "fn": "test",
-                "withinDescribe": "it"
-              }
-            ],
-            "meta": {
-              "type": "suggestion",
-              "fixable": "code",
-              "docs": {
-                "description": "enforce using test or it but not both",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-it.md"
-              },
-              "messages": {
-                "consistentMethod": "Prefer using {{ testFnKeyWork }} instead of {{ oppositeTestKeyword }}",
-                "consistentMethodWithinDescribe": "Prefer using {{ testKeywordWithinDescribe }} instead of {{ oppositeTestKeyword }} within describe"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "fn": {
-                      "type": "string",
-                      "enum": [
-                        "test",
-                        "it"
-                      ]
-                    },
-                    "withinDescribe": {
-                      "type": "string",
-                      "enum": [
-                        "test",
-                        "it"
-                      ]
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "prefer-to-be": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using toBe()",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be.md"
-              },
-              "schema": [],
-              "fixable": "code",
-              "messages": {
-                "useToBe": "Use `toBe` instead",
-                "useToBeUndefined": "Use `toBeUndefined()` instead",
-                "useToBeDefined": "Use `toBeDefined()` instead",
-                "useToBeNull": "Use `toBeNull()` instead",
-                "useToBeNaN": "Use `toBeNaN()` instead"
-              }
-            }
-          },
-          "no-hooks": {
-            "defaultOptions": [
-              {
-                "allow": []
-              }
-            ],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "disallow setup and teardown hooks",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-hooks.md"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "allow": {
-                      "type": "array",
-                      "contains": [
-                        "beforeAll",
-                        "beforeEach",
-                        "afterAll",
-                        "afterEach"
-                      ]
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ],
-              "messages": {
-                "unexpectedHook": "Unexpected '{{ hookName }}' hook"
-              }
-            }
-          },
-          "no-restricted-vi-methods": {
-            "defaultOptions": [
-              {}
-            ],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "disallow specific `vi.` methods",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-vi-methods.md"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
-              ],
-              "messages": {
-                "restrictedViMethod": "Use of `{{ restriction }}` is disallowed",
-                "restrictedViMethodWithMessage": "{{ message }}"
-              }
-            }
-          },
-          "consistent-test-filename": {
-            "defaultOptions": [
-              {
-                "pattern": ".*\\.(test|spec)\\.[tj]sx?$",
-                "allTestPattern": ".*\\.(test|spec)\\.[tj]sx?$"
-              }
-            ],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "recommended": "strict",
-                "requiresTypeChecking": false,
-                "description": "require .spec test file pattern",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/consistent-test-filename.md"
-              },
-              "messages": {
-                "consistentTestFilename": "use test file name pattern {{pattern}}"
-              },
-              "schema": [
-                {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "pattern": {
-                      "format": "regex",
-                      "default": ".*\\.test\\.[tj]sx?$"
-                    },
-                    "allTestPattern": {
-                      "format": "regex",
-                      "default": ".*\\.(test|spec)\\.[tj]sx?$"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "max-expects": {
-            "defaultOptions": [
-              {
-                "max": 5
-              }
-            ],
-            "meta": {
-              "docs": {
-                "requiresTypeChecking": false,
-                "recommended": "strict",
-                "description": "enforce a maximum number of expect per test",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/max-expects.md"
-              },
-              "messages": {
-                "maxExpect": "Too many assertion calls ({{count}}). Maximum is {{max}}."
-              },
-              "type": "suggestion",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "max": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "no-alias-methods": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "disallow alias methods",
-                "requiresTypeChecking": false,
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-alias-methods.md"
-              },
-              "messages": {
-                "noAliasMethods": "Replace {{ alias }}() with its canonical name {{ canonical }}()"
-              },
-              "type": "suggestion",
-              "fixable": "code",
-              "schema": []
-            }
-          },
-          "no-commented-out-tests": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "disallow commented out tests",
-                "requiresTypeChecking": false,
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-commented-out-tests.md"
-              },
-              "messages": {
-                "noCommentedOutTests": "Remove commented out tests. You may want to use `skip` or `only` instead."
-              },
-              "schema": [],
-              "type": "suggestion"
-            }
-          },
-          "no-conditional-expect": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "disallow conditional expects",
-                "requiresTypeChecking": false,
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-expect.md"
-              },
-              "messages": {
-                "noConditionalExpect": "Avoid calling `expect` inside conditional statements"
-              },
-              "schema": []
-            }
-          },
-          "no-conditional-in-test": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "disallow conditional tests",
-                "requiresTypeChecking": false,
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-conditional-in-test.md"
-              },
-              "messages": {
-                "noConditionalInTest": "Remove conditional tests"
-              },
-              "schema": [],
-              "type": "problem"
-            }
-          },
-          "no-disabled-tests": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "disallow disabled tests",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-disabled-tests.md"
-              },
-              "messages": {
-                "missingFunction": "Test is missing function argument",
-                "pending": "Call to pending()",
-                "pendingSuite": "Call to pending() within test suite",
-                "pendingTest": "Call to pending() within test",
-                "disabledSuite": "Disabled test suite",
-                "disabledTest": "Disabled test"
-              },
-              "schema": []
-            }
-          },
-          "no-done-callback": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "disallow using a callback in asynchronous tests and hooks",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-done-callback.md"
-              },
-              "deprecated": true,
-              "schema": [],
-              "messages": {
-                "noDoneCallback": "Return a promise instead of relying on callback parameter",
-                "suggestWrappingInPromise": "Wrap in `new Promise({{ callback }} => ...`",
-                "useAwaitInsteadOfCallback": "Use `await` instead of callback in async function"
-              },
-              "hasSuggestions": true
-            }
-          },
-          "no-duplicate-hooks": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "recommended": "strict",
-                "description": "disallow duplicate hooks and teardown hooks",
-                "requiresTypeChecking": false,
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-duplicate-hooks.md"
-              },
-              "messages": {
-                "noDuplicateHooks": "Duplicate {{hook}} in describe block."
-              },
-              "schema": [],
-              "type": "suggestion"
-            }
-          },
-          "no-large-snapshots": {
-            "defaultOptions": [
-              {}
-            ],
-            "meta": {
-              "docs": {
-                "description": "disallow large snapshots",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-large-snapshots.md"
-              },
-              "messages": {
-                "noSnapShot": "`{{ lineCount }}`s should begin with lowercase",
-                "tooLongSnapShot": "Expected vitest snapshot to be smaller than {{ lineLimit }} lines but was {{ lineCount }} lines long"
-              },
-              "type": "suggestion",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "maxSize": {
-                      "type": "number"
-                    },
-                    "inlineMaxSize": {
-                      "type": "number"
-                    },
-                    "allowedSnapshots": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "type": "array"
-                      }
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "no-interpolation-in-snapshots": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "disallow string interpolation in snapshots",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-interpolation-in-snapshots.md"
-              },
-              "fixable": "code",
-              "schema": [],
-              "messages": {
-                "noInterpolationInSnapshots": "Do not use string interpolation in snapshots"
-              }
-            }
-          },
-          "no-mocks-import": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "disallow importing from __mocks__ directory",
-                "recommended": "error",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-mocks-import.md"
-              },
-              "messages": {
-                "noMocksImport": "Mocks should not be manually imported from a __mocks__ directory. Instead use `jest.mock` and import from the original module path."
-              },
-              "schema": []
-            }
-          },
-          "no-restricted-matchers": {
-            "defaultOptions": [
-              {}
-            ],
-            "meta": {
-              "docs": {
-                "description": "disallow the use of certain matchers",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-restricted-matchers.md"
-              },
-              "type": "suggestion",
-              "schema": [
-                {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": [
-                      "string",
-                      "null"
-                    ]
-                  }
-                }
-              ],
-              "messages": {
-                "restrictedChain": "use of `{{ matcher }}` is disallowed",
-                "restrictedChainWithMessage": "{{ message }}"
-              }
-            }
-          },
-          "no-standalone-expect": {
-            "defaultOptions": [
-              {
-                "additionalTestBlockFunctions": []
-              }
-            ],
-            "meta": {
-              "docs": {
-                "description": "disallow using `expect` outside of `it` or `test` blocks",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-standalone-expect.md"
-              },
-              "type": "suggestion",
-              "messages": {
-                "noStandaloneExpect": "Expect must be called inside a test block"
-              },
-              "schema": [
-                {
-                  "properties": {
-                    "additionalTestBlockFunctions": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "no-test-prefixes": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "disallow using `test` as a prefix",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-prefixes.md"
-              },
-              "type": "suggestion",
-              "messages": {
-                "usePreferredName": "Use \"{{preferredNodeName}}\" instead"
-              },
-              "fixable": "code",
-              "schema": []
-            }
-          },
-          "no-test-return-statement": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "disallow return statements in tests",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-test-return-statement.md"
-              },
-              "schema": [],
-              "messages": {
-                "noTestReturnStatement": "Return statements are not allowed in tests"
-              }
-            }
-          },
-          "no-import-node-test": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "disallow importing `node:test`",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/no-import-node-test.md"
-              },
-              "type": "suggestion",
-              "messages": {
-                "noImportNodeTest": "Import from `vitest` instead of `node:test`"
-              },
-              "fixable": "code",
-              "schema": []
-            }
-          },
-          "prefer-called-with": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "enforce using `toBeCalledWith()` or `toHaveBeenCalledWith()`",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-called-with.md"
-              },
-              "messages": {
-                "preferCalledWith": "Prefer {{ matcherName }}With(/* expected args */)"
-              },
-              "type": "suggestion",
-              "fixable": "code",
-              "schema": []
-            }
-          },
-          "valid-title": {
-            "defaultOptions": [
-              {
-                "ignoreTypeOfDescribeName": false,
-                "allowArguments": false,
-                "disallowedWords": []
-              }
-            ],
-            "meta": {
-              "docs": {
-                "description": "enforce valid titles",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-title.md"
-              },
-              "messages": {
-                "titleMustBeString": "Test title must be a string",
-                "emptyTitle": "{{functionName}} should not have an empty title",
-                "duplicatePrefix": "should not have duplicate prefix",
-                "accidentalSpace": "should not have leading or trailing spaces",
-                "disallowedWord": "\"{{word}}\" is not allowed in test title",
-                "mustNotMatch": "{{functionName}} should not match {{pattern}}",
-                "mustMatch": "{{functionName}} should match {{pattern}}",
-                "mustNotMatchCustom": "{{message}}",
-                "mustMatchCustom": "{{message}}"
-              },
-              "type": "suggestion",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "ignoreTypeOfDescribeName": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "allowArguments": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "disallowedWords": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "patternProperties": {
-                    "^must(?:Not)?Match$": {
-                      "oneOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "array",
-                          "items": {
-                            "type": "string"
-                          },
-                          "minItems": 1,
-                          "maxItems": 2,
-                          "additionalItems": false
-                        },
-                        {
-                          "type": "object",
-                          "propertyNames": {
-                            "enum": [
-                              "describe",
-                              "test",
-                              "it"
-                            ]
-                          },
-                          "additionalProperties": {
-                            "oneOf": [
-                              {
-                                "type": "string"
-                              },
-                              "[Circular Reference]"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ],
-              "fixable": "code"
-            }
-          },
-          "valid-expect": {
-            "defaultOptions": [
-              {
-                "alwaysAwait": false,
-                "asyncMatchers": [
-                  "toReject",
-                  "toResolve"
-                ],
-                "minArgs": 1,
-                "maxArgs": 1
-              }
-            ],
-            "meta": {
-              "docs": {
-                "description": "enforce valid `expect()` usage",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-expect.md"
-              },
-              "messages": {
-                "tooManyArgs": "Expect takes most {{ amount}} argument{{s}}",
-                "notEnoughArgs": "Expect requires atleast {{ amount }} argument{{s}}",
-                "modifierUnknown": "Expect has unknown modifier",
-                "matcherNotFound": "Expect must have a corresponding matcher call.",
-                "matcherNotCalled": "Matchers must be called to assert.",
-                "asyncMustBeAwaited": "Async assertions must be awaited{{orReturned}}",
-                "promisesWithAsyncAssertionsMustBeAwaited": "Promises which return async assertions must be awaited{{orReturned}}"
-              },
-              "type": "suggestion",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "alwaysAwait": {
-                      "type": "boolean",
-                      "default": false
-                    },
-                    "asyncMatchers": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "minArgs": {
-                      "type": "number",
-                      "minimum": 1
-                    },
-                    "maxArgs": {
-                      "type": "number",
-                      "minimum": 1
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "prefer-to-be-falsy": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using toBeFalsy()",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-falsy.md"
-              },
-              "fixable": "code",
-              "schema": [],
-              "messages": {
-                "preferToBeFalsy": "Prefer using toBeFalsy()"
-              }
-            }
-          },
-          "prefer-to-be-object": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using toBeObject()",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-object.md"
-              },
-              "fixable": "code",
-              "messages": {
-                "preferToBeObject": "Prefer toBeObject() to test if a value is an object."
-              },
-              "schema": []
-            }
-          },
-          "prefer-to-be-truthy": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using `toBeTruthy`",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-be-truthy.md"
-              },
-              "messages": {
-                "preferToBeTruthy": "Prefer using `toBeTruthy` to test value is `true`"
-              },
-              "fixable": "code",
-              "schema": []
-            }
-          },
-          "prefer-to-have-length": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using toHaveLength()",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-have-length.md"
-              },
-              "fixable": "code",
-              "messages": {
-                "preferToHaveLength": "Prefer toHaveLength()"
-              },
-              "schema": []
-            }
-          },
-          "prefer-equality-matcher": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using the built-in quality matchers",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-equality-matcher.md"
-              },
-              "messages": {
-                "useEqualityMatcher": "Prefer using one of the equality matchers instead",
-                "suggestEqualityMatcher": "Use `{{ equalityMatcher }}`"
-              },
-              "hasSuggestions": true,
-              "schema": []
-            }
-          },
-          "prefer-strict-equal": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce strict equal over equal",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-strict-equal.md"
-              },
-              "messages": {
-                "useToStrictEqual": "Use `toStrictEqual()` instead",
-                "suggestReplaceWithStrictEqual": "Replace with `toStrictEqual()`"
-              },
-              "schema": [],
-              "hasSuggestions": true
-            }
-          },
-          "prefer-expect-resolves": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using `expect().resolves` over `expect(await ...)` syntax",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-resolves.md"
-              },
-              "fixable": "code",
-              "messages": {
-                "expectResolves": "Use `expect().resolves` instead"
-              },
-              "schema": []
-            }
-          },
-          "prefer-each": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using `each` rather than manual loops",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-each.md"
-              },
-              "schema": [],
-              "messages": {
-                "preferEach": "Prefer using `{{ fn }}.each` rather than a manual loop"
-              }
-            }
-          },
-          "prefer-hooks-on-top": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce having hooks before any test cases",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-on-top.md"
-              },
-              "messages": {
-                "noHookOnTop": "Hooks should come before test cases"
-              },
-              "schema": []
-            }
-          },
-          "prefer-hooks-in-order": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce having hooks in consistent order",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-hooks-in-order.md"
-              },
-              "messages": {
-                "reorderHooks": "`{{ currentHook }}` hooks should be before any `{{ previousHook }}` hooks"
-              },
-              "schema": []
-            }
-          },
-          "require-local-test-context-for-concurrent-snapshots": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "require local Test Context for concurrent snapshot tests",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-local-test-context-for-concurrent-snapshots.md"
-              },
-              "messages": {
-                "requireLocalTestContext": "Use local Test Context instead"
-              },
-              "type": "problem",
-              "schema": []
-            }
-          },
-          "prefer-mock-promise-shorthand": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce mock resolved/rejected shorthands for promises",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-mock-promise-shorthand.md"
-              },
-              "messages": {
-                "useMockShorthand": "Prefer {{ replacement }}"
-              },
-              "schema": [],
-              "fixable": "code"
-            }
-          },
-          "prefer-snapshot-hint": {
-            "defaultOptions": [
-              "multi"
-            ],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce including a hint with external snapshots",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-snapshot-hint.md"
-              },
-              "messages": {
-                "missingHint": "You should provide a hint for this snapshot"
-              },
-              "schema": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "always",
-                    "multi"
-                  ]
-                }
-              ]
-            }
-          },
-          "valid-describe-callback": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "problem",
-              "docs": {
-                "description": "enforce valid describe callback",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/valid-describe-callback.md"
-              },
-              "messages": {
-                "nameAndCallback": "Describe requires a name and callback arguments",
-                "secondArgumentMustBeFunction": "Second argument must be a function",
-                "noAsyncDescribeCallback": "Describe callback cannot be async",
-                "unexpectedDescribeArgument": "Unexpected argument in describe callback",
-                "unexpectedReturnInDescribe": "Unexpected return statement in describe callback"
-              },
-              "schema": []
-            }
-          },
-          "require-top-level-describe": {
-            "defaultOptions": [
-              {}
-            ],
-            "meta": {
-              "docs": {
-                "description": "enforce that all tests are in a top-level describe",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-top-level-describe.md"
-              },
-              "messages": {
-                "tooManyDescribes": "There should not be more than {{ max }} describe{{ s }} at the top level",
-                "unexpectedTestCase": "All test cases must be wrapped in a describe block.",
-                "unexpectedHook": "All hooks must be wrapped in a describe block."
-              },
-              "type": "suggestion",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "maxNumberOfTopLevelDescribes": {
-                      "type": "number",
-                      "minimum": 1
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "require-to-throw-message": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "require toThrow() to be called with an error message",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-to-throw-message.md"
-              },
-              "schema": [],
-              "messages": {
-                "addErrorMessage": "Add an error message to {{ matcherName }}()"
-              }
-            }
-          },
-          "require-hook": {
-            "defaultOptions": [
-              {
-                "allowedFunctionCalls": []
-              }
-            ],
-            "meta": {
-              "docs": {
-                "description": "require setup and teardown to be within a hook",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/require-hook.md"
-              },
-              "messages": {
-                "useHook": "This should be done within a hook"
-              },
-              "type": "suggestion",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "allowedFunctionCalls": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          },
-          "prefer-todo": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "layout",
-              "docs": {
-                "description": "enforce using `test.todo`",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-todo.md"
-              },
-              "messages": {
-                "emptyTest": "Prefer todo test case over empty test case",
-                "unimplementedTest": "Prefer todo test case over unimplemented test case"
-              },
-              "fixable": "code",
-              "schema": []
-            }
-          },
-          "prefer-spy-on": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using `vi.spyOn`",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-spy-on.md"
-              },
-              "messages": {
-                "useViSpayOn": "Use `vi.spyOn` instead"
-              },
-              "fixable": "code",
-              "schema": []
-            }
-          },
-          "prefer-comparison-matcher": {
-            "defaultOptions": [],
-            "meta": {
-              "type": "suggestion",
-              "docs": {
-                "description": "enforce using the built-in comparison matchers",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-comparison-matcher.md"
-              },
-              "schema": [],
-              "fixable": "code",
-              "messages": {
-                "useToBeComparison": "Prefer using `{{ preferredMatcher }}` instead"
-              }
-            }
-          },
-          "prefer-to-contain": {
-            "defaultOptions": [],
-            "meta": {
-              "docs": {
-                "description": "enforce using toContain()",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-to-contain.md"
-              },
-              "messages": {
-                "useToContain": "Use toContain() instead"
-              },
-              "fixable": "code",
-              "type": "suggestion",
-              "schema": []
-            }
-          },
-          "prefer-expect-assertions": {
-            "defaultOptions": [
-              {
-                "onlyFunctionsWithAsyncKeyword": false,
-                "onlyFunctionsWithExpectInCallback": false,
-                "onlyFunctionsWithExpectInLoop": false
-              }
-            ],
-            "meta": {
-              "docs": {
-                "description": "enforce using expect assertions instead of callbacks",
-                "recommended": "strict",
-                "url": "https://github.com/veritem/eslint-plugin-vitest/blob/main/docs/rules/prefer-expect-assertions.md"
-              },
-              "messages": {
-                "hasAssertionsTakesNoArguments": "`expect.hasAssertions` expects no arguments",
-                "assertionsRequiresOneArgument": "`expect.assertions` excepts a single argument of type number",
-                "assertionsRequiresNumberArgument": "This argument should be a number",
-                "haveExpectAssertions": "Every test should have either `expect.assertions(<number of assertions>)` or `expect.hasAssertions()` as its first expression",
-                "suggestAddingHasAssertions": "Add `expect.hasAssertions()`",
-                "suggestAddingAssertions": "Add `expect.assertions(<number of assertions>)`",
-                "suggestRemovingExtraArguments": "Remove extra arguments"
-              },
-              "type": "suggestion",
-              "hasSuggestions": true,
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "onlyFunctionsWithAsyncKeyword": {
-                      "type": "boolean"
-                    },
-                    "onlyFunctionsWithExpectInLoop": {
-                      "type": "boolean"
-                    },
-                    "onlyFunctionsWithExpectInCallback": {
-                      "type": "boolean"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          }
-        },
-        "configs": {
-          "legacy-recommended": {
-            "plugins": [
-              "vitest"
-            ],
-            "rules": {
-              "vitest/expect-expect": "error",
-              "vitest/no-identical-title": "error",
-              "vitest/no-commented-out-tests": "error",
-              "vitest/valid-title": "error",
-              "vitest/valid-expect": "error",
-              "vitest/valid-describe-callback": "error",
-              "vitest/require-local-test-context-for-concurrent-snapshots": "error",
-              "vitest/no-import-node-test": "error"
-            }
-          },
-          "legacy-all": {
-            "plugins": [
-              "vitest"
-            ],
-            "rules": {
-              "vitest/prefer-lowercase-title": "warn",
-              "vitest/max-nested-describe": "warn",
-              "vitest/no-focused-tests": "warn",
-              "vitest/no-conditional-tests": "warn",
-              "vitest/consistent-test-it": "warn",
-              "vitest/no-hooks": "warn",
-              "vitest/no-restricted-vi-methods": "warn",
-              "vitest/consistent-test-filename": "warn",
-              "vitest/max-expects": "warn",
-              "vitest/no-alias-methods": "warn",
-              "vitest/no-conditional-expect": "warn",
-              "vitest/no-conditional-in-test": "warn",
-              "vitest/no-disabled-tests": "warn",
-              "vitest/no-done-callback": "warn",
-              "vitest/no-duplicate-hooks": "warn",
-              "vitest/no-large-snapshots": "warn",
-              "vitest/no-interpolation-in-snapshots": "warn",
-              "vitest/no-mocks-import": "warn",
-              "vitest/no-restricted-matchers": "warn",
-              "vitest/no-standalone-expect": "warn",
-              "vitest/no-test-prefixes": "warn",
-              "vitest/no-test-return-statement": "warn",
-              "vitest/prefer-called-with": "warn",
-              "vitest/prefer-to-be-falsy": "warn",
-              "vitest/prefer-to-be-object": "warn",
-              "vitest/prefer-to-be-truthy": "warn",
-              "vitest/prefer-to-have-length": "warn",
-              "vitest/prefer-equality-matcher": "warn",
-              "vitest/prefer-strict-equal": "warn",
-              "vitest/prefer-expect-resolves": "warn",
-              "vitest/prefer-each": "warn",
-              "vitest/prefer-hooks-on-top": "warn",
-              "vitest/prefer-hooks-in-order": "warn",
-              "vitest/prefer-mock-promise-shorthand": "warn",
-              "vitest/prefer-snapshot-hint": "warn",
-              "vitest/require-top-level-describe": "warn",
-              "vitest/require-to-throw-message": "warn",
-              "vitest/require-hook": "warn",
-              "vitest/prefer-todo": "warn",
-              "vitest/prefer-spy-on": "warn",
-              "vitest/prefer-comparison-matcher": "warn",
-              "vitest/prefer-to-contain": "warn",
-              "vitest/prefer-expect-assertions": "warn",
-              "vitest/prefer-to-be": "warn"
-            }
-          },
-          "recommended": {
-            "plugins": {
-              "vitest": "[Circular Reference]"
-            },
-            "rules": {
-              "vitest/expect-expect": "error",
-              "vitest/no-identical-title": "error",
-              "vitest/no-commented-out-tests": "error",
-              "vitest/valid-title": "error",
-              "vitest/valid-expect": "error",
-              "vitest/valid-describe-callback": "error",
-              "vitest/require-local-test-context-for-concurrent-snapshots": "error",
-              "vitest/no-import-node-test": "error"
-            }
-          },
-          "all": {
-            "plugins": {
-              "vitest": "[Circular Reference]"
-            },
-            "rules": {
-              "vitest/prefer-lowercase-title": "warn",
-              "vitest/max-nested-describe": "warn",
-              "vitest/no-focused-tests": "warn",
-              "vitest/no-conditional-tests": "warn",
-              "vitest/consistent-test-it": "warn",
-              "vitest/no-hooks": "warn",
-              "vitest/no-restricted-vi-methods": "warn",
-              "vitest/consistent-test-filename": "warn",
-              "vitest/max-expects": "warn",
-              "vitest/no-alias-methods": "warn",
-              "vitest/no-conditional-expect": "warn",
-              "vitest/no-conditional-in-test": "warn",
-              "vitest/no-disabled-tests": "warn",
-              "vitest/no-done-callback": "warn",
-              "vitest/no-duplicate-hooks": "warn",
-              "vitest/no-large-snapshots": "warn",
-              "vitest/no-interpolation-in-snapshots": "warn",
-              "vitest/no-mocks-import": "warn",
-              "vitest/no-restricted-matchers": "warn",
-              "vitest/no-standalone-expect": "warn",
-              "vitest/no-test-prefixes": "warn",
-              "vitest/no-test-return-statement": "warn",
-              "vitest/prefer-called-with": "warn",
-              "vitest/prefer-to-be-falsy": "warn",
-              "vitest/prefer-to-be-object": "warn",
-              "vitest/prefer-to-be-truthy": "warn",
-              "vitest/prefer-to-have-length": "warn",
-              "vitest/prefer-equality-matcher": "warn",
-              "vitest/prefer-strict-equal": "warn",
-              "vitest/prefer-expect-resolves": "warn",
-              "vitest/prefer-each": "warn",
-              "vitest/prefer-hooks-on-top": "warn",
-              "vitest/prefer-hooks-in-order": "warn",
-              "vitest/prefer-mock-promise-shorthand": "warn",
-              "vitest/prefer-snapshot-hint": "warn",
-              "vitest/require-top-level-describe": "warn",
-              "vitest/require-to-throw-message": "warn",
-              "vitest/require-hook": "warn",
-              "vitest/prefer-todo": "warn",
-              "vitest/prefer-spy-on": "warn",
-              "vitest/prefer-comparison-matcher": "warn",
-              "vitest/prefer-to-contain": "warn",
-              "vitest/prefer-expect-assertions": "warn",
-              "vitest/prefer-to-be": "warn"
-            }
-          },
-          "env": {
-            "languageOptions": {
-              "globals": {
-                "suite": "writable",
-                "test": "writable",
-                "describe": "writable",
-                "it": "writable",
-                "expect": "writable",
-                "assert": "writable",
-                "vitest": "writable",
-                "vi": "writable",
-                "beforeAll": "writable",
-                "afterAll": "writable",
-                "beforeEach": "writable",
-                "afterEach": "writable"
-              }
-            }
-          }
-        },
-        "environments": {
-          "env": {
-            "globals": {
-              "suite": true,
-              "test": true,
-              "describe": true,
-              "it": true,
-              "expect": true,
-              "assert": true,
-              "vitest": true,
-              "vi": true,
-              "beforeAll": true,
-              "afterAll": true,
-              "beforeEach": true,
-              "afterEach": true
-            }
-          }
-        }
-      },
-      "jest-formatting": {
-        "rules": {
-          "padding-around-after-all-blocks": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          },
-          "padding-around-after-each-blocks": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          },
-          "padding-around-before-all-blocks": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          },
-          "padding-around-before-each-blocks": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          },
-          "padding-around-describe-blocks": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          },
-          "padding-around-expect-groups": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          },
-          "padding-around-test-blocks": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          },
-          "padding-around-all": {
-            "meta": {
-              "fixable": "whitespace",
-              "deprecated": false
-            }
-          }
-        },
-        "configs": {
-          "recommended": {
-            "plugins": [
-              "jest-formatting"
-            ],
-            "overrides": [
-              {
-                "files": [
-                  "**/*.test.*",
-                  "**/*_test.*",
-                  "**/*Test.*",
-                  "**/*.spec.*",
-                  "**/*_spec.*",
-                  "**/*Spec.*",
-                  "**/__tests__/*"
-                ],
-                "rules": {
-                  "jest-formatting/padding-around-after-all-blocks": 2,
-                  "jest-formatting/padding-around-after-each-blocks": 2,
-                  "jest-formatting/padding-around-before-all-blocks": 2,
-                  "jest-formatting/padding-around-before-each-blocks": 2,
-                  "jest-formatting/padding-around-describe-blocks": 2,
-                  "jest-formatting/padding-around-test-blocks": 2
-                }
-              }
-            ]
-          },
-          "strict": {
-            "plugins": [
-              "jest-formatting"
-            ],
-            "overrides": [
-              {
-                "files": [
-                  "**/*.test.*",
-                  "**/*_test.*",
-                  "**/*Test.*",
-                  "**/*.spec.*",
-                  "**/*_spec.*",
-                  "**/*Spec.*",
-                  "**/__tests__/*"
-                ],
-                "rules": {
-                  "jest-formatting/padding-around-all": 2
-                }
-              }
-            ]
-          }
-        }
-      },
-      "no-only-tests": {
-        "rules": {
-          "no-only-tests": {
-            "meta": {
-              "docs": {
-                "description": "disallow .only blocks in tests",
-                "category": "Possible Errors",
-                "recommended": true,
-                "url": "https://github.com/levibuzolic/eslint-plugin-no-only-tests"
-              },
-              "fixable": "code",
-              "schema": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "block": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "uniqueItems": true,
-                      "default": [
-                        "describe",
-                        "it",
-                        "context",
-                        "test",
-                        "tape",
-                        "fixture",
-                        "serial",
-                        "Feature",
-                        "Scenario",
-                        "Given",
-                        "And",
-                        "When",
-                        "Then"
-                      ]
-                    },
-                    "focus": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "uniqueItems": true,
-                      "default": [
-                        "only"
-                      ]
-                    },
-                    "functions": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "uniqueItems": true,
-                      "default": []
-                    },
-                    "fix": {
-                      "type": "boolean",
-                      "default": false
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            }
-          }
-        }
-      }
+    "parser": "espree@10.3.0",
+    "parserOptions": {
+      "sourceType": "module",
     },
-    "rules": {
-      "no-only-tests/no-only-tests": "error",
-      "vitest/consistent-test-filename": "error",
-      "vitest/consistent-test-it": "error",
-      "vitest/expect-expect": "error",
-      "vitest/max-expects": [
-        "error",
-        {
-          "max": 15
-        }
-      ],
-      "vitest/max-nested-describe": "error",
-      "vitest/no-alias-methods": "error",
-      "vitest/no-commented-out-tests": "error",
-      "vitest/no-conditional-expect": "error",
-      "vitest/no-conditional-in-test": "error",
-      "vitest/no-conditional-tests": "error",
-      "vitest/no-disabled-tests": "off",
-      "vitest/no-done-callback": "error",
-      "vitest/no-duplicate-hooks": "error",
-      "vitest/no-focused-tests": "error",
-      "vitest/no-hooks": "off",
-      "vitest/no-identical-title": "error",
-      "vitest/no-import-node-test": "error",
-      "vitest/no-interpolation-in-snapshots": "error",
-      "vitest/no-large-snapshots": [
-        "error",
-        {
-          "maxSize": 500
-        }
-      ],
-      "vitest/no-mocks-import": "error",
-      "vitest/no-restricted-matchers": "error",
-      "vitest/no-restricted-vi-methods": "error",
-      "vitest/no-standalone-expect": "error",
-      "vitest/no-test-prefixes": "error",
-      "vitest/no-test-return-statement": "error",
-      "vitest/prefer-called-with": "error",
-      "vitest/prefer-comparison-matcher": "error",
-      "vitest/prefer-each": "error",
-      "vitest/prefer-equality-matcher": "error",
-      "vitest/prefer-expect-assertions": "off",
-      "vitest/prefer-expect-resolves": "error",
-      "vitest/prefer-hooks-in-order": "error",
-      "vitest/prefer-hooks-on-top": "error",
-      "vitest/prefer-lowercase-title": "off",
-      "vitest/prefer-mock-promise-shorthand": "error",
-      "vitest/prefer-snapshot-hint": "error",
-      "vitest/prefer-spy-on": "error",
-      "vitest/prefer-strict-equal": "error",
-      "vitest/prefer-to-be": "error",
-      "vitest/prefer-to-be-falsy": "off",
-      "vitest/prefer-to-be-object": "error",
-      "vitest/prefer-to-be-truthy": "off",
-      "vitest/prefer-to-contain": "error",
-      "vitest/prefer-to-have-length": "error",
-      "vitest/prefer-todo": "error",
-      "vitest/require-hook": "error",
-      "vitest/require-local-test-context-for-concurrent-snapshots": "error",
-      "vitest/require-to-throw-message": "error",
-      "vitest/require-top-level-describe": "error",
-      "vitest/valid-describe-callback": "error",
-      "vitest/valid-expect": "error",
-      "vitest/valid-title": "error",
-      "jest-formatting/padding-around-after-all-blocks": "error",
-      "jest-formatting/padding-around-after-each-blocks": "error",
-      "jest-formatting/padding-around-before-all-blocks": "error",
-      "jest-formatting/padding-around-before-each-blocks": "error",
-      "jest-formatting/padding-around-expect-groups": "error",
-      "jest-formatting/padding-around-describe-blocks": "error",
-      "jest-formatting/padding-around-test-blocks": "error",
-      "jest-formatting/padding-around-all": "off"
-    }
-  }
-]
+    "sourceType": "module",
+  },
+  "linterOptions": {
+    "reportUnusedDisableDirectives": 1,
+  },
+  "plugins": [
+    "@",
+    "vitest:vitest@0.5.3",
+    "jest-formatting",
+    "no-only-tests",
+  ],
+  "rules": {
+    "jest-formatting/padding-around-after-all-blocks": [
+      2,
+    ],
+    "jest-formatting/padding-around-after-each-blocks": [
+      2,
+    ],
+    "jest-formatting/padding-around-all": [
+      0,
+    ],
+    "jest-formatting/padding-around-before-all-blocks": [
+      2,
+    ],
+    "jest-formatting/padding-around-before-each-blocks": [
+      2,
+    ],
+    "jest-formatting/padding-around-describe-blocks": [
+      2,
+    ],
+    "jest-formatting/padding-around-expect-groups": [
+      2,
+    ],
+    "jest-formatting/padding-around-test-blocks": [
+      2,
+    ],
+    "no-only-tests/no-only-tests": [
+      2,
+    ],
+    "vitest/consistent-test-filename": [
+      2,
+    ],
+    "vitest/consistent-test-it": [
+      2,
+    ],
+    "vitest/expect-expect": [
+      2,
+    ],
+    "vitest/max-expects": [
+      2,
+      {
+        "max": 15,
+      },
+    ],
+    "vitest/max-nested-describe": [
+      2,
+    ],
+    "vitest/no-alias-methods": [
+      2,
+    ],
+    "vitest/no-commented-out-tests": [
+      2,
+    ],
+    "vitest/no-conditional-expect": [
+      2,
+    ],
+    "vitest/no-conditional-in-test": [
+      2,
+    ],
+    "vitest/no-conditional-tests": [
+      2,
+    ],
+    "vitest/no-disabled-tests": [
+      0,
+    ],
+    "vitest/no-done-callback": [
+      2,
+    ],
+    "vitest/no-duplicate-hooks": [
+      2,
+    ],
+    "vitest/no-focused-tests": [
+      2,
+    ],
+    "vitest/no-hooks": [
+      0,
+    ],
+    "vitest/no-identical-title": [
+      2,
+    ],
+    "vitest/no-import-node-test": [
+      2,
+    ],
+    "vitest/no-interpolation-in-snapshots": [
+      2,
+    ],
+    "vitest/no-large-snapshots": [
+      2,
+      {
+        "maxSize": 500,
+      },
+    ],
+    "vitest/no-mocks-import": [
+      2,
+    ],
+    "vitest/no-restricted-matchers": [
+      2,
+    ],
+    "vitest/no-restricted-vi-methods": [
+      2,
+    ],
+    "vitest/no-standalone-expect": [
+      2,
+    ],
+    "vitest/no-test-prefixes": [
+      2,
+    ],
+    "vitest/no-test-return-statement": [
+      2,
+    ],
+    "vitest/prefer-called-with": [
+      2,
+    ],
+    "vitest/prefer-comparison-matcher": [
+      2,
+    ],
+    "vitest/prefer-each": [
+      2,
+    ],
+    "vitest/prefer-equality-matcher": [
+      2,
+    ],
+    "vitest/prefer-expect-assertions": [
+      0,
+    ],
+    "vitest/prefer-expect-resolves": [
+      2,
+    ],
+    "vitest/prefer-hooks-in-order": [
+      2,
+    ],
+    "vitest/prefer-hooks-on-top": [
+      2,
+    ],
+    "vitest/prefer-lowercase-title": [
+      0,
+    ],
+    "vitest/prefer-mock-promise-shorthand": [
+      2,
+    ],
+    "vitest/prefer-snapshot-hint": [
+      2,
+    ],
+    "vitest/prefer-spy-on": [
+      2,
+    ],
+    "vitest/prefer-strict-equal": [
+      2,
+    ],
+    "vitest/prefer-to-be": [
+      2,
+    ],
+    "vitest/prefer-to-be-falsy": [
+      0,
+    ],
+    "vitest/prefer-to-be-object": [
+      2,
+    ],
+    "vitest/prefer-to-be-truthy": [
+      0,
+    ],
+    "vitest/prefer-to-contain": [
+      2,
+    ],
+    "vitest/prefer-to-have-length": [
+      2,
+    ],
+    "vitest/prefer-todo": [
+      2,
+    ],
+    "vitest/require-hook": [
+      2,
+    ],
+    "vitest/require-local-test-context-for-concurrent-snapshots": [
+      2,
+    ],
+    "vitest/require-to-throw-message": [
+      2,
+    ],
+    "vitest/require-top-level-describe": [
+      2,
+    ],
+    "vitest/valid-describe-callback": [
+      2,
+    ],
+    "vitest/valid-expect": [
+      2,
+    ],
+    "vitest/valid-title": [
+      2,
+    ],
+  },
+}
