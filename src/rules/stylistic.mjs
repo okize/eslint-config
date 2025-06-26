@@ -137,16 +137,6 @@ export default {
   // decision: disabled because this is a formatter concern
   '@stylistic/lines-around-comment': 'off',
 
-  // Require or disallow newlines around directives
-  // https://eslint.style/rules/default/lines-around-directive
-  '@stylistic/lines-around-directive': [
-    'error',
-    {
-      before: 'always',
-      after: 'always',
-    },
-  ],
-
   // Specify the maximum length of a line in your program
   // https://eslint.style/rules/default/max-len
   // decision: disabled because this is a formatter concern
@@ -216,15 +206,6 @@ export default {
   // https://eslint.style/rules/default/no-multi-spaces
   // decision: disabled because this is a formatter concern
   '@stylistic/no-multi-spaces': 'off',
-
-  // Disallow multiple empty lines, only one newline at the end, and no new lines at the beginning
-  // https://eslint.style/rules/default/no-multiple-empty-lines
-  // decision: disabled because this is a formatter concern
-  '@stylistic/no-multiple-empty-lines': 'off',
-
-  // Disallow space between function identifier and application
-  // https://eslint.style/rules/default/no-spaced-func
-  '@stylistic/no-spaced-func': 'error',
 
   // Disallow tab characters entirely
   // https://eslint.style/rules/default/no-tabs
