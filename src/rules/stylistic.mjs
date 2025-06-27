@@ -73,9 +73,9 @@ export default {
   '@stylistic/function-call-argument-newline': 'off',
 
   // Enforce spacing between functions and their invocations
-  // https://eslint.style/rules/default/func-call-spacing
+  // https://eslint.style/rules/default/function-call-spacing
   // decision: disabled because this is a formatter concern
-  '@stylistic/func-call-spacing': 'off',
+  '@stylistic/function-call-spacing': 'off',
 
   // Require line breaks inside function parentheses if there are line breaks between parameters
   // https://eslint.style/rules/default/function-paren-newline
@@ -88,6 +88,7 @@ export default {
   '@stylistic/generator-star-spacing': 'off',
 
   // Enforce the location of arrow function bodies with implicit returns
+  // decision: disabled because this is a formatter concern
   // https://eslint.style/rules/default/implicit-arrow-linebreak
   '@stylistic/implicit-arrow-linebreak': 'off',
 
@@ -113,14 +114,8 @@ export default {
 
   // Enforce position of line comments
   // https://eslint.style/rules/default/line-comment-position
-  '@stylistic/line-comment-position': [
-    'off',
-    {
-      position: 'above',
-      ignorePattern: '',
-      applyDefaultPatterns: true,
-    },
-  ],
+  // decision: disabled because this is a formatter concern
+  '@stylistic/line-comment-position': 'off',
 
   // Disallow mixed 'LF' and 'CRLF' as linebreaks
   // https://eslint.style/rules/default/linebreak-style
@@ -149,6 +144,7 @@ export default {
 
   // Enforce a particular style for multiline comments
   // https://eslint.style/rules/default/multiline-comment-style
+  // decision: disabled because this is a formatter concern
   '@stylistic/multiline-comment-style': ['off', 'starred-block'],
 
   // Require multiline ternary
@@ -161,14 +157,6 @@ export default {
   // decision: disabled because this is a formatter concern
   '@stylistic/new-parens': 'off',
 
-  // Allow/disallow an empty newline after var statement
-  // https://eslint.style/rules/default/newline-after-var
-  '@stylistic/newline-after-var': 'off',
-
-  // Require an empty line before return statements
-  // https://eslint.style/rules/default/newline-before-return
-  '@stylistic/newline-before-return': 'off',
-
   // Enforces new line after each method call in the chain to make it
   // more readable and easy to maintain
   // https://eslint.style/rules/default/newline-per-chained-call
@@ -177,6 +165,7 @@ export default {
 
   // Disallow arrow functions where they could be confused with comparisons
   // https://eslint.style/rules/default/no-confusing-arrow
+  // decision: disabled because this is a formatter concern
   '@stylistic/no-confusing-arrow': 'off',
 
   // Disallow unnecessary parentheses
@@ -191,10 +180,12 @@ export default {
 
   // Disallow the use of leading or trailing decimal points in numeric literals
   // https://eslint.style/rules/default/no-floating-decimal
+  // decision: disabled because this is a formatter concern
   '@stylistic/no-floating-decimal': 'off',
 
   // Disallow un-paren'd mixes of different operators
   // https://eslint.style/rules/default/no-mixed-operators
+  // decision: disabled because this is a formatter concern
   '@stylistic/no-mixed-operators': 'off',
 
   // Disallow mixed spaces and tabs for indentation
@@ -206,6 +197,11 @@ export default {
   // https://eslint.style/rules/default/no-multi-spaces
   // decision: disabled because this is a formatter concern
   '@stylistic/no-multi-spaces': 'off',
+
+  // Disallow multiple empty lines, only one newline at the end, and no new lines at the beginning
+  // https://eslint.style/rules/default/no-multiple-empty-lines
+  // decision: disabled because this is a formatter concern
+  '@stylistic/no-multiple-empty-lines': 'off',
 
   // Disallow tab characters entirely
   // https://eslint.style/rules/default/no-tabs
@@ -224,6 +220,7 @@ export default {
 
   // Enforce the location of single-line statements
   // https://eslint.style/rules/default/nonblock-statement-body-position
+  // decision: disabled because this is a formatter concern
   '@stylistic/nonblock-statement-body-position': 'off',
 
   // Enforce line breaks between braces
@@ -243,6 +240,7 @@ export default {
 
   // Require a newline around variable declaration
   // https://eslint.style/rules/default/one-var-declaration-per-line
+  // decision: disabled because this is a formatter concern
   '@stylistic/one-var-declaration-per-line': 'off',
 
   // Requires operator at the beginning of the line in multiline statements
@@ -262,6 +260,7 @@ export default {
 
   // Require quotes around object literal property names
   // https://eslint.style/rules/default/quote-props
+  // decision: disabled because this is a formatter concern
   '@stylistic/quote-props': 'off',
 
   // Specify whether double or single quotes should be used
@@ -364,70 +363,87 @@ export default {
 
   // Enforce consistent line breaks after opening and before closing braces
   // https://eslint.style/rules/default/curly-newline
+  // decision: disabled because this is a formatter concern
   '@stylistic/curly-newline': 'off',
 
   // Indentation for binary operators
   // https://eslint.style/rules/default/indent-binary-ops
+  // decision: disabled because this is a formatter concern
   '@stylistic/indent-binary-ops': 'off',
 
   // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
   // https://eslint.style/rules/default/jsx-child-element-spacing
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-child-element-spacing': 'off',
 
   // Enforce closing bracket location in JSX
   // https://eslint.style/rules/default/jsx-closing-bracket-location
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-closing-bracket-location': 'off',
 
   // Enforce closing tag location for multiline JSX
   // https://eslint.style/rules/default/jsx-closing-tag-location
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-closing-tag-location': 'off',
 
   // Disallow unnecessary JSX expressions when literals alone are sufficient
   // https://eslint.style/rules/default/jsx-curly-brace-presence
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-curly-brace-presence': 'off',
 
   // Enforce consistent linebreaks in curly braces in JSX attributes and expressions
   // https://eslint.style/rules/default/jsx-curly-newline
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-curly-newline': 'off',
 
   // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
   // https://eslint.style/rules/default/jsx-curly-spacing
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-curly-spacing': 'off',
 
   // Enforce or disallow spaces around equal signs in JSX attributes
   // https://eslint.style/rules/default/jsx-equals-spacing
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-equals-spacing': 'off',
 
   // Enforce proper position of the first property in JSX
   // https://eslint.style/rules/default/jsx-first-prop-new-line
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-first-prop-new-line': 'off',
 
   // Enforce line breaks before and after JSX elements when they are used as arguments
   // https://eslint.style/rules/default/jsx-function-call-newline
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-function-call-newline': 'off',
 
   // Enforce JSX indentation
   // https://eslint.style/rules/default/jsx-indent
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-indent': 'off',
 
   // Enforce props indentation in JSX
   // https://eslint.style/rules/default/jsx-indent-props
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-indent-props': 'off',
 
   // Enforce maximum of props on a single line in JSX
   // https://eslint.style/rules/default/jsx-max-props-per-line
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-max-props-per-line': 'off',
 
   // Require or prevent a new line after jsx elements and expressions
   // https://eslint.style/rules/default/jsx-newline
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-newline': 'off',
 
   // Require one JSX element per line
   // https://eslint.style/rules/default/jsx-one-expression-per-line
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-one-expression-per-line': 'off',
 
   // Enforce PascalCase for user-defined JSX components
   // https://eslint.style/rules/default/jsx-pascal-case
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-pascal-case': 'off',
 
   // Disallow multiple spaces between inline JSX props
@@ -437,33 +453,41 @@ export default {
 
   // Disallow extra closing tags for components without children
   // https://eslint.style/rules/default/jsx-self-closing-comp
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-self-closing-comp': 'off',
 
   // Enforce props alphabetical sorting
   // https://eslint.style/rules/default/jsx-sort-props
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-sort-props': 'off',
 
   // Enforce whitespace in and around the JSX opening and closing brackets
   // https://eslint.style/rules/default/jsx-tag-spacing
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-tag-spacing': 'off',
 
   // Disallow missing parentheses around multiline JSX
   // https://eslint.style/rules/default/jsx-wrap-multilines
+  // decision: disabled because this is a formatter concern
   '@stylistic/jsx-wrap-multilines': 'off',
 
   // Require a specific member delimiter style for interfaces and type literals
   // https://eslint.style/rules/default/member-delimiter-style
+  // decision: disabled because this is a formatter concern
   '@stylistic/member-delimiter-style': 'off',
 
   // Require consistent spacing around type annotations
   // https://eslint.style/rules/default/type-annotation-spacing
+  // decision: disabled because this is a formatter concern
   '@stylistic/type-annotation-spacing': 'off',
 
   // Enforce consistent spacing inside TypeScript type generics
   // https://eslint.style/rules/default/type-generic-spacing
+  // decision: disabled because this is a formatter concern
   '@stylistic/type-generic-spacing': 'off',
 
   // Expect space before the type declaration in the named tuple
   // https://eslint.style/rules/default/type-named-tuple-spacing
+  // decision: disabled because this is a formatter concern
   '@stylistic/type-named-tuple-spacing': 'off',
 };

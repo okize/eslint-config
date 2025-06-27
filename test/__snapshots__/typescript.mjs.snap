@@ -124,10 +124,10 @@
     "@stylistic/eol-last": [
       0,
     ],
-    "@stylistic/func-call-spacing": [
+    "@stylistic/function-call-argument-newline": [
       0,
     ],
-    "@stylistic/function-call-argument-newline": [
+    "@stylistic/function-call-spacing": [
       0,
     ],
     "@stylistic/function-paren-newline": [
@@ -216,11 +216,6 @@
     ],
     "@stylistic/line-comment-position": [
       0,
-      {
-        "applyDefaultPatterns": true,
-        "ignorePattern": "",
-        "position": "above",
-      },
     ],
     "@stylistic/linebreak-style": [
       0,
@@ -250,12 +245,6 @@
     "@stylistic/new-parens": [
       0,
     ],
-    "@stylistic/newline-after-var": [
-      0,
-    ],
-    "@stylistic/newline-before-return": [
-      0,
-    ],
     "@stylistic/newline-per-chained-call": [
       0,
     ],
@@ -278,6 +267,9 @@
       0,
     ],
     "@stylistic/no-multi-spaces": [
+      0,
+    ],
+    "@stylistic/no-multiple-empty-lines": [
       0,
     ],
     "@stylistic/no-tabs": [
