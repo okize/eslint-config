@@ -122,7 +122,7 @@
       2,
     ],
     "testing-library/prefer-implicit-assert": [
-      2,
+      0,
     ],
     "testing-library/prefer-presence-queries": [
       2,

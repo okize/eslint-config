@@ -121,5 +121,6 @@ export default {
 
   // Suggest using implicit assertions for getBy* & findBy* queries
   // https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/prefer-implicit-assert.md
-  'testing-library/prefer-implicit-assert': 'error',
+  // decision: this is an alternative to `prefer-explicit-assert` and both cannot be used together
+  'testing-library/prefer-implicit-assert': 'off',
 };
