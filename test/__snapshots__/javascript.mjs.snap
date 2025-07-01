@@ -71,7 +71,7 @@
     "sourceType": "module",
   },
   "linterOptions": {
-    "reportUnusedDisableDirectives": 1,
+    "reportUnusedDisableDirectives": 2,
   },
   "plugins": [
     "@",

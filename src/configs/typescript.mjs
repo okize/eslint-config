@@ -10,6 +10,9 @@ import promiseRules from '../rules/promise.mjs';
 
 export default [
   {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+    },
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {

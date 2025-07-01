@@ -9,6 +9,9 @@ import promiseRules from '../rules/promise.mjs';
 
 export default [
   {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+    },
     languageOptions: {
       sourceType: 'module',
       ecmaVersion: 2024,
