@@ -1,0 +1,40 @@
+{
+  "language": "@/js",
+  "languageOptions": {
+    "ecmaVersion": 2025,
+    "parser": "espree@10.3.0",
+    "parserOptions": {
+      "sourceType": "module",
+    },
+    "sourceType": "module",
+  },
+  "linterOptions": {
+    "reportUnusedDisableDirectives": 1,
+  },
+  "plugins": [
+    "@",
+    "ssr-friendly",
+    "react-hooks-ssr",
+    "no-typeof-window-undefined",
+  ],
+  "rules": {
+    "no-typeof-window-undefined/no-typeof-window-undefined": [
+      2,
+    ],
+    "react-hooks-ssr/react-hooks-global-ssr": [
+      2,
+    ],
+    "ssr-friendly/no-dom-globals-in-constructor": [
+      2,
+    ],
+    "ssr-friendly/no-dom-globals-in-module-scope": [
+      2,
+    ],
+    "ssr-friendly/no-dom-globals-in-react-cc-render": [
+      2,
+    ],
+    "ssr-friendly/no-dom-globals-in-react-fc": [
+      2,
+    ],
+  },
+}
