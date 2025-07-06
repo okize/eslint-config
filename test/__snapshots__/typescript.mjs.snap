@@ -902,19 +902,6 @@
     ],
     "capitalized-comments": [
       0,
-      "never",
-      {
-        "block": {
-          "ignoreConsecutiveComments": true,
-          "ignoreInlineComments": true,
-          "ignorePattern": ".*",
-        },
-        "line": {
-          "ignoreConsecutiveComments": true,
-          "ignoreInlineComments": true,
-          "ignorePattern": ".*",
-        },
-      },
     ],
     "class-methods-use-this": [
       0,
@@ -975,11 +962,6 @@
     ],
     "func-name-matching": [
       0,
-      "always",
-      {
-        "considerPropertyDescriptor": true,
-        "includeCommonJSModuleExports": false,
-      },
     ],
     "func-names": [
       2,
@@ -1256,17 +1238,17 @@
       },
     ],
     "no-implicit-coercion": [
-      0,
+      2,
       {
         "allow": [],
-        "boolean": false,
+        "boolean": true,
         "disallowTemplateShorthand": false,
         "number": true,
         "string": true,
       },
     ],
     "no-implicit-globals": [
-      0,
+      2,
       {
         "lexicalBindings": false,
       },
@@ -1321,9 +1303,6 @@
         "allowSwitch": false,
       },
     ],
-    "no-lone-blocks": [
-      2,
-    ],
     "no-lonely-if": [
       2,
     ],
@@ -1358,9 +1337,6 @@
       2,
     ],
     "no-new-func": [
-      2,
-    ],
-    "no-new-symbol": [
       2,
     ],
     "no-new-wrappers": [
