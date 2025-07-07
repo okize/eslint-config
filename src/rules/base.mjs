@@ -141,7 +141,9 @@ export default {
   // https://eslint.org/docs/rules/no-misleading-character-class
   'no-misleading-character-class': 'error',
 
-  // TODO missing no-new-native-nonconstructor
+  // Disallow new operators with global non-constructor functions
+  // https://eslint.org/docs/latest/rules/no-new-native-nonconstructor
+  'no-new-native-nonconstructor': 'error',
 
   // Disallow calling global object properties as functions
   // https://eslint.org/docs/rules/no-obj-calls
@@ -244,7 +246,9 @@ export default {
   // https://eslint.org/docs/rules/no-use-before-define
   'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],
 
-  // TODO missing  no-useless-assignment
+  // Disallow variable assignments when the value is not used
+  // https://eslint.org/docs/latest/rules/no-useless-assignment
+  'no-useless-assignment': 'error',
 
   // Disallow useless backreferences in regular expressions
   // https://eslint.org/docs/rules/no-useless-backreference
@@ -479,7 +483,9 @@ export default {
     },
   ],
 
-  // TODO missing no-empty-static-block
+  // Disallow empty static blocks
+  // https://eslint.org/docs/latest/rules/no-empty-static-block
+  'no-empty-static-block': 'error',
 
   // Disallow null comparisons without type-checking operators
   // https://eslint.org/docs/rules/no-eq-null
@@ -542,7 +548,9 @@ export default {
   // https://eslint.org/docs/rules/no-labels
   'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
 
-  // TODO missing no-lone-blocks
+  // Disallow unnecessary nested blocks
+  // https://eslint.org/docs/latest/rules/no-lone-blocks
+  'no-lone-blocks': 'error',
 
   // Disallow if statements as the only statement in else blocks
   // https://eslint.org/docs/rules/no-lonely-if

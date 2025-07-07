@@ -715,6 +715,9 @@
         "allowObjectPatternsAsParameters": false,
       },
     ],
+    "no-empty-static-block": [
+      2,
+    ],
     "no-eq-null": [
       0,
     ],
@@ -825,6 +828,9 @@
         "allowSwitch": false,
       },
     ],
+    "no-lone-blocks": [
+      2,
+    ],
     "no-lonely-if": [
       2,
     ],
@@ -859,6 +865,9 @@
       2,
     ],
     "no-new-func": [
+      2,
+    ],
+    "no-new-native-nonconstructor": [
       2,
     ],
     "no-new-wrappers": [
@@ -1394,6 +1403,9 @@
         "functions": true,
         "variables": true,
       },
+    ],
+    "no-useless-assignment": [
+      2,
     ],
     "no-useless-backreference": [
       2,
