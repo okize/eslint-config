@@ -12,6 +12,7 @@
     "./jest": "./src/configs/jest.mjs",
     "./node": "./src/configs/node.mjs",
     "./react": "./src/configs/react.mjs",
+    "./react-ssr-compatibility": "./src/configs/react-ssr-compatibility.mjs",
     "./storybook": "./src/configs/storybook.mjs",
     "./styled-components": "./src/configs/styled-components.mjs",
     "./testing-library": "./src/configs/testing-library.mjs",
