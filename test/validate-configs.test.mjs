@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const configDir = join(__dirname, '../src/configs');
 const configs = await readdir(configDir);
 
-describe(`validate config`, () => {
+describe(`validate configs`, () => {
   configs.forEach((configFile) => {
     describe(`${parse(configFile).name}`, () => {
       let eslint;

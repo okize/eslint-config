@@ -4,18 +4,18 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { globSync } from 'glob';
 
-describe('Config files exports', () => {
+describe('config exports', () => {
   it('every config file in src/configs should have a matching export in package.json', () => {
     // Get directory of current module
-    const __dirname = fileURLToPath(new URL('.', import.meta.url));
+    const rootDir = fileURLToPath(new URL('.', import.meta.url));
 
     // Read package.json
-    const packageJsonPath = join(__dirname, '..', 'package.json');
+    const packageJsonPath = join(rootDir, '..', 'package.json');
     const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
     const exports = packageJson.exports || {};
 
     // Get all config files from src/configs
-    const configsDir = join(__dirname, '..', 'src', 'configs');
+    const configsDir = join(rootDir, '..', 'src', 'configs');
     const configFiles = globSync('*.mjs', { cwd: configsDir });
 
     // Keep track of missing exports

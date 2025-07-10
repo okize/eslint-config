@@ -5,7 +5,7 @@ import { readdir } from 'node:fs/promises';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const configsDir = join(__dirname, '..', 'src', 'configs');
 
-describe('ESLint Rule Validation', () => {
+describe('validate rules', () => {
   it('validates that all plugin rules have their plugins properly configured', async () => {
     const configFiles = await readdir(configsDir);
     const errors = [];

@@ -6,7 +6,7 @@ import { globSync } from 'glob';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const srcDir = join(__dirname, '..', 'src');
 
-describe('ESM Export Syntax', () => {
+describe('export syntax', () => {
   it('should use ESM export syntax in all .mjs files', () => {
     const mjsFiles = globSync('**/*.mjs', { cwd: srcDir });
 
