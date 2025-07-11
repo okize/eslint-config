@@ -1249,7 +1249,6 @@ __metadata:
     "@stylistic/eslint-plugin": "npm:^4.2.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.29.0"
     "@typescript-eslint/parser": "npm:^8.29.0"
-    check-export-map: "npm:^1.3.1"
     confusing-browser-globals: "npm:^1.0.11"
     eslint: "npm:^9.23.0"
     eslint-config-prettier: "npm:^10.1.1"
@@ -2352,18 +2351,6 @@ __metadata:
   version: 2.1.1
   resolution: "check-error@npm:2.1.1"
   checksum: 10c0/979f13eccab306cf1785fa10941a590b4e7ea9916ea2a4f8c87f0316fc3eab07eabefb6e587424ef0f88cbcd3805791f172ea739863ca3d7ce2afc54641c7f0e
-  languageName: node
-  linkType: hard
-
-"check-export-map@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "check-export-map@npm:1.3.1"
-  dependencies:
-    kolorist: "npm:^1.5.0"
-    mri: "npm:^1.2.0"
-  bin:
-    check-export-map: src/cli.js
-  checksum: 10c0/af649ff8ea4a0eecfd4c042c6b99cff6ea76a0910d179e213d50bfc4f9152ed9b19e9efa169d5aa898df8fa559dae3d97b5c3e3248884eae1b4641e130452c02
   languageName: node
   linkType: hard
 
@@ -4698,13 +4685,6 @@ __metadata:
   dependencies:
     json-buffer: "npm:3.0.1"
   checksum: 10c0/aa52f3c5e18e16bb6324876bb8b59dd02acf782a4b789c7b2ae21107fab95fab3890ed448d4f8dba80ce05391eeac4bfabb4f02a20221342982f806fa2cf271e
-  languageName: node
-  linkType: hard
-
-"kolorist@npm:^1.5.0":
-  version: 1.8.0
-  resolution: "kolorist@npm:1.8.0"
-  checksum: 10c0/73075db44a692bf6c34a649f3b4b3aea4993b84f6b754cbf7a8577e7c7db44c0bad87752bd23b0ce533f49de2244ce2ce03b7b1b667a85ae170a94782cc50f9b
   languageName: node
   linkType: hard
 
