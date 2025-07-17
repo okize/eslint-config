@@ -28,7 +28,7 @@
   },
   "plugins": [
     "@",
-    "jest:eslint-plugin-jest@28.11.0",
+    "jest:eslint-plugin-jest@29.0.1",
     "jest-formatting",
     "no-only-tests",
   ],
