@@ -33,6 +33,9 @@
     ],
     "storybook/meta-inline-properties": [
       2,
+      {
+        "csfVersion": 3,
+      },
     ],
     "storybook/meta-satisfies-type": [
       2,
@@ -48,6 +51,10 @@
     ],
     "storybook/no-uninstalled-addons": [
       2,
+      {
+        "ignore": [],
+        "packageJsonLocation": "",
+      },
     ],
     "storybook/prefer-pascal-case": [
       2,
