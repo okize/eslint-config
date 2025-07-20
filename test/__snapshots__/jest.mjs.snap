@@ -1,7 +1,7 @@
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "afterAll": false,
       "afterEach": false,
@@ -17,7 +17,7 @@
       "xit": false,
       "xtest": false,
     },
-    "parser": "espree@10.3.0",
+    "parser": "espree@10.4.0",
     "parserOptions": {
       "sourceType": "module",
     },

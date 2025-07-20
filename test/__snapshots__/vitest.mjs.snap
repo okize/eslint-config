@@ -1,7 +1,7 @@
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "afterAll": true,
       "afterEach": true,
@@ -9,6 +9,7 @@
       "assertType": true,
       "beforeAll": true,
       "beforeEach": true,
+      "chai": true,
       "describe": true,
       "expect": true,
       "expectTypeOf": true,
@@ -20,7 +21,7 @@
       "vi": true,
       "vitest": true,
     },
-    "parser": "espree@10.3.0",
+    "parser": "espree@10.4.0",
     "parserOptions": {
       "sourceType": "module",
     },

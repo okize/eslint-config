@@ -64,7 +64,7 @@
       "undefined": false,
       "unescape": false,
     },
-    "parser": "@babel/eslint-parser@7.27.0",
+    "parser": "@babel/eslint-parser@7.27.5",
     "parserOptions": {
       "requireConfigFile": false,
     },
@@ -75,7 +75,7 @@
   },
   "plugins": [
     "@",
-    "js:@eslint/js@9.23.0",
+    "js:@eslint/js@9.29.0",
     "@stylistic",
     "promise",
   ],
@@ -434,6 +434,7 @@
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
+        "ignoreOverrideMethods": false,
       },
     ],
     "complexity": [
@@ -499,6 +500,7 @@
       "expression",
       {
         "allowArrowFunctions": false,
+        "allowTypeAnnotation": false,
         "overrides": {},
       },
     ],
@@ -1286,11 +1288,16 @@
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
       2,
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-sparse-arrays": [
       2,
@@ -1376,6 +1383,7 @@
         "allowTaggedTemplates": false,
         "allowTernary": false,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -1400,7 +1408,10 @@
       {
         "allowNamedExports": false,
         "classes": true,
+        "enums": true,
         "functions": true,
+        "ignoreTypeReferences": true,
+        "typedefs": true,
         "variables": true,
       },
     ],
@@ -1430,6 +1441,9 @@
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       2,

@@ -1,7 +1,7 @@
 {
   "language": "@/js",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "AggregateError": false,
       "Array": false,
@@ -64,7 +64,7 @@
       "undefined": false,
       "unescape": false,
     },
-    "parser": "typescript-eslint/parser@8.29.0",
+    "parser": "typescript-eslint/parser@8.35.0",
     "parserOptions": {
       "ecmaVersion": 2024,
       "project": "./tsconfig.json",
@@ -77,7 +77,7 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.29.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.35.0",
     "@stylistic",
     "promise",
   ],
@@ -908,6 +908,7 @@
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
+        "ignoreOverrideMethods": false,
       },
     ],
     "complexity": [
@@ -973,6 +974,7 @@
       "expression",
       {
         "allowArrowFunctions": false,
+        "allowTypeAnnotation": false,
         "overrides": {},
       },
     ],
@@ -1775,11 +1777,16 @@
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
       2,
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-sparse-arrays": [
       2,
@@ -1865,6 +1872,7 @@
         "allowTaggedTemplates": false,
         "allowTernary": false,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -1881,7 +1889,10 @@
       {
         "allowNamedExports": false,
         "classes": true,
+        "enums": true,
         "functions": true,
+        "ignoreTypeReferences": true,
+        "typedefs": true,
         "variables": true,
       },
     ],
@@ -1911,6 +1922,9 @@
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       2,
