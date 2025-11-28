@@ -1657,7 +1657,7 @@ __metadata:
     eslint-plugin-vitest: "npm:^0.5.4"
     glob: "npm:^11.0.3"
     globals: "npm:^16.5.0"
-    globals-vitest: "npm:^3.2.4"
+    globals-vitest: "npm:^4.0.8"
     husky: "npm:^9.1.7"
     prettier: "npm:^3.6.2"
     storybook: "npm:^9.1.16"
@@ -4741,12 +4741,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals-vitest@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "globals-vitest@npm:3.2.4"
+"globals-vitest@npm:^4.0.8":
+  version: 4.0.8
+  resolution: "globals-vitest@npm:4.0.8"
   peerDependencies:
-    vitest: 3.2.4
-  checksum: 10c0/6fea1409b9174703d181e5808aab0b3b7f6dff21f192365b961927baaa3899b68125311dd0b2cc9dbb3917324629610d2c56260ccb03f82c85d9b38a59bd80fb
+    vitest: 4.0.8
+  checksum: 10c0/f3a88651ca8ce2eeab5a65b0cde23f453353b63aca80881fc0c4033bee7a90d2b4b069a33dca907cd1bb5dd440c1e62eefea87d81e233beeb699d2834259506a
   languageName: node
   linkType: hard
 
