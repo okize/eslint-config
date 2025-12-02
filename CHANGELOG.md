@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.22
+
+### Patch Changes
+
+- [`d3c96eb`](https://github.com/okize/eslint-config/commit/d3c96eb0ec7cc68227718ee137f57d7292e601a7) Thanks [@okize](https://github.com/okize)! - yfeat: update dependencies
+
 ## 0.0.21
 
 ### Patch Changes
