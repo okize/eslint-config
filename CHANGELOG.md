@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.0.25
+
+### Patch Changes
+
+- [`3a0faf2`](https://github.com/okize/eslint-config/commit/3a0faf24fbb039aac9923b3d6681238d9e083b04) Thanks [@okize](https://github.com/okize)! - feat: update react-hooks rules
+
 ## 0.0.22
 
 ### Patch Changes
