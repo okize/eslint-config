@@ -64,7 +64,7 @@
       "undefined": false,
       "unescape": false,
     },
-    "parser": "typescript-eslint/parser@8.35.0",
+    "parser": "typescript-eslint/parser@8.46.4",
     "parserOptions": {
       "ecmaVersion": 2024,
       "project": "./tsconfig.json",
@@ -77,7 +77,7 @@
   },
   "plugins": [
     "@",
-    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.35.0",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin@8.46.4",
     "@stylistic",
     "promise",
   ],
@@ -135,6 +135,10 @@
     ],
     "@stylistic/generator-star-spacing": [
       0,
+      {
+        "after": false,
+        "before": true,
+      },
     ],
     "@stylistic/implicit-arrow-linebreak": [
       0,
@@ -868,6 +872,7 @@
       2,
       {
         "enforceForClassMembers": true,
+        "enforceForTSTypes": false,
         "getWithoutSet": false,
         "setWithoutGet": true,
       },
@@ -987,6 +992,9 @@
     "grouped-accessor-pairs": [
       2,
       "anyOrder",
+      {
+        "enforceForTSTypes": false,
+      },
     ],
     "guard-for-in": [
       2,
@@ -1162,6 +1170,7 @@
     "no-duplicate-imports": [
       0,
       {
+        "allowSeparateTypeImports": false,
         "includeExports": false,
       },
     ],
@@ -1325,6 +1334,9 @@
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -2094,6 +2106,7 @@
     ],
     "require-unicode-regexp": [
       0,
+      {},
     ],
     "require-yield": [
       2,

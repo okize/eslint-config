@@ -64,7 +64,7 @@
       "undefined": false,
       "unescape": false,
     },
-    "parser": "@babel/eslint-parser@7.27.5",
+    "parser": "@babel/eslint-parser@7.28.5",
     "parserOptions": {
       "requireConfigFile": false,
     },
@@ -75,7 +75,7 @@
   },
   "plugins": [
     "@",
-    "js:@eslint/js@9.29.0",
+    "js:@eslint/js@9.39.1",
     "@stylistic",
     "promise",
   ],
@@ -133,6 +133,10 @@
     ],
     "@stylistic/generator-star-spacing": [
       0,
+      {
+        "after": false,
+        "before": true,
+      },
     ],
     "@stylistic/implicit-arrow-linebreak": [
       0,
@@ -397,6 +401,7 @@
       2,
       {
         "enforceForClassMembers": true,
+        "enforceForTSTypes": false,
         "getWithoutSet": false,
         "setWithoutGet": true,
       },
@@ -513,6 +518,9 @@
     "grouped-accessor-pairs": [
       2,
       "anyOrder",
+      {
+        "enforceForTSTypes": false,
+      },
     ],
     "guard-for-in": [
       2,
@@ -683,6 +691,7 @@
     "no-duplicate-imports": [
       0,
       {
+        "allowSeparateTypeImports": false,
         "includeExports": false,
       },
     ],
@@ -847,6 +856,9 @@
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -1626,6 +1638,7 @@
     ],
     "require-unicode-regexp": [
       0,
+      {},
     ],
     "require-yield": [
       2,
