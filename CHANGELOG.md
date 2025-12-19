@@ -1,5 +1,11 @@
 # @okize/eslint-config
 
+## 0.1.0
+
+### Minor Changes
+
+- [#68](https://github.com/okize/eslint-config/pull/68) [`f830b13`](https://github.com/okize/eslint-config/commit/f830b1395c31b1166f3d067149caaa7bc7083fd9) Thanks [@okize](https://github.com/okize)! - feat: update typescript rules
+
 ## 0.0.25
 
 ### Patch Changes
