@@ -4,22 +4,51 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref }}
-  cancel-in-progress: true
-
-permissions:
-  contents: write
-  id-token: write
-  issues: read
-  packages: write
-  pull-requests: write
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
+  publish-branch-package:
+    name: Publish Branch Package (Pull Requests)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write # Required for trusted publishing
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          ref: ${{ github.event.inputs.commit_hash || github.event.pull_request.head.sha || github.sha }}
+
+      - name: Install Node and npm packages
+        uses: ./.github/actions/setup-node-env
+
+      - name: Publish branch package to npm
+        uses: wistia/publish-branch-to-npm@525dea1ce88b510393e94769852b9b2f4a0bcf94 # v2.3.5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          npm_token: ${{ secrets.NPM_TOKEN }}
+          commit_hash: ${{ github.event.inputs.commit_hash || github.event.pull_request.head.sha || github.sha }}
+
   release:
+    name: Release (Main Branch)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-22.04
     timeout-minutes: 5
+    permissions:
+      contents: write
+      id-token: write
+      issues: read
+      packages: write
+      pull-requests: write
     steps:
       - name: Check out Git repository
         uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
