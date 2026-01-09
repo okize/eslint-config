@@ -78,6 +78,7 @@
     "js:@eslint/js@9.39.1",
     "@stylistic",
     "promise",
+    "filenames",
   ],
   "rules": {
     "@stylistic/array-bracket-newline": [
@@ -488,6 +489,15 @@
       {
         "null": "ignore",
       },
+    ],
+    "filenames/match-exported": [
+      2,
+    ],
+    "filenames/match-regex": [
+      0,
+    ],
+    "filenames/no-index": [
+      0,
     ],
     "for-direction": [
       2,
@@ -1576,7 +1586,7 @@
       2,
     ],
     "promise/avoid-new": [
-      0,
+      2,
     ],
     "promise/catch-or-return": [
       2,
@@ -1609,7 +1619,7 @@
       2,
     ],
     "promise/prefer-await-to-callbacks": [
-      2,
+      0,
     ],
     "promise/prefer-await-to-then": [
       0,

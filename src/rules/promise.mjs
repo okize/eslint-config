@@ -20,6 +20,7 @@ export default {
 
   // In an ES5 environment, make sure to create a Promise constructor before using
   // https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-native.md
+  // note: nothing in our repos requires this rule to be enabled
   'promise/no-native': 'off',
 
   // Avoid nested then() or catch() statements
@@ -36,7 +37,7 @@ export default {
 
   // Avoid creating new promises outside of utility libs
   // https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/avoid-new.md
-  'promise/avoid-new': 'off',
+  'promise/avoid-new': 'error',
 
   // Avoid calling new on a Promise static method
   // https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-new-statics.md
@@ -52,11 +53,13 @@ export default {
 
   // Prefer await to then()/catch()/finally() for reading Promise values
   // https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/prefer-await-to-then.md
+  // note: we could enable this in the future, but it seems overprescriptive for now
   'promise/prefer-await-to-then': 'off',
 
   // Prefer async/await to the callback pattern
   // https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/prefer-await-to-callbacks.md
-  'promise/prefer-await-to-callbacks': 'error',
+  // note: we could enable this in the future, but it seems overprescriptive for now
+  'promise/prefer-await-to-callbacks': 'off',
 
   // Disallow creating new promises with paths that resolve multiple times
   // https://github.com/xjamundx/eslint-plugin-promise/blob/development/docs/rules/no-multiple-resolved.md
