@@ -2,6 +2,19 @@
 // see: https://github.com/eslint-community/eslint-plugin-n#-rules
 
 export default {
+  // Node requires file extensions for ESM imports
+  // https://nodejs.org/api/esm.html#esm_mandatory_file_extensions
+  'import/extensions': [
+    'error',
+    'ignorePackages',
+    {
+      js: 'always',
+      json: 'always',
+      mjs: 'always',
+      cjs: 'always',
+    },
+  ],
+
   // require error handling in callbacks
   // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/handle-callback-err.md
   'n/handle-callback-err': 'error',

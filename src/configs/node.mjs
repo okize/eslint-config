@@ -1,5 +1,6 @@
 import globals from 'globals';
 import nodePlugin from 'eslint-plugin-n';
+import importPlugin from 'eslint-plugin-import';
 import nodeRules from '../rules/node.mjs';
 
 export default [
@@ -11,6 +12,7 @@ export default [
     },
     plugins: {
       n: nodePlugin,
+      import: importPlugin,
     },
     rules: {
       ...nodeRules,

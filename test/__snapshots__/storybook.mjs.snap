@@ -14,8 +14,28 @@
   "plugins": [
     "@",
     "storybook",
+    "filenames",
+    "import",
   ],
   "rules": {
+    "filenames/match-exported": [
+      0,
+    ],
+    "import/no-anonymous-default-export": [
+      0,
+    ],
+    "import/no-default-export": [
+      0,
+    ],
+    "import/no-extraneous-dependencies": [
+      2,
+      {
+        "devDependencies": true,
+      },
+    ],
+    "import/prefer-default-export": [
+      2,
+    ],
     "storybook/await-interactions": [
       2,
     ],

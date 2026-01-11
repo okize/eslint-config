@@ -98,8 +98,19 @@
   "plugins": [
     "@",
     "n:eslint-plugin-n@17.23.1",
+    "import",
   ],
   "rules": {
+    "import/extensions": [
+      2,
+      "ignorePackages",
+      {
+        "cjs": "always",
+        "js": "always",
+        "json": "always",
+        "mjs": "always",
+      },
+    ],
     "n/callback-return": [
       2,
     ],

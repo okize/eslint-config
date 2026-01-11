@@ -2,6 +2,16 @@
 // see: https://github.com/storybookjs/eslint-plugin-storybook#supported-rules-and-configurations
 
 export default {
+  // storybook >7 requires default exports in stories
+  'import/no-anonymous-default-export': 'off',
+  'import/no-default-export': 'off',
+  'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+  'import/prefer-default-export': 'error',
+
+  // ...and the default export is always called `meta` so the filenames
+  // will never match the exported name
+  'filenames/match-exported': 'off',
+
   // Interactions should be awaited
   // https://github.com/storybookjs/eslint-plugin-storybook/blob/main/docs/rules/await-interactions.md
   'storybook/await-interactions': 'error',
