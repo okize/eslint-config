@@ -3,9 +3,10 @@ import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import { fixupPluginRules } from '@eslint/compat';
 import stylisticPlugin from '@stylistic/eslint-plugin';
-import promisePlugin from 'eslint-plugin-promise';
 import filenamesPlugin from 'eslint-plugin-filenames';
 import importPlugin from 'eslint-plugin-import';
+import prettierPlugin from 'eslint-plugin-prettier';
+import promisePlugin from 'eslint-plugin-promise';
 import baseRules from '../rules/base.mjs';
 import stylisticRules from '../rules/stylistic.mjs';
 import promiseRules from '../rules/promise.mjs';
@@ -34,6 +35,7 @@ export default [
       '@stylistic': stylisticPlugin,
       filenames: fixupPluginRules(filenamesPlugin),
       import: importPlugin,
+      prettier: prettierPlugin,
       promise: promisePlugin,
     },
     settings: {
@@ -72,6 +74,7 @@ export default [
 
       'import/named': 'off', // conflicts with TS's type system
       'import/no-unused-modules': 'off', // false positives
+      'prettier/prettier': 'error',
     },
   },
 ];

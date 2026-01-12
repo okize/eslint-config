@@ -1,5 +1,5 @@
 import babelParser from '@babel/eslint-parser';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import prettierPluginRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 
 const config = [
@@ -25,7 +25,7 @@ const config = [
     },
   },
   // enables prettier & disables any prior rules that conflict with prettier
-  eslintPluginPrettierRecommended,
+  prettierPluginRecommended,
 ];
 
 export default config;

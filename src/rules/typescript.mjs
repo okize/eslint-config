@@ -5,88 +5,76 @@ export default {
   // the following rules are deliberately disabled (as they may be inherited from other rulesets (eg. javascript.mjs)) because
   // they have equivalent rules below that are considered "extension rules" by @typescript-eslint
 
-  // prefer @typescript-eslint/block-spacing
-  'block-spacing': 'off',
-
-  // prefer @typescript-eslint/class-methods-use-this
+  // decision: prefer @typescript-eslint/class-methods-use-this
   'class-methods-use-this': 'off',
 
-  // prefer @typescript-eslint/default-param-last
+  // decision: prefer @typescript-eslint/default-param-last
   'default-param-last': 'off',
 
-  // prefer @typescript-eslint/dot-notation
+  // decision: prefer @typescript-eslint/dot-notation
   'dot-notation': 'off',
 
-  // prefer @typescript-eslint/init-declarations
+  // decision: prefer @typescript-eslint/init-declarations
   'init-declarations': 'off',
 
-  // prefer @typescript-eslint/key-spacing
-  'key-spacing': 'off',
-
-  // prefer @typescript-eslint/lines-around-comment
-  'lines-around-comment': 'off',
-
-  // prefer @typescript-eslint/max-params
+  // decision: prefer @typescript-eslint/max-params
   'max-params': 'off',
 
-  // prefer @typescript-eslint/no-array-constructor
+  // decision: prefer @typescript-eslint/no-array-constructor
   'no-array-constructor': 'off',
 
-  // prefer @typescript-eslint/no-dupe-class-members
+  // decision: prefer @typescript-eslint/no-dupe-class-members
   'no-dupe-class-members': 'off',
 
-  // prefer @typescript-eslint/no-empty-function
+  // decision: prefer @typescript-eslint/no-empty-function
   'no-empty-function': 'off',
 
-  // prefer @typescript-eslint/no-extra-semi
-  'no-extra-semi': 'off',
-
-  // prefer @typescript-eslint/no-implied-eval
+  // decision: prefer @typescript-eslint/no-implied-eval
   'no-implied-eval': 'off',
 
-  // prefer @typescript-eslint/no-invalid-this
+  // decision: prefer @typescript-eslint/no-invalid-this
   'no-invalid-this': 'off',
 
-  // prefer @typescript-eslint/no-loop-func
+  // decision: prefer @typescript-eslint/no-loop-func
   'no-loop-func': 'off',
 
-  // prefer @typescript-eslint/no-loss-of-precision
+  // decision: prefer @typescript-eslint/no-loss-of-precision
   'no-loss-of-precision': 'off',
 
-  // prefer @typescript-eslint/no-magic-numbers
+  // decision: prefer @typescript-eslint/no-magic-numbers
   'no-magic-numbers': 'off',
 
-  // prefer @typescript-eslint/no-redeclare
+  // decision: prefer @typescript-eslint/no-redeclare
   'no-redeclare': 'off',
 
-  // prefer @typescript-eslint/no-restricted-imports
+  // decision: prefer @typescript-eslint/no-restricted-imports
   'no-restricted-imports': 'off',
 
-  // prefer @typescript-eslint/no-shadow
+  // decision: prefer @typescript-eslint/no-shadow
   'no-shadow': 'off',
 
-  // prefer @typescript-eslint/only-throw-error
+  // decision: prefer @typescript-eslint/only-throw-error
   'no-throw-literal': 'off',
 
-  // prefer @typescript-eslint/no-unused-expressions
+  // decision: prefer @typescript-eslint/no-unused-expressions
   'no-unused-expressions': 'off',
 
-  // prefer @typescript-eslint/no-unused-vars
+  // decision: prefer @typescript-eslint/no-unused-vars
   'no-unused-vars': 'off',
 
-  // prefer @typescript-eslint/no-use-before-define
+  // decision: prefer @typescript-eslint/no-use-before-define
   'no-use-before-define': 'off',
 
-  // prefer @typescript-eslint/no-useless-constructor
+  // decision: prefer @typescript-eslint/no-useless-constructor
   'no-useless-constructor': 'off',
 
-  // prefer @typescript-eslint/require-await
+  // decision: prefer @typescript-eslint/require-await
   'require-await': 'off',
 
-  // prefer @typescript-eslint/return-await
+  // decision: prefer @typescript-eslint/return-await
   'no-return-await': 'off',
 
-  // prefer @typescript-eslint/prefer-destructuring
+  // decision: prefer @typescript-eslint/prefer-destructuring
   'prefer-destructuring': 'off',
 
   // recommended to be disabled for TypeScript projects

@@ -312,8 +312,8 @@ export default {
 
   // Enforce consistent brace style for all control statements
   // https://eslint.org/docs/rules/curly
-  // decision: enforce curly braces for all control statements because even the `multiline` option can allow subtle bugs
-  curly: ['error', 'all'],
+  // decision: disabled because this is a formatter concern (special case - can be used in some situations)
+  curly: 0,
 
   // Require default cases in switch statements
   // https://eslint.org/docs/rules/default-case

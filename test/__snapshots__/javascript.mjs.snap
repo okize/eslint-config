@@ -79,6 +79,7 @@
     "@stylistic",
     "filenames",
     "import",
+    "prettier:eslint-plugin-prettier@5.5.4",
     "promise",
   ],
   "rules": {
@@ -462,7 +463,7 @@
       2,
     ],
     "curly": [
-      2,
+      0,
       "all",
     ],
     "default-case": [
@@ -1802,6 +1803,9 @@
       2,
     ],
     "prefer-template": [
+      2,
+    ],
+    "prettier/prettier": [
       2,
     ],
     "promise/always-return": [

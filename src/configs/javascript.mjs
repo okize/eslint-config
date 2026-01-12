@@ -3,9 +3,10 @@ import globals from 'globals';
 import babelParser from '@babel/eslint-parser';
 import jsPlugin from '@eslint/js';
 import stylisticPlugin from '@stylistic/eslint-plugin';
-import promisePlugin from 'eslint-plugin-promise';
 import filenamesPlugin from 'eslint-plugin-filenames';
 import importPlugin from 'eslint-plugin-import';
+import prettierPlugin from 'eslint-plugin-prettier';
+import promisePlugin from 'eslint-plugin-promise';
 import baseRules from '../rules/base.mjs';
 import stylisticRules from '../rules/stylistic.mjs';
 import promiseRules from '../rules/promise.mjs';
@@ -36,6 +37,7 @@ export default [
       '@stylistic': stylisticPlugin,
       filenames: fixupPluginRules(filenamesPlugin),
       import: importPlugin,
+      prettier: prettierPlugin,
       promise: promisePlugin,
     },
     rules: {
@@ -44,6 +46,7 @@ export default [
       ...filenameRules,
       ...importRules,
       ...promiseRules,
+      'prettier/prettier': 'error',
     },
   },
 ];

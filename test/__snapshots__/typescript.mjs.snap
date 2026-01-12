@@ -81,6 +81,7 @@
     "@stylistic",
     "filenames",
     "import",
+    "prettier:eslint-plugin-prettier@5.5.4",
     "promise",
   ],
   "rules": {
@@ -895,9 +896,6 @@
     "block-scoped-var": [
       2,
     ],
-    "block-spacing": [
-      0,
-    ],
     "camelcase": [
       2,
       {
@@ -937,7 +935,7 @@
       2,
     ],
     "curly": [
-      2,
+      0,
       "all",
     ],
     "default-case": [
@@ -1263,12 +1261,6 @@
     "init-declarations": [
       0,
     ],
-    "key-spacing": [
-      0,
-    ],
-    "lines-around-comment": [
-      0,
-    ],
     "logical-assignment-operators": [
       2,
       "always",
@@ -1464,9 +1456,6 @@
     ],
     "no-extra-label": [
       2,
-    ],
-    "no-extra-semi": [
-      0,
     ],
     "no-fallthrough": [
       2,
@@ -2271,6 +2260,9 @@
       2,
     ],
     "prefer-template": [
+      2,
+    ],
+    "prettier/prettier": [
       2,
     ],
     "promise/always-return": [
