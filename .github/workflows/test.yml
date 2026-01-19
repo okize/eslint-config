@@ -29,3 +29,6 @@ jobs:
 
       - name: Run tests
         run: yarn test
+
+      - name: Check export map
+        run: yarn test:export

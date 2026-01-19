@@ -31,7 +31,8 @@
     "outdated": "yarn upgrade-interactive",
     "prepare": "husky",
     "release": "changeset publish",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:export": "check-export-map"
   },
   "dependencies": {
     "@babel/core": "^7.28.5",
