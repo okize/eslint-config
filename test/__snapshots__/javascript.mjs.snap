@@ -75,7 +75,7 @@
   },
   "plugins": [
     "@",
-    "js:@eslint/js@9.39.1",
+    "js:@eslint/js@9.39.2",
     "@stylistic",
     "filenames",
     "import",
