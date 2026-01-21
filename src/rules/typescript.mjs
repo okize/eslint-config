@@ -38,9 +38,6 @@ export default {
   // decision: prefer @typescript-eslint/no-loop-func
   'no-loop-func': 'off',
 
-  // decision: prefer @typescript-eslint/no-loss-of-precision
-  'no-loss-of-precision': 'off',
-
   // decision: prefer @typescript-eslint/no-magic-numbers
   'no-magic-numbers': 'off',
 
@@ -62,6 +59,9 @@ export default {
   // decision: prefer @typescript-eslint/no-unused-vars
   'no-unused-vars': 'off',
 
+  // decision: prefer @typescript-eslint/no-unused-private-class-members
+  'no-unused-private-class-members': 'off',
+
   // decision: prefer @typescript-eslint/no-use-before-define
   'no-use-before-define': 'off',
 
@@ -70,9 +70,6 @@ export default {
 
   // decision: prefer @typescript-eslint/require-await
   'require-await': 'off',
-
-  // decision: prefer @typescript-eslint/return-await
-  'no-return-await': 'off',
 
   // decision: prefer @typescript-eslint/prefer-destructuring
   'prefer-destructuring': 'off',
@@ -271,7 +268,7 @@ export default {
   // Disallow the declaration of empty interfaces
   // https://typescript-eslint.io/rules/no-empty-interface
   // decision: this rule has been deprecated in favour of the more comprehensive @typescript-eslint/no-empty-object-type rule
-  '@typescript-eslint/no-empty-interface': 'off',
+  // '@typescript-eslint/no-empty-interface': 'off',
 
   // Disallow accidentally using the "empty object" type
   // https://typescript-eslint.io/rules/no-empty-object-type
@@ -323,7 +320,8 @@ export default {
 
   // Disallow literal numbers that lose precision
   // https://typescript-eslint.io/rules/no-loss-of-precision
-  '@typescript-eslint/no-loss-of-precision': 'error',
+  // decision: this rule has been deprecated because the base eslint/no-loss-of-precision rule added support for numeric separators. There is no longer any need to use this extension rule.
+  // '@typescript-eslint/no-loss-of-precision': 'off',
 
   // Disallow magic numbers
   // https://typescript-eslint.io/rules/no-magic-numbers
@@ -403,7 +401,7 @@ export default {
   // Disallow type aliases
   // https://typescript-eslint.io/rules/no-type-alias
   // decision: this rule has been deprecated in favour of the @typescript-eslint/consistent-type-definitions rule
-  '@typescript-eslint/no-type-alias': 'off',
+  // '@typescript-eslint/no-type-alias': 'off',
 
   // Disallow unnecessary equality comparisons against boolean literals
   // https://typescript-eslint.io/rules/no-unnecessary-boolean-literal-compare
@@ -512,7 +510,7 @@ export default {
   // Disallow require statements except in import statements
   // https://typescript-eslint.io/rules/no-var-requires
   // decision: this rule has been deprecated in favour of the @typescript-eslint/no-require-imports rule.
-  '@typescript-eslint/no-var-requires': 'off',
+  // '@typescript-eslint/no-var-requires': 'off',
 
   // Disallow using confusing built-in primitive class wrappers
   // https://typescript-eslint.io/rules/no-wrapper-object-types
@@ -621,7 +619,7 @@ export default {
   // Enforce using @ts-expect-error over @ts-ignore
   // https://typescript-eslint.io/rules/prefer-ts-expect-error
   // decision: this rule has been deprecated in favor of @typescript-eslint/ban-ts-comment
-  '@typescript-eslint/prefer-ts-expect-error': 'off',
+  // '@typescript-eslint/prefer-ts-expect-error': 'off',
 
   // Require any function or method that returns a Promise to be marked async
   // https://typescript-eslint.io/rules/promise-function-async
@@ -649,7 +647,8 @@ export default {
 
   // Enforce constituents of a type union/intersection to be sorted alphabetically
   // https://typescript-eslint.io/rules/sort-type-constituents
-  '@typescript-eslint/sort-type-constituents': 'error',
+  // decision: this rule has been deprecated in favor of the perfectionist/sort-intersection-types and perfectionist/sort-union-types rules.
+  // '@typescript-eslint/sort-type-constituents': 'error',
 
   // Disallow certain types in boolean expressions
   // https://typescript-eslint.io/rules/strict-boolean-expressions
@@ -670,7 +669,10 @@ export default {
 
   // Require type annotations in certain places
   // https://typescript-eslint.io/rules/typedef
-  '@typescript-eslint/typedef': 'error',
+  // decision: deprecated because equiring type annotations unnecessarily can be cumbersome to maintain and
+  // generally reduces code readability. TypeScript is often better at inferring types than easily written
+  // type annotations would allow.
+  // '@typescript-eslint/typedef': 'error',
 
   // Enforce unbound methods are called with their expected scope
   // https://typescript-eslint.io/rules/unbound-method
@@ -699,4 +701,18 @@ export default {
   // Enforce that get() types should be assignable to their equivalent set() type
   // https://typescript-eslint.io/rules/related-getter-setter-pairs
   '@typescript-eslint/related-getter-setter-pairs': 'error',
+
+  // Disallow conversion idioms when they do not change the type or value of the expression
+  // https://typescript-eslint.io/rules/no-unnecessary-type-conversion/
+  '@typescript-eslint/no-unnecessary-type-conversion': 'error',
+
+  // Disallow unused private class members
+  // https://typescript-eslint.io/rules/no-unused-private-class-members/
+  '@typescript-eslint/no-unused-private-class-members': 'error',
+
+  // Disallow default values that will never be used
+  // https://typescript-eslint.io/rules/no-useless-default-assignment/
+  // decision: temporarily disabled because of bug
+  // see: https://github.com/typescript-eslint/typescript-eslint/issues/11849
+  '@typescript-eslint/no-useless-default-assignment': 'off',
 };
