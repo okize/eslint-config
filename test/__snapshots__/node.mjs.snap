@@ -97,7 +97,7 @@
   },
   "plugins": [
     "@",
-    "n:eslint-plugin-n@17.23.1",
+    "n:eslint-plugin-n@17.23.2",
     "import",
   ],
   "rules": {
