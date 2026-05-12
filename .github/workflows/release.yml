@@ -67,7 +67,7 @@ jobs:
           echo "NEW_PACKAGE_VERSION=$(yarn changeset status --output=release.json && jq -r '.releases[0].newVersion' release.json && rm release.json)" >> "$GITHUB_ENV"
 
       - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@c48e67d110a68bc90ccf1098e9646092baacaa87 # v1.6.0
+        uses: changesets/action@63a615b9cd06ba9a3e6d13796c7fbcb080a60a0b # v1.8.0
         id: changesets
         with:
           createGithubReleases: true
